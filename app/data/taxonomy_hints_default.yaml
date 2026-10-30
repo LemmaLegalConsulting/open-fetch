@@ -1,0 +1,22 @@
+# Taxonomy hints for default classification taxonomy
+#
+# Structure:
+# - general_hint: Applied to all taxonomy terms. Use for guidance that applies universally.
+# - hints: (Optional) Key-by-key overrides for specific taxonomy terms. Currently unused.
+#
+# Note: When hints are not needed, leave the file minimal or comment out key-specific hints.
+
+# general_hint: |
+#   Remember: Many taxonomy terms are written from the perspective of the person seeking help.
+#   "Real Property > Tenant (Residential)" means the speaker is a tenant.
+#   "Real Property > Landlord Residential" means the speaker is a landlord.
+#   Similarly, "Labor & Employment > X - Employee" is for workers, "X - Employer" is for employers.
+#   Use context clues to determine which side of the legal relationship the user is on.
+
+# Key-specific hints (currently unused - commented out as examples)
+# Uncomment and modify as needed to override the general_hint for specific categories.
+# hints:
+#   "Real Property > Tenant (Residential)": "Use if tenant asks about housing issues"
+#   "Real Property > Landlord Residential": "Use if landlord asks about property management"
+#   "Labor & Employment > General - Employee": "Use if worker asks about employment issues"
+#   "Labor & Employment > General - Employer": "Use if employer asks about business/HR issues"

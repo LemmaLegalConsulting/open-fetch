@@ -1,0 +1,68 @@
+prompts:
+  - "{{problem_description}}"
+
+providers:
+  - id: file://promptfoo/promptfoo_classifier_provider.py
+    label: cheap-providers-ensemble
+    config:
+      enabled_providers: ["keyword"]
+      decision_mode: "vote"
+      taxonomy_name: "default"
+      include_debug_details: true
+      disable_telemetry: true
+      cache_enabled: false
+
+tests: file://promptfoo/synthetic_examples.csv
+
+defaultTest:
+  assert:
+    - type: javascript
+      value: |
+        const norm = s => (s ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
+
+        const expectedCategory = norm(context.vars.expected_category);
+        const expectedSubcategory = context.vars.expected_subcategory ? norm(context.vars.expected_subcategory) : null;
+
+        const data = typeof output === 'string' ? JSON.parse(output) : output;
+        const labels = Array.isArray(data?.labels) ? data.labels.map(l => norm(l.label)) : [];
+
+        let score = 0;
+        let pass = false;
+        let message = 'No match found.';
+
+        for (const label of labels) {
+          const [labelCategory, labelSubcategory] = label.split(' > ');
+
+          if (expectedSubcategory) {
+            const want = `${expectedCategory} > ${expectedSubcategory}`;
+            if (label === want) {
+              score = 1;
+              pass = true;
+              message = `Exact match found: ${label}`;
+              break;
+            }
+          } else {
+            if (labelCategory === expectedCategory && (labelSubcategory || '').toLowerCase() === 'other') {
+              score = 1;
+              pass = true;
+              message = `Top-level 'Other' match found: ${label}`;
+              break;
+            }
+          }
+
+          if (labelCategory === expectedCategory) {
+            score = Math.max(score, 0.5);
+            pass = true;
+            message = `Partial (top-level) match found: ${label}`;
+          }
+        }
+
+        if (!pass && labels.length > 0) {
+          message = `Expected '${expectedCategory}${expectedSubcategory ? ' > ' + expectedSubcategory : ''}', but got: [${labels.join(', ')}]`;
+        }
+
+        return {
+          pass: pass,
+          score: score,
+          reason: message,
+        };

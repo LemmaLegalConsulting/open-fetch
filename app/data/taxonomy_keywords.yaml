@@ -1,0 +1,1808 @@
+negative_indicators:
+  level1:
+    - microchip
+    - device in my teeth
+    - implanted
+    - they want me dead
+    - voices
+    - surveillance
+    - spying
+    - your employee
+  level2:
+    - fbi
+    - homeless
+    - homelessness
+    - shelter
+
+Administrative Law:
+  DMV (Non-Criminal):
+    - DMV
+    - DMV hearing
+    - DMV suspension
+    - Department of Motor Vehicles
+    - driver's license
+    - driver license
+    - license reinstatement
+    - registration renewal
+    - vehicle registration
+    - title transfer
+    - vehicle title
+    - non-criminal citation
+    - civil traffic ticket
+    - driving privilege
+    - license suspension non-DUI
+    - car tags
+  General (Federal):
+    - federal agency
+    - federal regulation
+    - administrative procedure act
+    - APA
+    - federal government agency
+    - federal administrative law
+    - federal rules
+    - federal government
+  General (Local/Municipal):
+    - municipal ordinance
+    - local government
+    - city council
+    - county regulation
+    - local administrative law
+    - township rules
+    - bylaws
+    - zoning ordinance
+  General (State):
+    - state agency
+    - state regulation
+    - state administrative code
+    - state government agency
+    - state administrative law
+    - state rules
+    - state government
+  Medicare/Medicaid:
+    - medicare
+    - medicaid
+    - government health insurance
+    - CMS
+    - healthcare benefits
+    - medical assistance
+    - medicare appeals
+    - medicaid eligibility
+  Military/Veterans:
+    - military law
+    - veterans affairs
+    - VA benefits
+    - service member rights
+    - military discharge
+    - veteran claims
+    - military administrative law
+    - court-martial appeal
+  PERS:
+    - public employee retirement system
+    - PERS
+    - public pension benefits
+    - government retirement plan
+    - public pension
+    - retirement appeal
+    - state employee retirement
+  Professional Licensing:
+    - professional license
+    - licensing board
+    - professional board
+    - board investigation
+    - disciplinary action
+    - disciplinary hearing
+    - board hearing
+    - medical license
+    - bar license
+    - contractor license
+    - nursing license
+    - license revocation
+    - professional ethics
+    - professional license reinstatement
+    - license renewal denial
+    - credentialing
+    - board order
+    - scope-of-practice violation
+    - character and fitness
+    - licensure
+  Schools — Special Needs Education:
+    - IEP
+    - special education
+    - school disability services
+    - IDEA
+    - school accommodation
+    - special needs student
+    - education rights
+    - school dispute
+  Social Security/SSI:
+    - social security
+    - SSI
+    - disability benefits
+    - retirement benefits
+    - survivor benefits
+    - social security administration
+    - SSDI
+    - supplemental security income
+  SSD:
+    - social security disability
+    - SSD
+    - disability claim
+    - long-term disability
+    - disability appeal
+    - SSDI application
+  Student Rights:
+    - student discipline
+    - school expulsion
+    - academic rights
+    - FERPA
+    - campus safety
+    - student privacy
+    - education law
+    - student due process
+  Transportation:
+    - DOT
+    - Department of Transportation
+    - transportation regulation
+    - public transit
+    - vehicle safety
+    - transport law
+    - road rules
+    - commercial vehicle
+  Unemployment:
+    - unemployment benefits
+    - unemployment claim
+    - jobless aid
+    - employment department
+    - unemployment appeal
+    - layoff
+    - job loss
+    - UI benefits
+  Utilities:
+    - utility bill
+    - energy regulation
+    - public utilities commission
+    - PUC
+    - water rights
+    - electricity service
+    - gas service
+    - utility dispute
+    - rate increase
+  Welfare:
+    - welfare benefits
+    - food stamps
+    - TANF
+    - public assistance
+    - housing assistance
+    - SNAP
+    - cash aid
+    - government aid
+  Environmental:
+    - environmental regulation
+    - EPA
+    - environmental compliance
+    - environmental permits
+    - environmental enforcement
+    - environmental impact review
+    - environmental agency
+  Other:
+    - administrative appeal
+    - government dispute
+    - regulatory compliance
+    - public law
+    - administrative hearing
+    - agency action
+    - government oversight
+    - administrative licensure
+    - agency hearing request
+    - background check denial
+    - professional credential renewal
+
+Bankruptcy:
+  Business:
+    - business bankruptcy
+    - corporate insolvency
+    - Chapter 11
+    - chapter 7
+    - business debt
+    - reorganization
+    - corporate bankruptcy
+    - small business bankruptcy
+    - liquidation
+    - dissolving an LLC
+  Creditors:
+    - creditor rights
+    - debt collection
+    - secured creditor
+    - unsecured creditor
+    - proof of claim
+    - creditor committee
+    - bankruptcy creditor
+    - debtor-creditor law
+    - creditor
+  Document Review:
+    - bankruptcy documents
+    - financial statements
+    - debt schedules
+    - petition review
+    - bankruptcy document preparation
+    - bankruptcy forms
+    - asset schedules
+  Farm:
+    - farm bankruptcy
+    - Chapter 12
+    - agricultural debt
+    - farm reorganization
+    - family farmer bankruptcy
+    - farm loan
+    - rural debt
+  Personal:
+    - personal bankruptcy
+    - Chapter 7
+    - Chapter 13
+    - consumer debt
+    - wage earner plan
+    - file bankruptcy
+    - bankruptcy filing
+    - dischargeable debt
+    - debt discharge
+    - automatic stay
+    - stop collection
+    - exempt property
+    - means test
+    - fresh start
+  Pro Se Coaching:
+    - pro se bankruptcy
+    - bankruptcy self-representation
+    - bankruptcy guidance
+    - DIY bankruptcy
+    - unrepresented debtor
+    - bankruptcy advice
+  Other:
+    - bankruptcy filing
+    - debt relief
+    - insolvency
+    - bankruptcy asset protection
+    - bankruptcy court
+    - debt restructuring
+    - financial distress
+    - 341 meeting
+    - automatic stay violation
+    - means test calculation
+    - claim objection
+    - reaffirmation agreement
+    - bankruptcy
+
+Business and Corporate:
+  Agriculture/Farm:
+    - agricultural law
+    - farm business
+    - agribusiness
+    - farm contracts
+    - crop insurance
+    - livestock law
+    - farm land
+    - food law
+  Construction:
+    - construction law
+    - contractor dispute
+    - building permits
+    - construction contracts
+    - mechanic's lien
+    - construction defect
+    - subcontractor issues
+  Entertainment:
+    - entertainment law
+    - media law
+    - film production
+    - music industry
+    - artist contracts
+    - entertainment intellectual property
+    - entertainment licensing
+  Environmental:
+    - environmental law
+    - pollution control
+    - EPA regulations
+    - hazardous waste
+    - clean air act
+    - clean water act
+    - environmental compliance
+    - natural resources
+  Franchise:
+    - franchise law
+    - franchise agreement
+    - franchisor
+    - franchisee
+    - franchise dispute
+    - business expansion
+    - licensing agreement
+  General (contracts, entities):
+    - business contracts
+    - corporate law
+    - business organization
+    - LLC
+    - corporation
+    - partnership
+    - sole proprietorship
+    - contract dispute
+    - commercial law
+    - operating agreement
+    - articles of incorporation
+    - shareholder agreement
+    - buy-sell agreement
+    - breach of contract
+    - contract breach
+    - partnership dispute
+    - limited liability company
+    - LLC formation
+    - business dissolution
+  Litigation:
+    - business litigation
+    - corporate dispute
+    - commercial dispute
+    - contract litigation
+    - shareholder dispute
+    - business lawsuit
+    - commercial lawsuit
+  Marijuana Business:
+    - marijuana business law
+    - cannabis law
+    - dispensary license
+    - marijuana regulation
+    - hemp law
+    - CBD business
+    - cannabis compliance
+    - OLCC
+  Non-Profit:
+    - non-profit law
+    - 501(c)(3)
+    - tax-exempt organization
+    - charitable organization
+    - non-profit compliance
+    - fundraising law
+    - board governance
+  Publishing:
+    - publishing law
+    - copyright law
+    - literary rights
+    - author contracts
+    - book publishing
+    - digital publishing
+    - media rights
+  Restaurants/OLCC:
+    - restaurant law
+    - OLCC
+    - liquor license
+    - food service regulation
+    - hospitality law
+    - health code compliance
+    - restaurant permit
+  Sale Of Business:
+    - sale of business
+    - sell my business
+    - sell my company
+    - company sale
+    - mergers and acquisitions
+    - M&A
+    - business acquisition
+    - asset purchase
+    - stock purchase
+    - due diligence
+  Securities:
+    - securities law
+    - SEC
+    - stock market regulation
+    - investment fraud
+    - broker-dealer
+    - public offerings
+    - insider trading
+  Other:
+    - corporate governance
+    - business formation
+    - commercial transactions
+    - business ethics
+    - corporate compliance
+    - operating agreement dispute
+    - member-managed LLC
+    - articles amendment
+    - business dissolution filing
+    - buy-sell clause
+    - business law
+
+Consumer Law:
+  Automobiles/RV's/Mobile Homes:
+    - lemon law
+    - car defect
+    - RV dispute
+    - mobile home issues
+    - vehicle warranty
+    - auto fraud
+    - car purchase
+  Banking:
+    - banking law
+    - bank dispute
+    - account fraud
+    - loan dispute
+    - credit card issues
+    - financial services
+    - consumer banking
+  General:
+    - consumer protection
+    - consumer rights
+    - unfair trade practices
+    - deceptive advertising
+    - consumer product liability
+    - consumer fraud
+    - consumer dispute
+  Identity Theft:
+    - identity theft
+    - credit fraud
+    - data breach
+    - personal information theft
+    - consumer cybercrime
+    - fraudulent charges
+  Insurance:
+    - insurance law
+    - insurance claim
+    - denied claim
+    - bad faith insurance
+    - policy dispute
+    - home insurance
+    - auto insurance
+  Mortgage Issues (non-foreclosure):
+    - mortgage dispute
+    - loan modification
+    - escrow issues
+    - mortgage servicing
+    - predatory mortgage lending
+    - home loan
+  Problems Between Consumers:
+    - consumer dispute
+    - small claims
+    - consumer neighbor dispute
+    - personal property dispute
+    - consumer fraud
+  Small Claims Advice:
+    - small claims court
+    - small claims advice
+    - DIY lawsuit
+    - small claims pro se litigation
+    - dispute resolution
+  Storage Units:
+    - storage unit lien
+    - storage unit dispute
+    - storage unit abandoned property
+    - self-storage law
+    - storage tenant rights
+  Vehicle Towing:
+    - vehicle towing
+    - towing dispute
+    - illegal tow
+    - impounded vehicle
+    - towing fees
+    - parking violation
+  Other:
+    - consumer contracts
+    - consumer credit
+    - consumer debt collection
+    - consumer product safety
+    - consumer privacy
+    - predatory towing
+    - storage unit lien
+    - chargeback request
+    - identity monitoring breach
+    - lemon law replacement
+
+Criminal Law:
+  Capital Murder:
+    - capital murder
+    - death penalty
+    - capital homicide
+    - aggravated murder
+    - first-degree murder
+  Clemency:
+    - clemency
+    - pardon
+    - commutation
+    - sentence reduction
+    - executive clemency
+  DMV (DUII Related):
+    - DUI
+    - DWI
+    - drunk driving
+    - impaired driving
+    - DUII
+    - driving under influence
+    - DUI license suspension
+  DUII/DWS:
+    - DUII
+    - DWS
+    - driving under the influence of intoxicants
+    - driving while suspended
+    - DUI defense
+    - license revocation
+  Expunction:
+    - set aside conviction
+    - expunge conviction
+    - record sealing
+    - seal record
+    - oregon set-aside
+    - certificate of good conduct
+    - arrest record expungement
+    - mandatory waiting period
+    - expunge
+    - expunged
+
+  Forfeiture:
+    - asset forfeiture
+    - civil forfeiture
+    - criminal forfeiture
+    - property seizure
+    - drug forfeiture
+  Game Violations:
+    - hunting violation
+    - fishing violation
+    - poaching
+    - wildlife crime
+    - game law
+  Gun Rights:
+    - gun rights
+    - Second Amendment
+    - firearms law
+    - concealed carry
+    - gun ownership
+    - NRA
+  Juvenile Offender:
+    - juvenile crime
+    - youth offender
+    - delinquency
+    - juvenile court
+    - minor offense
+    - youth detention
+  Lesser Felony:
+    - lesser felony
+    - non-violent felony
+    - property crime
+    - felony drug possession
+    - felony theft
+  Local Ordinances:
+    - local ordinance violation
+    - municipal code
+    - city violation
+    - county violation
+    - noise ordinance
+    - public nuisance
+  Major Felony:
+    - major felony
+    - violent crime
+    - armed robbery
+    - aggravated assault
+    - rape
+    - kidnapping
+  Mental Commitment:
+    - mental commitment
+    - involuntary commitment
+    - mental health court
+    - competency to stand trial
+    - insanity defense
+  Misdemeanor:
+    - misdemeanor
+    - petty crime
+    - shoplifting
+    - misdemeanor assault
+    - misdemeanor DUI
+    - disorderly conduct
+  Non-Capital Murder:
+    - non-capital murder
+    - second-degree murder
+    - manslaughter
+    - vehicular homicide
+    - non-death penalty murder
+  Parole/Probation:
+    - parole violation
+    - probation violation
+    - supervised release
+    - parole board
+    - probation officer
+    - early release
+  Post Conviction/Appeals:
+    - post-conviction relief
+    - criminal appeal
+    - habeas corpus
+    - wrongful conviction
+    - sentence appeal
+    - appellate review
+  Relief From Sex Offender Registration:
+    - sex offender registration
+    - deregistration
+    - sex offender list
+    - Megan's Law
+    - relief from registration
+  Traffic Offenses:
+    - traffic ticket
+    - speeding ticket
+    - reckless driving
+    - hit and run
+    - driving without license
+    - traffic court
+  Traffic Offenses - CDL Drivers:
+    - CDL traffic offense
+    - commercial driver's license
+    - trucking violation
+    - CDL DOT regulations
+    - commercial vehicle ticket
+  White Collar Crime:
+    - white collar crime
+    - fraud
+    - embezzlement
+    - money laundering
+    - insider trading
+    - corporate crime
+    - white collar cybercrime
+  Other:
+    - criminal defense
+    - arrest
+    - bail
+    - arraignment
+    - plea bargain
+    - sentencing
+    - criminal investigation
+    - set aside petition
+    - post conviction relief
+    - probation violation hearing
+    - ORS 137 expungement
+    - no contest plea
+
+Debtor/Creditor:
+  Collection/Harassment:
+    - debt collection harassment
+    - fair debt collection practices act
+    - FDCPA
+    - debt collector abuse
+    - creditor harassment
+    - collection calls
+  Debt Counseling/Workouts:
+    - debt counseling
+    - debt workout
+    - debt management plan
+    - credit counseling
+    - debt consolidation
+    - financial restructuring
+  General (Creditor):
+    - creditor rights
+    - debt recovery
+    - judgment enforcement
+    - secured debt
+    - unsecured debt
+    - creditor remedies
+  General (Debtor):
+    - debtor rights
+    - debt relief
+    - consumer debt
+    - personal debt
+    - debt negotiation
+    - financial hardship
+  Judgment Collection:
+    - judgment collection
+    - wage garnishment
+    - bank levy
+    - asset seizure
+    - judgment enforcement
+    - debt judgment
+  Student Loans:
+    - student loan debt
+    - student loan default
+    - income-driven repayment
+    - student loan forgiveness
+    - private student loans
+    - federal student loans
+  Other:
+    - debt dispute
+    - credit report error
+    - fair credit reporting act
+    - FCRA
+    - debt settlement
+    - financial dispute
+    - cease and desist letter
+    - debt validation notice
+    - illegal garnishment
+    - debt buyer lawsuit
+    - collection abuse
+    - credit card debt
+    - pay my debt
+
+Family Law:
+  Adoption/DHS :
+    - adoption
+    - Department of Human Services
+    - child adoption
+    - stepparent adoption
+    - international adoption
+    - foster care adoption
+    - parental rights termination
+  Birth Certificate/Name Change:
+    - birth certificate amendment
+    - name change
+    - legal name change
+    - gender marker change
+    - identity document change
+  Child Custody/Visitation:
+    - child custody
+    - visitation rights
+    - parenting plan
+    - joint custody
+    - sole custody
+    - custody dispute
+    - parental rights
+    - parenting time
+    - custody modification
+    - best interests standard
+    - joint legal custody
+    - sole legal custody
+    - custody order
+    - custody
+  Child Support/Modification:
+    - child support
+    - child support modification
+    - arrears
+    - support enforcement
+    - child support guidelines
+    - spousal support
+  Collaborative Family Law:
+    - collaborative law
+    - collaborative divorce
+    - family alternative dispute resolution
+    - family mediation
+    - non-adversarial divorce
+  Document Review:
+    - family law documents
+    - divorce papers
+    - custody agreements
+    - prenuptial agreements
+    - family law document review
+  Emancipation:
+    - emancipation of minor
+    - minor's rights
+    - independent minor
+    - minor legal independence
+  General (Divorce/Separation etc.):
+    - divorce
+    - separation
+    - dissolution of marriage
+    - legal separation
+    - no-fault divorce
+    - contested divorce
+    - uncontested divorce
+  Grandparent/Third Party Rights:
+    - grandparent rights
+    - grandparent visitation
+    - grandparent custody
+    - third-party custody
+  Guardianship:
+    - guardianship of minor
+    - minor guardianship
+    - child legal guardian
+    - temporary guardianship
+  Informal Living Arrangements:
+    - cohabitation agreement
+    - unmarried couple rights
+    - domestic partnership
+    - palimony
+    - non-marital relationships
+  Interstate/Independent Adoption:
+    - interstate adoption
+    - independent adoption
+    - private adoption
+    - Interstate Compact on the Placement of Children
+  Juvenile/DHS Issues:
+    - juvenile dependency
+    - DHS involvement
+    - child protective services
+    - CPS
+    - child welfare
+    - foster care
+    - DHS child abuse
+  Military:
+    - military divorce
+    - military child custody
+    - servicemember family law
+    - military spouse rights
+    - Servicemembers Civil Relief Act
+  Parental Responsibility:
+    - parental responsibility
+    - parental rights
+    - child decision-making
+    - legal custody
+    - physical custody
+  Paternity:
+    - paternity
+    - father's rights
+    - paternity DNA testing
+    - acknowledgment of paternity
+    - disestablishment of paternity
+  Prenuptial Agreements:
+    - prenuptial agreement
+    - premarital agreement
+    - postnuptial agreement
+    - marital agreement
+    - marriage asset protection
+  Pro Se Coaching:
+    - pro se family law
+    - family law self-representation
+    - family law guidance
+    - DIY divorce
+    - unrepresented party in family law
+  QDROs:
+    - QDRO
+    - Qualified Domestic Relations Order
+    - divorce retirement division
+    - pension division
+    - 401k division
+  Restraining Orders:
+    - restraining order
+    - protective order
+    - domestic violence
+    - abuse prevention order
+    - stalking order
+  Domestic Violence:
+    - domestic violence
+    - DV
+    - intimate partner violence
+    - family violence
+    - domestic abuse
+  Same Sex Couples and Parents:
+    - same-sex marriage
+    - LGBTQ+ family law
+    - same-sex parenting
+    - same-sex domestic partnership
+    - marriage equality
+  Spousal Support:
+    - spousal support
+    - alimony
+    - divorce maintenance
+    - temporary alimony
+    - permanent alimony
+    - rehabilitative alimony
+  Terminate Parent Rights:
+    - termination of parental rights
+    - TPR
+    - child abandonment
+    - unfit parent
+    - adoption TPR
+  Other:
+    - family law dispute
+    - marital property
+    - community property
+    - separate property
+    - annulment
+    - legal separation
+    - parenting time modification
+    - temporary protective order
+    - QDRO draft
+    - custody evaluator
+    - military spouse benefits
+
+General Litigation:
+  Actions Against Police:
+    - police misconduct
+    - police brutality
+    - excessive force
+    - false arrest
+    - police civil rights violation
+    - police lawsuit
+  Americans With Disabilities Act:
+    - ADA compliance
+    - Americans with Disabilities Act
+    - disability discrimination
+    - reasonable accommodation
+    - access rights
+    - disability rights
+  Animal Law:
+    - animal law
+    - animal cruelty
+    - pet custody
+    - dog bite
+    - veterinary malpractice
+    - wildlife law
+  Aviation:
+    - aviation law
+    - plane crash
+    - airline liability
+    - airport regulation
+    - air traffic control
+    - aviation accident
+  Child Abuse Victims:
+    - child abuse victim
+    - child sexual abuse
+    - child neglect
+    - victim compensation
+    - child abuse lawsuit
+    - child protection
+  Civil Matters for Inmates:
+    - inmate civil rights
+    - prison conditions
+    - prison medical neglect
+    - solitary confinement
+    - prisoner rights
+    - jail conditions
+  Civil Rights:
+    - civil rights
+    - constitutional rights
+    - First Amendment
+    - Fourth Amendment
+    - due process
+    - equal protection
+    - general discrimination
+  Crime Victims:
+    - crime victim rights
+    - victim compensation
+    - victim advocacy
+    - victim restitution
+    - victim services
+    - sexual assault victim
+  General Litigation:
+    - general litigation
+    - civil lawsuit
+    - dispute resolution
+    - court case
+    - legal dispute
+    - trial law
+    - civil procedure
+  General Torts/Privacy:
+    - tort law
+    - privacy rights
+    - invasion of privacy
+    - general negligence
+    - general personal injury
+    - general defamation
+  Health Law/HIPAA:
+    - health law
+    - HIPAA
+    - patient privacy
+    - medical records
+    - healthcare compliance
+    - patient rights
+    - medical ethics
+  Insurance (Health/Disability):
+    - health insurance dispute
+    - disability insurance claim
+    - denied health claim
+    - long-term disability insurance
+    - health and disability ERISA
+  Insurance (Liability):
+    - liability insurance
+    - commercial general liability
+    - professional liability
+    - D&O insurance
+    - insurance coverage dispute
+    - liability bad faith
+  Libel/Slander/Defamation:
+    - libel
+    - slander
+    - defamation
+    - reputational harm
+    - false statements
+    - online defamation
+    - free speech
+  Malpractice (Dental):
+    - dental malpractice
+    - dentist negligence
+    - dental injury
+    - dental malpractice lawsuit
+    - dental error
+  Malpractice (Legal):
+    - legal malpractice
+    - attorney negligence
+    - lawyer misconduct
+    - legal malpractice lawsuit
+    - legal professional negligence
+  Malpractice (Medical):
+    - medical malpractice
+    - doctor negligence
+    - surgical error
+    - misdiagnosis
+    - birth injury
+    - medical wrongful death
+  Maritime:
+    - maritime law
+    - admiralty law
+    - shipping law
+    - boat accident
+    - seaman's rights
+    - offshore injury
+    - cargo dispute
+  Mold Claims:
+    - mold claim
+    - toxic mold
+    - mold property damage
+    - indoor air quality
+    - mold litigation
+    - mold health effects
+  Neighbor Disputes/Nuisance:
+    - neighbor dispute
+    - nuisance law
+    - property line dispute
+    - noise complaint
+    - boundary dispute
+    - tree dispute
+  Online Harrassment/Doxing/Bullying:
+    - online harassment
+    - doxing
+    - cyberbullying
+    - internet harassment
+    - revenge porn
+    - online threats
+    - digital privacy
+  Personal Injury:
+    - personal injury
+    - car accident
+    - slip and fall
+    - wrongful death
+    - catastrophic injury
+    - accident claim
+    - bodily injury
+  Premises Liability:
+    - premises liability
+    - slip and fall
+    - property owner liability
+    - unsafe conditions
+    - premises dog bite
+    - negligent security
+  Products Liability:
+    - products liability
+    - defective product
+    - unsafe product
+    - product recall
+    - manufacturing defect
+    - design defect
+    - warning defect
+  Property Damage:
+    - property damage
+    - vandalism
+    - fire damage
+    - water damage
+    - property insurance claim
+    - property loss
+  Services for Plaintiffs and Defendants:
+    - plaintiff representation
+    - defendant representation
+    - litigation services
+    - legal defense
+    - legal counsel
+  Stalking Orders:
+    - stalking order
+    - anti-stalking injunction
+    - harassment order
+    - personal safety
+    - stalking restraining order
+  Tort Claims Act:
+    - tort claims act
+    - government liability
+    - sovereign immunity
+    - federal tort claims act
+    - state tort claims act
+  Wrongful Death:
+    - wrongful death
+    - fatal accident
+    - survivor's claim
+    - loss of consortium
+    - fatal injury
+    - death claim
+  Other:
+    - civil litigation
+    - dispute resolution
+    - arbitration
+    - mediation
+    - settlement
+    - court proceedings
+    - anti slapp
+    - tort claim notice
+    - civil rights violation
+    - defamation per se
+    - negligent security
+
+Intellectual Property:
+  Computer Law & Internet Law:
+    - computer law
+    - internet law
+    - cyber law
+    - data privacy
+    - software licensing
+    - domain name dispute
+    - e-commerce law
+  Entertainment:
+    - entertainment IP
+    - music copyright
+    - film rights
+    - literary property
+    - artist rights
+    - media intellectual property
+  Patent (Reg Patent Attys Only):
+    - patent law
+    - patent application
+    - patent infringement
+    - utility patent
+    - design patent
+    - patent prosecution
+    - patent litigation
+  Trademark/Copyright:
+    - trademark
+    - copyright
+    - brand protection
+    - logo registration
+  Other:
+    - trade secret
+    - IP licensing
+    - intellectual property rights
+    - IP litigation
+    - technology law
+    - innovation law
+    - intellectual property
+    - infringe
+    - infringement
+International Law:
+  Business And Corporate:
+    - international business law
+    - cross-border transactions
+    - foreign investment
+    - international corporate law
+    - global trade
+  Customs Quotas & Duties:
+    - customs law
+    - import/export duties
+    - trade quotas
+    - tariff
+    - customs compliance
+    - border control
+  Deportation:
+    - deportation defense
+    - removal proceedings
+    - immigration detention
+    - deportation appeal
+    - ICE
+    - immigration enforcement
+  Family Law:
+    - international family law
+    - Hague Convention child abduction
+    - international child custody
+    - cross-border divorce
+    - international adoption
+  General Immigration/Visas:
+    - immigration law
+    - visa application
+    - green card
+    - citizenship
+    - asylum
+    - refugee status
+    - family immigration
+    - immigration
+  Import/Export Regulation:
+    - import/export regulation
+    - trade compliance
+    - export controls
+    - sanctions law
+    - customs duties
+    - international trade agreements
+  Litigation:
+    - international litigation
+    - cross-border dispute
+    - foreign judgment enforcement
+    - international arbitration
+    - transnational litigation
+  Taxation:
+    - international tax law
+    - foreign income tax
+    - FATCA
+    - offshore accounts
+    - tax treaties
+    - cross-border taxation
+  Other:
+    - public international law
+    - private international law
+    - human rights law
+    - treaty law
+    - international organizations
+
+Labor & Employment:
+  ADA (Disability) Act Issues - Employee:
+    - ADA in employment
+    - employment disability discrimination
+    - employment reasonable accommodation
+    - workplace disability rights
+    - ADA lawsuit
+  ADA (Disability) Act Issues - Employer:
+    - ADA in employment
+    - employment disability discrimination
+    - employment reasonable accommodation
+    - workplace disability rights
+    - ADA lawsuit
+  Discrimination - Employee:
+    - employment discrimination
+    - workplace discrimination
+    - employment harassment
+    - employment retaliation
+    - EEOC
+    - Title VII
+    - age discrimination
+    - gender discrimination
+    - hostile work environment
+    - protected class discrimination
+    - adverse employment action
+    - constructive discharge
+    - pay equity act
+    - EEOC charge
+    - EEOC right-to-sue
+  Discrimination - Employer:
+    - employment discrimination
+    - workplace discrimination
+    - employment harassment
+    - employment retaliation
+    - EEOC
+    - Title VII
+    - age discrimination
+    - gender discrimination
+    - hostile work environment
+    - protected class discrimination
+    - adverse employment action
+    - constructive discharge
+    - pay equity act
+    - EEOC charge
+    - EEOC right-to-sue
+  Document Review/Severance Packages - Employee:
+    - severance package review
+    - employment contract review
+    - non-compete agreement
+    - confidentiality agreement
+    - employment documents
+  Document Review/Severance Packages - Employer:
+    - severance package review
+    - employment contract review
+    - non-compete agreement
+    - confidentiality agreement
+    - employment documents
+  FLSA - Employee:
+    - FLSA
+    - Fair Labor Standards Act
+    - minimum wage
+    - overtime pay
+    - wage and hour law
+    - unpaid wages
+  FLSA - Employer:
+    - FLSA
+    - Fair Labor Standards Act
+    - minimum wage
+    - overtime pay
+    - wage and hour law
+    - unpaid wages
+  FMLA - Employee:
+    - FMLA
+    - Family and Medical Leave Act
+    - medical leave
+    - family leave
+    - job-protected leave
+    - FMLA violation
+  FMLA - Employer:
+    - FMLA
+    - Family and Medical Leave Act
+    - medical leave
+    - family leave
+    - job-protected leave
+    - FMLA violation
+  General - Employee:
+    - employment law
+    - labor law
+    - workplace rights
+    - employer-employee relations
+    - human resources law
+    - employment contracts
+  General - Employer:
+    - employment law
+    - labor law
+    - workplace rights
+    - employer-employee relations
+    - human resources law
+    - employment contracts
+  Pensions/Benefits/ERISA - Employee:
+    - pension law
+    - ERISA
+    - employee benefits
+    - employment retirement plans
+    - 401k dispute
+    - employment health benefits
+  Pensions/Benefits/ERISA - Employer:
+    - pension law
+    - ERISA
+    - employee benefits
+    - employment retirement plans
+    - 401k dispute
+    - employment health benefits
+  Public Employees - Employee:
+    - public employee law
+    - civil service
+    - government employee rights
+    - public sector union
+    - public employee collective bargaining
+  Public Employees - Employer:
+    - public employee law
+    - civil service
+    - government employee rights
+    - public sector union
+    - public employee collective bargaining
+  Sexual Harassment - Employee:
+    - workplace sexual harassment
+    - hostile work environment
+    - quid pro quo
+    - workplace misconduct
+    - sexual harassment lawsuit
+  Sexual Harassment - Employer:
+    - workplace sexual harassment
+    - hostile work environment
+    - quid pro quo
+    - workplace misconduct
+    - sexual harassment lawsuit
+  Union Issues - Employee:
+    - union law
+    - labor union
+    - collective bargaining
+    - union dispute
+    - unfair labor practice
+    - NLRB
+  Union Issues - Employer:
+    - union law
+    - labor union
+    - collective bargaining
+    - union dispute
+    - unfair labor practice
+    - NLRB
+  Wage and Hour Claims - Employee:
+    - wage claim
+    - unpaid wages
+    - overtime dispute
+    - minimum wage violation
+    - wage theft
+    - hour dispute
+  Wage and Hour Claims - Employer:
+    - wage claim
+    - unpaid wages
+    - overtime dispute
+    - minimum wage violation
+    - wage theft
+    - hour dispute
+  Whistleblowers - Employee:
+    - whistleblower protection
+    - qui tam
+    - false claims act
+    - whistleblower retaliation
+    - government fraud
+  Whistleblowers - Employer:
+    - whistleblower protection
+    - qui tam
+    - false claims act
+    - whistleblower retaliation
+    - government fraud
+  Wrongful Discharge - Employee:
+    - wrongful termination
+    - wrongful discharge
+    - unjust dismissal
+    - retaliatory discharge
+    - employment at will
+    - fired unfairly
+  Wrongful Discharge - Employer:
+    - wrongful termination
+    - wrongful discharge
+    - unjust dismissal
+    - retaliatory discharge
+    - employment at will
+    - fired unfairly
+  Other:
+    - workplace safety
+    - OSHA
+    - employee privacy
+    - workplace investigations
+    - employment litigation
+    - interactive process
+    - constructive discharge
+    - exempt-status misclassification
+    - reasonable accommodation request
+    - hostile work environment
+
+Real Property:
+  Agriculture/Farm:
+    - farm property
+    - agricultural land
+    - rural property
+    - farm lease
+    - farm zoning
+    - agricultural easements
+  Condemnation:
+    - condemnation
+    - eminent domain
+    - government taking
+    - just compensation
+    - property seizure
+    - inverse condemnation
+  Construction/Contractors:
+    - construction property
+    - real estate contractor dispute
+    - building codes
+    - property development
+    - construction lien
+    - real estate construction
+  Eminent Domain:
+    - eminent domain
+    - condemnation
+    - government taking
+    - just compensation
+    - property seizure
+    - inverse condemnation
+  Environmental:
+    - environmental property law
+    - land contamination
+    - brownfield
+    - environmental due diligence
+    - property pollution
+    - property hazardous materials
+  Foreclosure:
+    - foreclosure
+    - mortgage foreclosure
+    - judicial foreclosure
+    - non-judicial foreclosure
+    - short sale
+    - deed in lieu
+    - foreclosure defense
+  General (Commercial):
+    - commercial real estate
+    - commercial property
+    - commercial lease
+    - commercial purchase agreement
+    - commercial development
+    - business property
+  General (Residential):
+    - residential real estate
+    - residential property
+    - home purchase
+    - home sale
+    - residential lease
+    - property deed
+    - home ownership
+  Government Loans (VA, FHA, etc.):
+    - VA loan
+    - FHA loan
+    - government-backed mortgage
+    - USDA loan
+    - government housing assistance
+    - federal housing programs
+  Section 8/HUD:
+    - section 8
+    - HUD
+    - housing choice voucher
+    - subsidized housing
+    - public housing assistance
+  Homeowners Assoc:
+    - HOA law
+    - homeowners association
+    - condo association
+    - covenants, conditions, and restrictions
+    - CC&Rs
+    - HOA
+    - association rules
+  Land Use/Zoning:
+    - variance application
+    - conditional use permit
+    - non-conforming use
+    - rezoning petition
+    - comprehensive plan amendment
+    - development code
+    - land use law
+    - zoning law
+  Landlord Commercial:
+    - my commercial tenant stopped paying rent
+    - evict my commercial tenant
+    - serving a default notice to my commercial tenant
+    - enforce the personal guaranty on my lease
+    - collect past due commercial rent from tenant
+    - commercial tenant holding over
+    - tenant not paying CAM or NNN charges
+    - enforcing my commercial lease terms
+    - commercial tenant broke the lease
+    - tenant subleased without my consent
+  Landlord Residential:
+    - my tenant
+    - serving a pay or quit to my tenant
+    - evicting my tenant for nonpayment
+    - evicting my tenant for a lease violation
+    - filing unlawful detainer against my tenant
+    - holdover tenant
+    - stopped paying rent
+    - damaged the unit
+    - keeping part of the security deposit for damage
+    - broke the lease early
+    - collecting unpaid rent from my tenant
+    - tenant claiming my unit is uninhabitable
+    - removing unauthorized occupants from my rental
+  Litigation:
+    - real estate litigation
+    - property dispute
+    - boundary dispute
+    - title dispute
+    - real estate lawsuit
+    - property lawsuit
+  ADA Issues/Animals/Accommodations:
+    - ADA
+    - fair housing act
+    - emotional support animal
+    - service animal
+    - housing reasonable accommodation
+    - disability housing rights
+  Mining Oil & Gas:
+    - mining law
+    - oil and gas law
+    - mineral rights
+    - drilling rights
+    - natural resource extraction
+    - energy law
+  Mobile Home (Landlord):
+    - mobile home landlord
+    - mobile home park law
+    - mobile home lot lease
+    - mobile home eviction
+  Mobile Home (Tenant/Owner):
+    - mobile home tenant
+    - mobile home owner
+    - mobile home park rights
+    - mobile home title
+    - mobile home dispute
+  Property Tax:
+    - property tax
+    - real estate tax
+    - tax assessment
+    - property tax appeal
+    - tax lien
+    - ad valorem tax
+  Tenant (Commercial):
+    - I am a commercial tenant
+    - review my commercial lease
+    - negotiating my commercial lease terms
+    - defending a commercial eviction
+    - want to end my commercial lease early
+    - dispute a commercial rent increase
+    - dispute CAM or NNN charges my landlord billed
+    - enforce my exclusive use clause
+    - need consent to sublease or assign
+    - dispute my build-out allowance
+  Tenant (Residential):
+    - my landlord
+    - my rent
+    - got a pay or quit notice
+    - fighting an eviction
+    - my eviction
+    - being evicted
+    - getting kicked out
+    - getting evicted
+    - eviction for nonpayment of rent
+    - eviction for a lease violation
+    - my security deposit was not returned
+    - refuses repairs
+    - won't repair my apartment
+    - repair and deduct
+    - lower my rent
+    - my apartment is uninhabitable
+    - mold in my apartment
+    - illegal lockout by landlord
+    - landlord shut off my utilities
+    - landlord retaliation for complaints
+    - rent increase notice from landlord
+    - breaking my lease
+    - got an eviction
+    - landlord entering without notice
+  Water Law:
+    - water law
+    - water rights
+    - riparian rights
+    - appropriation doctrine
+    - groundwater
+    - surface water
+    - water allocation
+  Other:
+    - easement
+    - right of way
+    - property boundaries
+    - boundary encroachment
+    - adverse possession
+    - quiet title
+    - title defect
+    - real estate transactions
+    - property law
+    - non-conforming use
+    - short-term rental ordinance
+    - vacation rental compliance
+
+Taxation:
+  Business & Corporate:
+    - business tax
+    - corporate tax
+    - corporate income tax
+    - payroll tax
+    - business sales tax
+    - business deductions
+  Criminal:
+    - tax fraud
+    - tax evasion
+    - criminal tax
+    - IRS investigation
+    - tax crime
+    - tax penalties
+  Estate & Gift:
+    - estate tax
+    - gift tax
+    - inheritance tax
+    - probate tax
+    - tax estate planning
+    - wealth transfer tax
+  Litigation:
+    - tax litigation
+    - IRS audit
+    - tax court
+    - tax dispute
+    - tax appeal
+    - tax controversy
+  Personal Income:
+    - personal income tax
+    - income tax return
+    - tax deductions
+    - tax credits
+    - tax planning
+    - 1040
+    - 1040EZ
+  Other:
+    - general property tax
+    - state tax
+    - local tax
+    - tax compliance
+    - general tax law
+    - tax advice
+    - offer in compromise
+    - innocent spouse relief
+    - installment agreement
+    - tax lien release
+    - CP2000 notice
+    - IRS
+
+Wills & Trusts:
+  Conservatorship/Guardianship:
+    - conservatorship
+    - adult guardianship
+    - incapacitated adult
+    - legal elder care
+    - adult protection
+    - guardianship probate court
+  Document Review:
+    - will review
+    - trust review
+    - estate planning documents
+    - power of attorney review
+    - advance directive review
+  Elder Abuse:
+    - elder abuse
+    - financial elder abuse
+    - elderly neglect
+    - undue influence
+    - elder exploitation
+    - adult protective services
+  General (Wills/Trusts/Estates):
+    - wills
+    - trusts
+    - estates
+    - estate planning
+    - probate
+    - last will and testament
+    - living trust
+    - testamentary trust
+  Litigation:
+    - will contest
+    - trust litigation
+    - probate litigation
+    - estate dispute
+    - fiduciary litigation
+    - inheritance dispute
+  Living Trusts:
+    - living trust
+    - revocable trust
+    - irrevocable trust
+    - trust administration
+    - avoid probate
+    - grantor trust
+  Long-term Care Issues:
+    - long-term care planning
+    - elderly Medicaid planning
+    - nursing home costs
+    - long-term care asset protection
+    - elder law
+  Medicare/Medicaid Planning:
+    - Medicare planning
+    - Medicaid planning
+    - elder care benefits
+    - healthcare directives
+    - medical power of attorney
+  Power of Attorney:
+    - power of attorney
+    - POA
+    - durable power of attorney
+    - financial power of attorney
+    - healthcare power of attorney
+    - power of attorney agent
+  Probate:
+    - personal representative
+    - executor appointment
+    - letters testamentary
+    - intestate succession
+    - probate inventory
+    - creditor claim period
+    - small estate affidavit
+    - probate
+  Reversing Guardianship or Payee Assignments:
+    - reverse guardianship
+    - terminate guardianship
+    - payee assignment
+    - restore adult rights
+    - conservatorship termination
+  Special Needs/Inc. Cap Trusts:
+    - special needs trust
+    - supplemental needs trust
+    - disability trust
+    - incapacity planning
+    - trust Medicaid eligibility
+  Other:
+    - advance directive
+    - living will
+    - beneficiary designation
+    - general estate administration
+    - general trust administration
+    - fiduciary accounting
+    - letters testamentary
+    - small estate affidavit
+    - trust contest
+    - special needs trust
+
+Workers' Comp:
+  Employers:
+    - employer workers' comp
+    - workers' comp employer liability
+    - employer's workers' comp insurance
+    - employer workplace injury
+  Federal:
+    - federal workers' comp
+    - FECA
+    - Longshore and Harbor Workers' Compensation Act
+    - federal employee injury
+    - OWCP
+  LHWA:
+    - LHWA
+    - Longshore and Harbor Workers' Compensation Act
+    - maritime workers' comp
+    - dock worker injury
+    - harbor worker claim
+  State:
+    - state workers' comp
+    - state workers' compensation claim
+    - state industrial insurance
+    - state work injury
+  Stress Related:
+    - stress-related workers' comp
+    - work mental health claim
+    - work psychological injury
+    - workplace stress
+  Third Party Litigation:
+    - third-party workers' comp
+    - work injury third-party lawsuit
+    - workers' comp subrogation
+    - work injury product liability
+  Other:
+    - workers' compensation
+    - work injury
+    - occupational disease
+    - workers' comp medical benefits
+    - workers' comp lost wages
+    - permanent disability
+    - job injury
+    - injured on the job
+    - injured at my job

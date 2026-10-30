@@ -1,0 +1,42 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.venv/
+venv/
+
+# Runtime and tool output
+*.log
+cache/
+.promptfoo/
+.serverless/
+node_modules/
+.npm/
+.next/
+.open-next/
+out/
+*.tsbuildinfo
+
+# Editor/agent state and OS metadata
+.agents/
+.codex
+.DS_Store
+*:Zone.Identifier
+
+# Private validations and generated results must remain local.
+private-data/
+results/
+promptfoo/EXPERIMENT_LOGS/
+promptfoo/*.csv
+!promptfoo/synthetic_examples.csv
+*.xlsx
+*.sqlite*
+*.db

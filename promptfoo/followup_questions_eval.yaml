@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+description: Follow-up question generation quality (heuristics + LLM-graded + readability)
+
+tags:
+  suite: followups
+
+prompts:
+  - "{{problem_description}}"
+
+tests: file://synthetic_examples.csv
+
+providers:
+  - id: file://promptfoo_classifier_provider.py
+    label: cheap-providers-ensemble
+    config:
+      enabled_providers: ["gpt-5.2", "gemini", "mistral", "keyword", "spot"]
+      decision_mode: "vote"
+      taxonomy_name: "default"
+      include_debug_details: false
+      enable_screening_protocols: false
+      legacy_screening: false
+      disable_telemetry: true
+      cache_enabled: false
+      display_format: true
+
+defaultTest:
+  options:
+    # Grader model for llm-rubric assertions
+    provider:
+      id: openai:gpt-5.2
+    rubricPrompt: |
+      [
+        {
+          "role": "system",
+          "content": "You are an evaluator of follow-up questions for a legal-intake assistant. Return JSON only: {\"reason\": string, \"pass\": boolean, \"score\": number}.\n\nScoring: 1 = meets the rubric, 0.5 = borderline/minor issues, 0 = clear failure. If borderline, pass but note concerns in reason.\n\nIMPORTANT: If the output starts with 'SKIP:', immediately return {\"pass\": true, \"score\": 1, \"reason\": \"No follow-up questions needed (valid outcome)\"}."
+        },
+        {
+          "role": "user",
+          "content": "User's question: `{{problem_description}}`\n\nOutput to evaluate:\n\n{{ output }}\n\nRubric:\n\n{{ rubric }}"
+        }
+      ]
+  assert:
+    # Ensure we can parse the provider response (handles raw_json metadata, <!-- RAW_JSON:...--> wrapper, or plain JSON)
+    - type: javascript
+      value: |
+        try {
+          let raw = context?.providerResponse?.metadata?.raw_json ?? output;
+          // Try to extract from <!-- RAW_JSON:...--> wrapper if present
+          const wrapperMatch = raw.match(/<!-- RAW_JSON:(.+?)-->/s);
+          if (wrapperMatch) { raw = wrapperMatch[1]; }
+          // Strip markdown fences if present
+          raw = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+          const parsed = typeof raw === "string" ? JSON.parse(raw) : raw;
+          return { pass: !!parsed, score: 1, reason: "Valid JSON output" };
+        } catch (e) {
+          return { pass: false, score: 0, reason: "Output is not valid JSON: " + e.message };
+        }
+
+    # -------------------------
+    # CHEAP / OBJECTIVE HEURISTICS (must-have gates first)
+    # -------------------------
+
+    # Sentence length (complements FKGL/Dale-Chall):
+    # catches clause-heavy questions even if readability score is ok.
+    # Relaxed from 28 to 32 average words to allow for complex legal questions.
+    - type: python
+      metric: followup_sentence_length_ok
+      threshold: 1
+      value: file://assertions/followup_heuristics.py:sentence_length_ok
+      config:
+        max_avg_sentence_words: 32
+        max_max_sentence_words: 45
+
+    # Readability: question text ≤ 9th grade (Dale-Chall score ≤ 7.9 ≈ 9th-10th grade)
+    - type: python
+      metric: followup_dale_chall_grade
+      threshold: 0
+      value: file://assertions/followup_textstat_grade.py
+      config:
+        max_dale_chall_grade: 7.9
+
+    # FKGL absolute score (display-only; pass if <= 14)
+    - type: python
+      metric: followup_fkgl_grade_level
+      threshold: 0
+      weight: 0
+      value: file://assertions/followup_textstat_grade.py:get_fkgl_assert
+      config:
+        max_fkgl_grade: 14
+    # -------------------------
+    # LLM-GRADED ASSERTIONS (semantic checks)
+    # -------------------------
+
+    # 1) Responsive to original query (semantic relevance / routing value)
+    # Note: If no follow-up question is generated, this passes with score 1. This is now a valid outcome.
+    - type: llm-rubric
+      metric: followup_relevant
+      threshold: 0.5
+      transform: "(() => { if (output.trim().startsWith('SKIP:')) { return output; } try { const match = output.match(/<!-- RAW_JSON:(.+?)-->/s); const raw = match ? match[1] : output; const data = JSON.parse(raw); if (!data) { return 'ERROR: Could not parse JSON'; } const questions = []; if (data.follow_up_questions && data.follow_up_questions.length > 0) { data.follow_up_questions.forEach((q, i) => { let qText = `Q${i+1}: ${q.question}`; if (q.options && Array.isArray(q.options) && q.options.length > 0) { qText += '\\n  Options: ' + q.options.map((o, j) => String.fromCharCode(65+j) + ') ' + o).join(', '); } questions.push(qText); }); } else if (data.question) { let qText = `Q1: ${data.question}`; if (data.options && Array.isArray(data.options) && data.options.length > 0) { qText += '\\n  Options: ' + data.options.map((o, j) => String.fromCharCode(65+j) + ') ' + o).join(', '); } questions.push(qText); } if (questions.length === 0) { return 'SKIP: No follow-up questions generated (valid outcome: issue was clear enough)'; } return questions.join('\\n\\n'); } catch (e) { return 'ERROR: ' + e.message; } })()"
+      value: |
+        Evaluate if ALL the questions are relevant to the original query and goal of classifying the user's problem:
+        * Each question, if answered, would add information that would lead to a more accurate classification of the user's legal problem.
+        * No question asks the user to repeat information that the user has already provided.
+        * No question asks about something unnecessary to the classification, such as which venue or kind of relief the user is looking for.
+        * The options, if any, are clearly related to their respective questions and cover distinct possible answers.
+
+        SPECIAL CASE: If the input starts with "SKIP: No follow-up questions generated", return {"pass": true, "score": 1} because no questions were needed (valid outcome).
+
+        Return {"pass": true, "score": 1} if ALL questions are relevant, {"pass": false, "score": 0} if ANY question is generic or unrelated.
+
+    # 2) Readability / Plain language (no unexplained legal jargon)
+    # Note: If no follow-up question is generated, this passes with score 1 (no jargon to evaluate).
+    - type: llm-rubric
+      metric: followup_jargon_appropriate
+      threshold: 0.5
+      transform: "(() => { if (output.trim().startsWith('SKIP:')) { return output; } try { const match = output.match(/<!-- RAW_JSON:(.+?)-->/s); const raw = match ? match[1] : output; const data = JSON.parse(raw); const questions = []; if (data.follow_up_questions && data.follow_up_questions.length > 0) { data.follow_up_questions.forEach((q, i) => { let qText = `Q${i+1}: ${q.question}`; if (q.options && Array.isArray(q.options) && q.options.length > 0) { qText += '\\n  Options: ' + q.options.map((o, j) => String.fromCharCode(65+j) + ') ' + o).join(', '); } questions.push(qText); }); } else if (data.question) { let qText = `Q1: ${data.question}`; if (data.options && Array.isArray(data.options) && data.options.length > 0) { qText += '\\n  Options: ' + data.options.map((o, j) => String.fromCharCode(65+j) + ') ' + o).join(', '); } questions.push(qText); } if (questions.length === 0) { return 'SKIP: No follow-up questions generated (valid outcome)'; } return questions.join('\\n\\n'); } catch (e) { return 'ERROR: ' + e.message; } })()"
+      value: |
+        Check if ALL the questions use plain language accessible to a typical user, without unexplained legal jargon.
+
+        A legal/technical term is ALLOWED only if:
+        1. The user used the SAME term in their original query (echo), OR
+        2. The question includes an immediate plain-English explanation in parentheses, dashes, or appositive (gloss)
+           Example: "executor (the person responsible for handling the estate)"
+
+        Consider for EACH question:
+        * Vocabulary: Does each legal term meet the echo-or-gloss rule above?
+        * Syntax: Is the sentence reasonably clear with simple structure?
+
+        SPECIAL CASE: If the input starts with "SKIP:", return {"pass": true, "score": 1}.
+
+        Return {"pass": true, "score": 1} if ALL terms are echoed or glossed, {"pass": true, "score": 0.5} if minor issues (note in reason), {"pass": false, "score": 0} if unexplained jargon that a typical user wouldn't understand.

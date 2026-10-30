@@ -1,0 +1,16 @@
+# Runtime source allowlist: datasets, secrets, tests and local state stay out.
+**
+!requirements.txt
+!app/**/*.py
+!app/prompts/*.txt
+!app/data/taxonomy_detailed_descriptions.csv
+!app/data/taxonomy.csv
+!app/data/list-taxonomy.csv
+!app/data/list_taxonomy_mapping.csv
+!app/data/taxonomy_keywords.yaml
+!app/data/taxonomy_hints_default.yaml
+!app/dashboard/static/*.html
+!app/dashboard/static/*.css
+!app/dashboard/static/*.js
+!LICENSE
+!NOTICE

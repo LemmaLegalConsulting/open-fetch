@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+description: Selection algorithm regression evals for the default singleton-rescue selector
+
+tags:
+  suite: selection
+
+prompts:
+  - "{{problem_description}}"
+
+tests: file://synthetic_examples.csv
+
+providers:
+  - id: file://promptfoo_classifier_provider.py
+    label: singleton-rescue-default
+    config:
+      enabled_providers: ["gemini", "mistral", "keyword", "spot"]
+      decision_mode: "vote"
+      taxonomy_name: "default"
+      include_debug_details: false
+      cache_enabled: false
+      display_format: false
+      disable_telemetry: true
+
+defaultTest:
+  assert:
+    - type: javascript
+      value: |
+        const norm = (s) => (s ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
+        const parseOutput = () => {
+          let raw = context?.providerResponse?.metadata?.raw_json ?? output;
+          if (typeof raw === 'string') {
+            const wrapperMatch = raw.match(/<!-- RAW_JSON:(.+?)-->/s);
+            if (wrapperMatch) raw = wrapperMatch[1];
+            raw = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+          }
+          return typeof raw === 'string' ? JSON.parse(raw) : raw;
+        };
+
+        try {
+          const data = parseOutput();
+          const labels = Array.isArray(data?.labels) ? data.labels : [];
+          const normalizedLabels = labels.map((label) => norm(label?.label));
+          const normalizedTopLevels = [...new Set(normalizedLabels.map((label) => label.split(' > ')[0]))];
+          const suite = context.vars.suite;
+
+          if (suite === 'incorrect_results' && context.vars.expected_top_levels_all) {
+            const expectedTopLevels = context.vars.expected_top_levels_all
+              .split('||')
+              .map((value) => norm(value))
+              .filter(Boolean);
+            const minMatches = Number(context.vars.min_expected_top_levels || expectedTopLevels.length || 1);
+            const matched = expectedTopLevels.filter((value) => normalizedTopLevels.includes(value));
+            const score = expectedTopLevels.length > 0 ? matched.length / expectedTopLevels.length : 0;
+            const pass = matched.length >= minMatches;
+            return {
+              pass,
+              score,
+              reason: pass
+                ? `Matched top levels ${matched.join(', ')} (${matched.length}/${expectedTopLevels.length})`
+                : `Expected at least ${minMatches} of [${expectedTopLevels.join(', ')}], got [${normalizedTopLevels.join(', ')}]`,
+            };
+          }
+
+          const expectedCategory = norm(context.vars.expected_category);
+          const expectedSubcategory = context.vars.expected_subcategory ? norm(context.vars.expected_subcategory) : null;
+          const expectedFull = expectedSubcategory ? `${expectedCategory} > ${expectedSubcategory}` : expectedCategory;
+
+          let score = 0;
+          let pass = false;
+          let reason = `Expected '${expectedFull}', but got [${normalizedLabels.join(', ')}]`;
+
+          for (const label of normalizedLabels) {
+            const [labelCategory, labelSubcategory] = label.split(' > ');
+
+            if (expectedSubcategory) {
+              if (label === expectedFull) {
+                score = 1;
+                pass = true;
+                reason = `Exact match found: ${label}`;
+                break;
+              }
+            } else if (labelCategory === expectedCategory) {
+              score = 1;
+              pass = true;
+              reason = `Top-level match found: ${label}`;
+              break;
+            }
+
+            if (labelCategory === expectedCategory) {
+              score = Math.max(score, 0.5);
+              pass = true;
+              reason = `Partial top-level match found: ${label}`;
+            }
+          }
+
+          return { pass, score, reason };
+        } catch (err) {
+          return { pass: false, score: 0, reason: `Output parse failure: ${err.message}` };
+        }

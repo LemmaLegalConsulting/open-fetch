@@ -1,0 +1,158 @@
+# Family / domestic relations
+
+alimony
+child support
+custody
+dependent
+divorce
+domestic
+household
+marriage
+minor
+parenting
+separation
+spouse
+support
+visitation
+
+# Domestic violence
+
+abuse
+abuser
+assault
+domestic violence
+emergency
+harassment
+stalker
+stalking
+violent
+
+# Legal roles & parties
+
+attorney
+lawyer
+parties
+party
+victim
+witness
+
+# Court & procedure basics
+
+arrest
+citation
+clerk
+court
+courthouse
+deadline
+file
+filing
+hearing
+judge
+notice
+order
+parole
+schedule
+sheriff
+trial
+warrant
+
+# Orders, remedies & restrictions
+
+emergency
+permanent
+require
+temporary
+
+# Forms & documents
+
+attachment
+form
+statement
+
+# Money & property
+
+account
+balance
+debt
+expense
+home
+income
+payment
+property
+rent
+
+# Case status & timing
+
+completed
+current
+dismissed
+final
+ongoing
+pending
+previous
+
+# Modern words
+
+account
+application
+apply
+attachment
+background check
+bankruptcy
+child support enforcement
+confirmation
+court order
+criminal record
+deadline extension
+download
+email
+eviction
+foreclosure
+fraud
+identity theft
+internet
+link
+login
+message
+no contact
+notification
+online
+password
+portal
+protective order
+reference number
+request
+restraining order
+review
+scam
+scan
+screenshot
+status
+submit online
+text
+text message
+tracking
+update
+upload
+url
+voicemail
+website
+social security
+agency
+
+# Common acronyms
+
+FBI
+SSDI
+SSI
+SSA
+TAFDC
+SNAP
+IRS
+RMV
+DMV
+HUD
+ADA
+DUI
+DUII
+OUI

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic
+openai>=2.7.2
+pyyaml
+httpx
+tenacity>=8.2.0
+diskcache
+opentelemetry-sdk==1.40.0
+opentelemetry-exporter-otlp-proto-http==1.40.0
+azure-monitor-opentelemetry-exporter==1.0.0b51
+boto3>=1.35.0,<2

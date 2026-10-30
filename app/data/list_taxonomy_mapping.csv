@@ -1,0 +1,1108 @@
+list_code,list_title,mapped_category,mapped_subcategory
+BE-00-00-00-00,"Public Benefits",Administrative Law,General (State)
+BE-01-00-00-00,"Disability public benefits",Administrative Law,SSD (Social Security Disability)
+BE-01-01-00-00,"State and local benefits for the disabled",Administrative Law,General (State)
+BE-01-02-00-00,"Social Security Disability Insurance (SSDI)",Administrative Law,SSD (Social Security Disability)
+BE-01-03-00-00,"Supplemental Security Income (SSI)",Administrative Law,Social Security/SSI
+BE-01-03-00-00,"Overpayment of Social Security",Administrative Law,SSD (Social Security Disability)
+BE-01-04-00-00,"In-home supportive service disability benefits",Administrative Law,Medicare/Medicaid
+BE-02-00-00-00,"Food and Cash benefits",Administrative Law,Welfare
+BE-02-01-00-00,"SNAP (Food Stamp) benefits",Administrative Law,Welfare
+BE-02-01-01-00,"Eligibility and Applications for SNAP (food stamp) benefits",Administrative Law,Welfare
+BE-02-01-01-01,"Determining eligibility for SNAP (food stamp) benefits",Administrative Law,Welfare
+BE-02-01-01-02,"Expedited issuance of SNAP benefits",Administrative Law,Welfare
+BE-02-01-01-03,"Immigrants' Eligibility for SNAP benefits",Administrative Law,Welfare
+BE-02-01-01-04,"Disability and eligibility for SNAP food stamps",Administrative Law,Welfare
+BE-02-01-02-00,"Emergency SNAP (food stamp) benefits",Administrative Law,Welfare
+BE-02-01-03-00,"Electronic Benefits Transfer (EBT) system and cards",Administrative Law,Welfare
+BE-02-01-04-00,"Fraud in getting SNAP benefits",Administrative Law,Welfare
+BE-02-01-05-00,"Being charged with Intentional Program Violations of SNAP",Administrative Law,Welfare
+BE-02-01-06-00,"Underpayment of SNAP benefits",Administrative Law,Welfare
+BE-02-01-07-00,"Overpayment and Recoupment of SNAP benefits",Administrative Law,Welfare
+BE-02-01-08-00,"Reduction or Termination of SNAP benefits",Administrative Law,Welfare
+BE-02-02-00-00,"Temporary Assistance for Needy Families benefits (TANF)",Administrative Law,Welfare
+BE-02-02-01-00,"Applications and Eligibility for TANF",Administrative Law,Welfare
+BE-02-02-01-01,"Application process for TANF benefits",Administrative Law,Welfare
+BE-02-02-01-02,"Eligibility standards for TANF benefits",Administrative Law,Welfare
+BE-02-02-01-03,"Income, assets, and eligibility for TANF benefits",Administrative Law,Welfare
+BE-02-02-01-04,"Available income for TANF benefits",Administrative Law,Welfare
+BE-02-02-01-05,"Income disregards for TANF benefits",Administrative Law,Welfare
+BE-02-02-01-06,"Assets and resources' effect on TANF benefits eligibility",Administrative Law,Welfare
+BE-02-02-01-07,"Defining the family unit for TANF eligibility",Administrative Law,Welfare
+BE-02-02-01-08,"Immigrants' Eligibility for TANF benefits",Administrative Law,Welfare
+BE-02-02-01-09,"Residency requirements to receive TANF",Administrative Law,Welfare
+BE-02-02-01-11,"Teen parents' eligibility for TANF",Administrative Law,Welfare
+BE-02-02-03-00,"Amount of money received through TANF",Administrative Law,Welfare
+BE-02-02-03-01,"Child-Only TANF benefit calculations",Administrative Law,Welfare
+BE-02-02-03-02,"Child exclusions and family caps for TANF benefit calculations",Administrative Law,Welfare
+BE-02-02-03-03,"Money sanctions for TANF recipients",Administrative Law,Welfare
+BE-02-02-03-04,"Housing or Shelter Allowance on TANF",Administrative Law,Welfare
+BE-02-02-03-05,"TANF standards to calculate financial need",Administrative Law,Welfare
+BE-02-02-03-06,"TANF amounts for support services",Administrative Law,Welfare
+BE-02-02-04-00,"TANF and child support obligations",Family Law,Child Support/Modification
+BE-02-02-05-00,"TANF diversion programs ",Administrative Law,Welfare
+BE-02-02-05-01,"Lump Sum Payments to TANF applicants",Administrative Law,Welfare
+BE-02-02-06-00,"Appealing a TANF benefits decision",Administrative Law,General (State)
+BE-02-02-06-01,"Due process protections around TANF",Administrative Law,General (State)
+BE-02-02-07-00,"Receiving TANF benefits through electronic benefits transfer (EBT)",Administrative Law,Welfare
+BE-02-02-08-00,"Emergency TANF benefits",Administrative Law,Welfare
+BE-02-02-09-00,"Fraud in receiving TANF benefits",Administrative Law,Welfare
+BE-02-02-10-00,"Requirements to stay on TANF benefits",Administrative Law,Welfare
+BE-02-02-10-01,"Job search requirements for TANF benefits",Administrative Law,Welfare
+BE-02-02-10-04,"TANF Assessments and Individual Responsibility Plans",Administrative Law,Welfare
+BE-02-02-10-05,"TANF work requirements and education or vocational training",Administrative Law,Welfare
+BE-02-02-11-00,"Over- or Under-payment of TANF Benefits",Administrative Law,Welfare
+BE-02-02-11-01,"Overpayment and Recoupment of TANF Benefits",Administrative Law,Welfare
+BE-02-02-11-02,"Underpayment of TANF benefits",Administrative Law,Welfare
+BE-02-02-12-00,"Termination of TANF benefits",Administrative Law,Welfare
+BE-02-02-12-01,"Time limit on receiving TANF",Administrative Law,Welfare
+BE-02-03-00-00,"General Assistance from a state or local government",Administrative Law,General (State)
+BE-02-04-00-00,"Supplemental Food Program for Women, Infants and Children (WIC)",Administrative Law,Welfare
+BE-02-05-00-00,"State Funded Cash Assistance",Administrative Law,General (State)
+BE-02-06-00-00,"Appealing a food or cash benefits decision",Administrative Law,General (State)
+BE-03-00-00-00,"Health public benefits and medical assistance programs",Administrative Law,Medicare/Medicaid
+BE-03-01-00-00,"State and Local Medical assistance programs ",Administrative Law,General (State)
+BE-03-02-00-00,"Medicaid health coverage",Administrative Law,Medicare/Medicaid
+BE-03-02-01-00,"Medicaid Home And Community Based Services",Administrative Law,Medicare/Medicaid
+BE-03-02-01-01,"Traumatic Brain Injury Waiver program for Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-02-00,"Eligibility and applications for Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-02-02,"Application process for Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-02-03,"Asset Limits for Medicaid eligibility",Administrative Law,Medicare/Medicaid
+BE-03-02-02-04,"Available Income and eligibility for Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-02-06,"Spend Down strategy to be eligible for Medicaid",Wills & Trusts,Medicare/Medicaid Planning
+BE-03-02-02-07,"Transferring assets to qualify for Medicaid",Wills & Trusts,Medicare/Medicaid Planning
+BE-03-02-03-00,"Medicaid coverage of particular procedures or treatments",Administrative Law,Medicare/Medicaid
+BE-03-02-03-01,"Medicaid coverage of abortion",Administrative Law,Medicare/Medicaid
+BE-03-02-03-02,"Medicaid coverage of breast and cervical cancer treatment",Administrative Law,Medicare/Medicaid
+BE-03-02-03-03,"Medicaid coverage of birth control and family planning",Administrative Law,Medicare/Medicaid
+BE-03-02-03-04,"Medicaid coverage of dental services",Administrative Law,Medicare/Medicaid
+BE-03-02-03-05,"Medicaid coverage of Durable Medical Equipment",Administrative Law,Medicare/Medicaid
+BE-03-02-03-06,"Medicaid coverage of optical services",Administrative Law,Medicare/Medicaid
+BE-03-02-03-07,"Medicaid coverage of prescriptions",Administrative Law,Medicare/Medicaid
+BE-03-02-03-08,"Medicaid coverage of nursing home care and assistance",Wills & Trusts,Long-Term Care Issues
+BE-03-02-04-00,"Appealing Medicaid decisions",Administrative Law,Medicare/Medicaid
+BE-03-02-04-01,"Appealing Medicaid coverage decision",Administrative Law,Medicare/Medicaid
+BE-03-02-04-02,"Appealing Medicaid decision on eligibility",Administrative Law,Medicare/Medicaid
+BE-03-02-05-00,"Cost-sharing, Premiums, and Out-of-Pocket costs on Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-06-00,"Being eligible for both Medicaid and Medicare",Administrative Law,Medicare/Medicaid
+BE-03-02-07-00,"Medicaid Overpayment and Recoupment",Administrative Law,Medicare/Medicaid
+BE-03-02-08-00,"Suing to enforce the Medicaid Act",Administrative Law,General (Federal)
+BE-03-02-09-00,"Termination of Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-10-00,"Underpayment by Medicaid",Administrative Law,Medicare/Medicaid
+BE-03-02-11-00,"Medicaid and child support obligations",Family Law,Child Support/Modification
+BE-03-03-00-00,"Medicare health coverage",Administrative Law,Medicare/Medicaid
+BE-03-03-01-00,"Eligibility and Applications for Medicare",Administrative Law,Medicare/Medicaid
+BE-03-03-01-01,"Application process for Medicare",Administrative Law,Medicare/Medicaid
+BE-03-03-01-02,"Income limits on Medicare eligibility",Administrative Law,Medicare/Medicaid
+BE-03-03-02-00,"Appealing Medicare decisions",Administrative Law,Medicare/Medicaid
+BE-03-03-02-01,"Appealing Medicare coverage decisions",Administrative Law,Medicare/Medicaid
+BE-03-03-02-02,"Appealing Medicare eligibility decision",Administrative Law,Medicare/Medicaid
+BE-03-03-03-00,"Medicare coverage of particular procedures or treatments",Administrative Law,Medicare/Medicaid
+BE-03-03-03-01,"Medicare coverage of extended care, rehab, and nursing care",Administrative Law,Medicare/Medicaid
+BE-03-03-03-02,"Medicare coverage of hospital services",Administrative Law,Medicare/Medicaid
+BE-03-03-03-04,"Medicare coverage of skilled nursing care",Administrative Law,Medicare/Medicaid
+BE-03-03-04-00,"Cost-sharing, Premiums, and Out-of-Pocket costs on Medicare",Administrative Law,Medicare/Medicaid
+BE-03-03-05-00,"Termination of Medicare coverage",Administrative Law,Medicare/Medicaid
+BE-03-03-06-00,"Underpayment by Medicare program",Administrative Law,Medicare/Medicaid
+BE-03-03-07-00,"Overpayment and recoupment of Medicare payments",Administrative Law,Medicare/Medicaid
+BE-03-03-08-00,"Medigap Supplement Insurance for Medicare beneficiaries",Consumer Law,Insurance
+BE-03-03-09-00,"Medicare Part A for inpatient care",Administrative Law,Medicare/Medicaid
+BE-03-03-10-00,"Medicare Part B for outpatient services and equipment",Administrative Law,Medicare/Medicaid
+BE-03-03-11-00,"Medicare Part C (Medicare Advantage)",Administrative Law,Medicare/Medicaid
+BE-03-03-12-00,"Medicare Part D for prescription drugs",Administrative Law,Medicare/Medicaid
+BE-03-05-00-00,"Children's Health Insurance Programs (CHIP) for kids and pregnant women",Administrative Law,Medicare/Medicaid
+BE-03-05-01-00,"Eligibility for Children's Health Insurance Programs",Administrative Law,Medicare/Medicaid
+BE-03-05-02-00,"Appealing denial of CHIP coverage",Administrative Law,Medicare/Medicaid
+BE-03-05-03-00,"Dental services through CHIP",Administrative Law,Medicare/Medicaid
+BE-03-05-04-00,"Coverage of health issues on CHIP",Administrative Law,Medicare/Medicaid
+BE-03-05-05-00,"Early Periodic Screening, Diagnosis, and Treatment program for children",Administrative Law,Medicare/Medicaid
+BE-03-05-06-00,"Children's protections against Lead Poisoning and Asthma",General Litigation,Health Law/HIPAA
+BE-03-07-00-00,"Prescription Drug payment assistance",Administrative Law,Medicare/Medicaid
+BE-04-00-00-00,"Unemployment Benefits, Compensation, and Insurance",Administrative Law,Unemployment
+BE-04-01-00-00,"Applying for Unemployment Insurance benefits",Administrative Law,Unemployment
+BE-04-02-00-00,"Eligibility for Unemployment benefits",Administrative Law,Unemployment
+BE-04-02-01-00,"'Ability to Work' criteria for Unemployment benefits",Administrative Law,Unemployment
+BE-04-02-02-00,"Eligibility for unemployment benefits if you quit",Administrative Law,Unemployment
+BE-04-02-03-00,"Eligibility for unemployment benefits after misconduct",Administrative Law,Unemployment
+BE-04-03-00-00,"Unemployment Benefit amounts and time-lengths",Administrative Law,Unemployment
+BE-04-04-00-00,"Termination of Unemployment Benefits",Administrative Law,Unemployment
+BE-04-04-01-00,"Termination of unemployment benefits for turning down a job",Administrative Law,Unemployment
+BE-04-04-02-00,"Termination of unemployment benefits for unavailability for work",Administrative Law,Unemployment
+BE-04-05-00-00,"Denial or Disqualification from unemployment benefits",Administrative Law,Unemployment
+BE-04-06-00-00,"Unemployment benefits hearings to contest a decision",Administrative Law,Unemployment
+BE-04-07-00-00,"Overpayment and Recoupment of unemployment benefits",Administrative Law,Unemployment
+BE-04-10-00-00,"Unemployment Benefits during a public health emergency",Administrative Law,Unemployment
+BE-05-00-00-00,"Utilities, Energy, and Heating benefits at home",Administrative Law,Utilities
+BE-05-01-00-00,"Help with Internet costs (Affordable Connectivity Program)",Administrative Law,Utilities
+BE-06-00-00-00,"Public Benefits for Veterans and Military",Administrative Law,Military/Veterans
+BE-06-01-00-00,"Disability benefits for veterans and military",Administrative Law,Military/Veterans
+BE-06-02-00-00,"Appealing Veterans Affairs Benefits Decision",Administrative Law,Military/Veterans
+BE-06-03-00-00,"Education benefits for veterans and military",Administrative Law,Military/Veterans
+BE-07-00-00-00,"Old Age Public Benefits",Administrative Law,Social Security/SSI
+BE-07-01-00-00,"Social Security retirement benefits",Administrative Law,Social Security/SSI
+BU-00-00-00-00,"Small Business and IP",Business & Corporate,"General (Contracts Business Organization)"
+BU-01-00-00-00,"Business and Occupational Licenses",Administrative Law,Professional Licensing
+BU-01-01-00-00,"Child Care and Day Care Licenses",Administrative Law,Professional Licensing
+BU-01-01-01-00,"Exemptions for Child Care Licenses",Administrative Law,Professional Licensing
+BU-01-01-02-00,"Getting a Child Care License",Administrative Law,Professional Licensing
+BU-01-02-00-00,"Business Licenses",Administrative Law,Professional Licensing
+BU-02-00-00-00,"Economic Development",Business & Corporate,"General (Contracts Business Organization)"
+BU-03-00-00-00,"Running a farm business",Business & Corporate,Agriculture/Farm
+BU-04-00-00-00,"Intellectual Property",Intellectual Property,Trademark/Copyright
+BU-04-01-00-00,"Copyright of written or artistic works",Intellectual Property,Trademark/Copyright
+BU-04-02-00-00,"Patents for an invention",Intellectual Property,Patent (Reg Patent Attys Only)
+BU-04-03-00-00,"Trademarks for names and logos",Intellectual Property,Trademark/Copyright
+BU-05-00-00-00,"Running a For-Profit Business",Business & Corporate,"General (Contracts Business Organization)"
+BU-05-01-00-00,"Incorporating and Dissolving a for-profit business",Business & Corporate,"General (Contracts Business Organization)"
+BU-05-02-00-00,"Starting a for-profit business",Business & Corporate,"General (Contracts Business Organization)"
+BU-05-03-00-00,"Finances of a for-profit business",Business & Corporate,"General (Contracts Business Organization)"
+BU-05-04-00-00,"Taxes for a for-profit business",Taxation,Business & Corporate
+BU-05-04-01-00,"Sales taxes",Taxation,Business & Corporate
+BU-06-00-00-00,"Running a Nonprofit",Business & Corporate,Non-Profit
+BU-07-00-00-00,"Help for Small Businesses after a Disaster",Business & Corporate,"General (Contracts Business Organization)"
+BU-10-00-00-00,"Running an Arts/Entertainment Business",Business & Corporate,Entertainment
+CO-00-00-00-00,"Courts and Lawyers",General Litigation,General Litigation
+CO-01-00-00-00,"Getting and having a lawyer",General Litigation,Malpractice-Legal
+CO-02-00-00-00,"Legal Help Resources to deal with legal issues",General Litigation,General Litigation
+CO-02-01-00-00,"Websites and technology for legal help",Intellectual Property,Computer Law & Internet Law
+CO-02-01-01-00,"Bar Association legal help websites",Intellectual Property,Computer Law & Internet Law
+CO-02-02-00-00,"Community resources for legal problems",General Litigation,General Litigation
+CO-02-03-00-00,"Court-based legal help centers",General Litigation,General Litigation
+CO-02-04-00-00,"Filling out forms and other legal documents",General Litigation,General Litigation
+CO-03-00-00-00,"Representing oneself without a lawyer",Family Law,Pro Se Coaching
+CO-03-01-00-00,"Judges' behavior with self-represented litigants",General Litigation,General Litigation
+CO-03-02-00-00,"Court programs for self-represented litigants",General Litigation,General Litigation
+CO-03-03-00-00,"Education on how to represent oneself",General Litigation,General Litigation
+CO-04-00-00-00,"Administrative agency requests and hearings",Administrative Law,General (State)
+CO-04-02-00-00,"Hearings challenging public benefits decisions",Administrative Law,General (State)
+CO-04-03-00-00,"Hearing for labor issues and unemployment claims",Labor & Employment,General
+CO-04-04-00-00,"Hearing with Social Security Administration",Administrative Law,Social Security/SSI
+CO-04-05-00-00,"Agencies not following court decisions (Nonacquiescence)",Administrative Law,General (Federal)
+CO-05-00-00-00,"Evidence for a court case",General Litigation,General Litigation
+CO-05-01-00-00,"Privileged material and evidence rules",General Litigation,General Litigation
+CO-06-00-00-00,"Legal Research",General Litigation,General Litigation
+CO-07-00-00-00,"Going to court and dealing with procedure",General Litigation,General Litigation
+CO-07-01-00-00,"Alternative Dispute Resolution, Mediation, and Settlements",General Litigation,General Litigation
+CO-07-02-00-00,"Appealing a court's judgment",General Litigation,General Litigation
+CO-07-02-01-00,"Standards for reviewing an appeal",General Litigation,General Litigation
+CO-07-02-02-00,"Appealing a judge's ruling through Mandamus",General Litigation,General Litigation
+CO-07-02-03-00,"Standards of review for appealed cases",General Litigation,General Litigation
+CO-07-03-00-00,"Court's ability to hear, refuse, or move a case",General Litigation,General Litigation
+CO-07-03-01-00,"Estoppel to stop an issue being raised again",General Litigation,General Litigation
+CO-07-03-02-00,"Court Abstaining from hearing a case",General Litigation,General Litigation
+CO-07-03-03-00,"Immunity from lawsuits or prosecution",General Litigation,Civil Rights
+CO-07-03-03-01,"Government's Sovereign Immunity from lawsuits",General Litigation,Tort Claims Act
+CO-07-03-03-02,"Government officials' Qualified Immunity from lawsuits",General Litigation,Civil Rights
+CO-07-03-04-00,"Court's Jurisdiction to hear a case",General Litigation,General Litigation
+CO-07-03-04-01,"Court's decision whether there is a case and controversy",General Litigation,General Litigation
+CO-07-03-04-02,"Court's jurisdiction when parties come from different states",General Litigation,General Litigation
+CO-07-03-04-03,"Federal court's jurisdiction to hear federal questions",General Litigation,General Litigation
+CO-07-03-04-04,"Federal court's ability to hear a state law question",General Litigation,General Litigation
+CO-07-03-04-05,"Court's personal jurisdiction over parties",General Litigation,General Litigation
+CO-07-03-04-06,"Court's decision whether a case is moot",General Litigation,General Litigation
+CO-07-03-04-07,"Court's decision whether a case is ripe",General Litigation,General Litigation
+CO-07-03-05-00,"Litigant's exhaustion of remedies in original court",General Litigation,General Litigation
+CO-07-03-06-00,"Removing a case from state to federal court",General Litigation,General Litigation
+CO-07-03-07-00,"Res Judicata to stop a claim being raised again",General Litigation,General Litigation
+CO-07-03-08-00,"Standing of a person to bring a lawsuit",General Litigation,General Litigation
+CO-07-03-09-00,"Statute of Limitation to bring a lawsuit",General Litigation,General Litigation
+CO-07-03-09-01,"Computation of time for statutes of limitation",General Litigation,General Litigation
+CO-07-03-09-02,"Waiving a statute of limitations",General Litigation,General Litigation
+CO-07-03-10-00,"Transferring a case to another venue",General Litigation,General Litigation
+CO-07-04-00-00,"Judge's powers and behavior",General Litigation,General Litigation
+CO-07-04-01-00,"Bias by a judge",General Litigation,General Litigation
+CO-07-04-02-00,"Judge's discretion in a case",General Litigation,General Litigation
+CO-07-05-00-00,"Judgments, Settlements, and Appeals of court cases",General Litigation,General Litigation
+CO-07-05-01-00,"Consent Decrees or Settlements of a case",General Litigation,General Litigation
+CO-07-05-02-00,"Default Judgment against one party",Debtor/Creditor,Judgement Collection
+CO-07-05-03-00,"Enforcing a court's judgment",Debtor/Creditor,Judgement Collection
+CO-07-05-03-01,"Enforcing a judgment in another jurisdiction",Debtor/Creditor,Judgement Collection
+CO-07-05-03-02,"Contempt for not following a judgment",General Litigation,General Litigation
+CO-07-05-04-00,"Declaratory judgment about a case",General Litigation,General Litigation
+CO-07-05-05-00,"Summary Judgment for one party before a trial's end",General Litigation,General Litigation
+CO-07-06-00-00,"Court costs and fees",General Litigation,General Litigation
+CO-07-06-01-00,"Court fee waivers (in forma pauperis)",General Litigation,General Litigation
+CO-07-07-00-00,"Claiming Money (Damages) in a lawsuit",General Litigation,Personal Injury
+CO-07-08-00-00,"Processing Delays by an administrative agency",Administrative Law,General (Federal)
+CO-07-09-00-00,"Discovery process to get evidence from other side",General Litigation,General Litigation
+CO-07-09-01-00,"Depositions of witnesses",General Litigation,General Litigation
+CO-07-09-02-00,"Expert witness discovery before a trial",General Litigation,General Litigation
+CO-07-09-03-00,"Extending time for discovery process",General Litigation,General Litigation
+CO-07-09-04-00,"Interrogatory request during discovery",General Litigation,General Litigation
+CO-07-09-05-00,"Non-compliance with Discovery rules",General Litigation,General Litigation
+CO-07-09-06-00,"Privileged information protected from Discovery",General Litigation,General Litigation
+CO-07-09-07-00,"Turning over documents during Discovery",General Litigation,General Litigation
+CO-07-09-08-00,"Sanctions for discovery violations",General Litigation,General Litigation
+CO-07-10-00-00,"Due Process rights when dealing with the government",General Litigation,Civil Rights
+CO-07-10-01-00,"Due Process rights in an administrative agency hearing",Administrative Law,General (State)
+CO-07-10-02-00,"Rights against government depriving one of liberty",General Litigation,Civil Rights
+CO-07-10-03-00,"Rights against government depriving one of property",General Litigation,Civil Rights
+CO-07-10-04-00,"Remedies if government violates one's due process",General Litigation,Civil Rights
+CO-07-11-00-00,"Juries",General Litigation,General Litigation
+CO-07-12-00-00,"Filing and Serving pleadings, forms, and court paperwork",General Litigation,General Litigation
+CO-07-12-01-00,"Serving court papers on other party",General Litigation,General Litigation
+CO-07-12-02-00,"Waiver of service of court papers",General Litigation,General Litigation
+CO-07-13-00-00,"Rules of civil procedure",General Litigation,General Litigation
+CO-07-14-00-00,"Transcripts and Recordings of legal proceedings",General Litigation,General Litigation
+CO-07-15-00-00,"Remote court hearings by video or phone",General Litigation,General Litigation
+CO-07-16-00-00,"Hearing preparation and basics",General Litigation,General Litigation
+CO-08-00-00-00,"Rule- and law-making procedures",Administrative Law,General (Federal)
+CO-08-01-00-00,"Proposing a rules change for an administrative agency",Administrative Law,General (Federal)
+CO-08-02-00-00,"Notices and Public Comment on proposed government rules",Administrative Law,General (Federal)
+CO-09-00-00-00,"Finding and hiring a lawyer",General Litigation,Malpractice-Legal
+CO-09-01-00-00,"Having a free lawyer appointed",General Litigation,General Litigation
+CO-09-02-00-00,"Lawyer's fees and payments",General Litigation,Malpractice-Legal
+CO-09-02-02-00,"Hourly Rates of a lawyer",General Litigation,Malpractice-Legal
+CO-09-02-03-00,"Costs that lawyers are allowed to charge",General Litigation,Malpractice-Legal
+CO-09-02-04-00,"Having other party pay attorney fees",General Litigation,General Litigation
+CO-09-02-04-01,"Attorney fees award after consent decree or settlement",General Litigation,General Litigation
+CO-09-02-04-02,"Computing attorney's fees to be paid from one party to another",General Litigation,General Litigation
+CO-09-02-04-03,"Having the government pay attorney fees",General Litigation,Tort Claims Act
+CO-09-03-00-00,"Attorney-Client Privilege",General Litigation,Malpractice-Legal
+CO-09-04-00-00,"Establishing a lawyer-client relationship",General Litigation,Malpractice-Legal
+CO-09-04-01-00,"Conflicts of Interest check for a lawyer and client",General Litigation,Malpractice-Legal
+CO-09-04-02-00,"Retainer letters and agreements to hire a lawyer",General Litigation,Malpractice-Legal
+CO-09-05-00-00,"Ethical rules for lawyer's behavior",General Litigation,Malpractice-Legal
+CO-09-05-01-00,"Bias of a lawyer",General Litigation,Malpractice-Legal
+CO-09-06-00-00,"Getting Legal Aid or Pro Bono lawyer help",General Litigation,General Litigation
+CO-09-06-01-00,"Finding Legal Aid outside of the US",International Law,Litigation
+CO-09-06-02-00,"Restrictions on what legal aid can do",General Litigation,General Litigation
+CO-09-07-00-00,"Paralegals and non-lawyer professionals",General Litigation,General Litigation
+CO-10-00-00-00,"Class Action lawsuits",General Litigation,General Litigation
+CO-10-01-00-00,"Getting a class action certified",General Litigation,General Litigation
+CO-10-02-00-00,"Defining a class in a class action",General Litigation,General Litigation
+CR-00-00-00-00,"Crime and Prisons",Criminal Law,Other
+CR-01-00-00-00,"Being a victim or witness to a crime",General Litigation,Crime Victim
+CR-01-01-00-00,"Being a witness to a crime",General Litigation,Crime Victim
+CR-01-02-00-00,"Victim's Rights",General Litigation,Crime Victim
+CR-01-04-00-00,"Witness Identification of suspects",Criminal Law,Other
+CR-01-05-00-00,"Crime Victim Compensation",General Litigation,Crime Victim
+CR-02-00-00-00,"After being found guilty of a crime",Criminal Law,Post Conviction/ Appeals
+CR-02-01-00-00,"Pardon for a crime",Criminal Law,Clemency
+CR-02-01-01-00,"Clemency process for granting a pardon or reduction",Criminal Law,Clemency
+CR-02-03-00-00,"Sex Offender registration",Criminal Law,Relief From Sex Offender Registration
+CR-02-04-00-00,"Innocence Commissions and laws",Criminal Law,Post Conviction/ Appeals
+CR-03-00-00-00,"Confessions and statements to the police",Criminal Law,Other
+CR-03-01-00-00,"Coercion of a confession",Criminal Law,Other
+CR-03-02-00-00,"False confessions",Criminal Law,Other
+CR-03-03-00-00,"Challenging a confession based on mental capacity",Criminal Law,Mental Commitment
+CR-04-00-00-00,"Having a lawyer in a criminal case",Criminal Law,Other
+CR-04-01-00-00,"Quality of criminal lawyer's work and ineffective assistance of counsel",General Litigation,Malpractice-Legal
+CR-05-00-00-00,"Line-ups and Identification",Criminal Law,Other
+CR-05-01-00-00,"Line-up procedures in a criminal investigation",Criminal Law,Other
+CR-05-02-00-00,"Misidentification during a line-up",Criminal Law,Other
+CR-06-00-00-00,"Criminal Records",Criminal Law,Expunction
+CR-06-01-00-00,"Expungement or Sealing of Criminal Record",Criminal Law,Expunction
+CR-06-02-00-00,"Pardons and Criminal Records ",Criminal Law,Clemency
+CR-06-03-00-00,"Juvenile Criminal Records",Criminal Law,Juvenile Offender
+CR-06-03-01-00,"Accessing a juvenile criminal record",Criminal Law,Juvenile Offender
+CR-06-03-02-00,"Confidentiality of juvenile criminal records",Criminal Law,Juvenile Offender
+CR-06-03-03-00,"Expungement of juvenile criminal record",Criminal Law,Expunction
+CR-07-00-00-00,"Death Penalty",Criminal Law,Capital Murder
+CR-08-00-00-00,"Going to criminal court and being on trial",Criminal Law,Other
+CR-08-01-00-00,"Appealing criminal court's decision",Criminal Law,Post Conviction/ Appeals
+CR-08-01-01-00,"Courts of appeal",Criminal Law,Post Conviction/ Appeals
+CR-08-01-02-00,"Preservation of error in a criminal case to have appeal",Criminal Law,Post Conviction/ Appeals
+CR-08-01-03-00,"Collateral appeal to court after conviction",Criminal Law,Post Conviction/ Appeals
+CR-08-01-04-00,"Appealing based on ineffective assistance of counsel",Criminal Law,Post Conviction/ Appeals
+CR-08-02-00-00,"Criminal trial process",Criminal Law,Other
+CR-08-02-01-00,"Criminal trial jury selection",Criminal Law,Other
+CR-08-02-02-00,"Jury instructions in a criminal trial",Criminal Law,Other
+CR-08-02-03-00,"Lawyers' arguments and behavior during criminal trial",Criminal Law,Other
+CR-08-03-00-00,"Evidence at a criminal trial",Criminal Law,Other
+CR-08-03-01-00,"Forensic evidence about a crime",Criminal Law,Other
+CR-08-03-01-01,"Ballistics evidence",Criminal Law,Other
+CR-08-03-01-02,"Fingerprint and impression evidence",Criminal Law,Other
+CR-08-03-01-04,"Blood and body fluid evidence",Criminal Law,Other
+CR-08-03-02-00,"Hair and fiber evidence",Criminal Law,Other
+CR-08-03-03-00,"Expert testimony at a criminal trial",Criminal Law,Other
+CR-08-03-04-00,"Genetic evidence at a criminal trial",Criminal Law,Other
+CR-08-03-04-01,"DNA evidence at a criminal trial",Criminal Law,Other
+CR-08-03-04-02,"Challenging genetic evidence as junk science",Criminal Law,Other
+CR-08-04-00-00,"Right to challenge witnesses",Criminal Law,Other
+CR-08-05-00-00,"Defenses against criminal charges",Criminal Law,Other
+CR-08-05-01-00,"Criminal defense around lack of capacity or insanity",Criminal Law,Mental Commitment
+CR-08-05-02-00,"Self-defense as a criminal defense",Criminal Law,Other
+CR-08-06-00-00,"Grand Juries and being indicted for a crime",Criminal Law,Major Felony
+CR-08-07-00-00,"Make motion for a new trial",Criminal Law,Post Conviction/ Appeals
+CR-08-09-00-00,"Requesting a jury for a criminal trial",Criminal Law,Other
+CR-08-10-00-00,"Sentencing and penalties after being found guilty",Criminal Law,Parole/Probation
+CR-09-00-00-00,"Due Process rights in a criminal case",General Litigation,Civil Rights
+CR-10-00-00-00,"Juvenile Justice",Criminal Law,Juvenile Offender
+CR-11-00-00-00,"Challenging detention through Habeas Corpus",Criminal Law,Post Conviction/ Appeals
+CR-11-01-00-00,"Supporting a petition for habeas corpus",Criminal Law,Post Conviction/ Appeals
+CR-11-02-00-00,"Opposing a petition for habeas corpus",Criminal Law,Post Conviction/ Appeals
+CR-11-03-00-00,"Review of a habeas corpus petition",Criminal Law,Post Conviction/ Appeals
+CR-12-00-00-00,"Dealing with police and prosecutors",General Litigation,Actions Against Police
+CR-12-03-00-00,"Encounters with the police",General Litigation,Actions Against Police
+CR-12-03-01-00,"Procedure for filing habeas corpus petition",Criminal Law,Post Conviction/ Appeals
+CR-12-06-00-00,"Police or prosecutors' misconduct",General Litigation,Actions Against Police
+CR-12-06-01-00,"Prosecutor failing to disclose evidence (Brady Violation)",Criminal Law,Post Conviction/ Appeals
+CR-12-06-02-00,"Misconduct cases against police or prosecutors",General Litigation,Actions Against Police
+CR-13-00-00-00,"Understanding Specific Types of Crimes",Criminal Law,Other
+CR-13-01-00-00,"Crimes against property",Criminal Law,Misdemeanor
+CR-13-02-00-00,"Crimes against a person",Criminal Law,Major Felony
+CR-14-00-00-00,"Reentry after prison",Criminal Law,Parole/Probation
+CR-15-00-00-00,"Prisoners' rights, services, and conditions",General Litigation,Civil Matter for Inmates
+CR-16-00-00-00,"Being investigated for a crime",Criminal Law,Other
+DI-00-00-00-00,"Disaster Relief",General Litigation,Other
+DI-01-00-00-00,"Help for Farms after a Disaster",Business & Corporate,Agriculture/Farm
+DI-02-00-00-00,"Public Benefits for individuals after a disaster",Administrative Law,General (Federal)
+DI-02-01-00-00,"Local Public Benefits to assist people after a disaster (not FEMA)",Administrative Law,General (Local/Municipal)
+DI-02-02-00-00,"FEMA 'Other Needs' assistance",Administrative Law,General (Federal)
+DI-02-03-00-00,"Appealing FEMA benefits decision",Administrative Law,General (Federal)
+DI-02-04-00-00,"Unemployment assistance after a disaster",Administrative Law,Unemployment
+DI-02-05-00-00,"FEMA Buy-outs or Hazard Mitigation Grant Program ",Real Property,Eminent Domain
+DI-03-00-00-00,"Finding Missing Persons after a Disaster",General Litigation,Other
+DI-04-00-00-00,"Insurance Claims after a disaster",Consumer Law,Insurance
+DI-05-00-00-00,"Rebuilding and Reconstruction after a disaster",Real Property,Construction/Contractors
+DI-06-00-00-00,"Replacing Lost Documents after a disaster",Administrative Law,General (State)
+DI-07-00-00-00,"Tax Relief after a disaster",Taxation,Personal Income
+DI-07-01-00-00,"Deducting losses on damaged property after a natural disaser",Taxation,Personal Income
+DI-08-00-00-00,"Public Health Emergency issues",General Litigation,Health Law/HIPAA
+DI-09-00-00-00,"Family issues after a natural disaster",Family Law,Other
+ED-00-00-00-00,"Education",Administrative Law,Student Rights
+ED-01-00-00-00,"Adult continuing education",Administrative Law,Student Rights
+ED-01-01-00-00,"Vocational education",Administrative Law,Student Rights
+ED-02-00-00-00,"Public Benefits offered through schools",Administrative Law,Schools - Special Needs Edu.
+ED-02-01-00-00,"School breakfast and lunch programs",Administrative Law,Welfare
+ED-02-02-00-00,"Head Start services for families",Administrative Law,Schools - Special Needs Edu.
+ED-02-03-00-00,"School clothing allowance program",Administrative Law,Welfare
+ED-03-00-00-00,"Paying for education",Debtor/Creditor,Student Loans
+ED-03-01-00-00,"Fees for educational programs",Administrative Law,Student Rights
+ED-03-03-00-00,"Vouchers to pay for private education",Administrative Law,Student Rights
+ED-04-00-00-00,"Discipline, expulsion, or suspension from school",Administrative Law,Student Rights
+ED-04-01-00-00,"Expulsion from school",Administrative Law,Student Rights
+ED-04-02-00-00,"Suspension from school",Administrative Law,Student Rights
+ED-04-03-00-00,"Truancy and attendance",Criminal Law,Juvenile Offender
+ED-05-00-00-00,"Discrimination and rights around education",General Litigation,Civil Rights
+ED-05-01-00-00,"Desegregation of schools",General Litigation,Civil Rights
+ED-05-02-00-00,"Exclusion of students from activities",Administrative Law,Student Rights
+ED-05-05-00-00,"Discrimination based on sex/gender at a school (Title IX)",General Litigation,Civil Rights
+ED-06-00-00-00,"Privacy at school",General Litigation,General Torts/Privacy
+ED-07-00-00-00,"Students with disabilities and special education",Administrative Law,Schools - Special Needs Edu.
+ED-07-01-00-00,"Assistive technology for students with disabilities",Administrative Law,Schools - Special Needs Edu.
+ED-07-02-00-00,"Protections for students with disabilities",Administrative Law,Schools - Special Needs Edu.
+ED-07-02-01-00,"Rights of students with disabilities when facing discipline",Administrative Law,Schools - Special Needs Edu.
+ED-07-03-00-00,"Individual Education Plans (IEPs)",Administrative Law,Schools - Special Needs Edu.
+ED-08-00-00-00,"School residency or enrollment",Administrative Law,Student Rights
+ED-09-00-00-00,"School standards, testing, and requirements",Administrative Law,Student Rights
+ED-09-01-00-00,"School funding for quality education",Administrative Law,Student Rights
+ED-10-00-00-00,"Language access to education",General Litigation,Civil Rights
+ED-11-00-00-00,"Quality of education for student with disability",Administrative Law,Schools - Special Needs Edu.
+ED-12-00-00-00,"Students' Educational Records",Administrative Law,Student Rights
+ED-13-00-00-00,"Education issues after a natural disaster",Administrative Law,Student Rights
+EN-00-00-00-00,"Environmental Justice",Business & Corporate,Environment
+EN-01-00-00-00,"Air Pollution",Business & Corporate,Environment
+EN-02-00-00-00,"Environmental Protection",Business & Corporate,Environment
+EN-03-00-00-00,"Hazardous Waste",Business & Corporate,Environment
+EN-04-00-00-00,"Pesticides",Business & Corporate,Environment
+EN-05-00-00-00,"Sustainable Agriculture",Business & Corporate,Agriculture/Farm
+EN-06-00-00-00,"Water Pollution",Real Property,Water Law
+EN-07-00-00-00,"Environmental issues after a natural disaster",Business & Corporate,Environment
+ES-00-00-00-00,"Estates, Wills, and Guardianships",Wills & Trusts,"General (Wills, Trusts, Estates)"
+ES-01-00-00-00,"Making a Will and Estate Plan",Wills & Trusts,"General (Wills, Trusts, Estates)"
+ES-01-01-00-00,"Drafting and signing a will",Wills & Trusts,"General (Wills, Trusts, Estates)"
+ES-01-02-00-00,"Updating a Will through a Codicil",Wills & Trusts,"General (Wills, Trusts, Estates)"
+ES-01-03-00-00,"Distributing money through Payable-on-Death account",Wills & Trusts,"General (Wills, Trusts, Estates)"
+ES-01-05-00-00,"Estate Planning for a beneficiary with a disability",Wills & Trusts,Special Needs/Inc. Cap Trusts
+ES-02-00-00-00,"Dealing with another person's estate after they die",Wills & Trusts,Probate
+ES-02-01-00-00,"Contesting a will",Wills & Trusts,Litigation
+ES-02-02-00-00,"Dying without a will (intestate)",Wills & Trusts,Probate
+ES-02-03-00-00,"Probate process for an uncontested will",Wills & Trusts,Probate
+ES-02-04-00-00,"Going to Probate Court",Wills & Trusts,Probate
+ES-02-05-00-00,"When an estate can avoid probate",Wills & Trusts,Probate
+ES-02-06-00-00,"Being a 'beneficiary' to another's estate",Wills & Trusts,Probate
+ES-03-00-00-00,"Guardianship and Conservatorship",Wills & Trusts,Conservatorship/Guardianship
+ES-03-01-00-00,"Money and Property issues in a Guardianship or Conservatorship",Wills & Trusts,Conservatorship/Guardianship
+ES-03-01-01-00,"Accountings for Funds Spent in a Guardianship or Conservatorship",Wills & Trusts,Conservatorship/Guardianship
+ES-03-01-02-00,"Financial exploitation in a Guardianship or Conservatorship",Wills & Trusts,Elder Abuse
+ES-03-01-03-00,"Joint Property issues in a guardianship/conservatorship",Wills & Trusts,Conservatorship/Guardianship
+ES-03-02-00-00,"Guardianship or Conservatorship of an Adult",Wills & Trusts,Conservatorship/Guardianship
+ES-03-02-01-00,"Getting a Conservatorship or Guardianship of an Adult",Wills & Trusts,Conservatorship/Guardianship
+ES-03-02-01-01,"Getting an Emergency Guardianship of an Adult",Wills & Trusts,Conservatorship/Guardianship
+ES-03-02-01-02,"Guardianship of a Mentally Ill Adult",Wills & Trusts,Conservatorship/Guardianship
+ES-03-02-02-00,"Guardian Ad Litem for vulnerable adults in housing cases",Wills & Trusts,Conservatorship/Guardianship
+ES-03-02-03-00,"Conservatorship of an adult's financial affairs",Wills & Trusts,Conservatorship/Guardianship
+ES-03-03-00-00,"Guardianship of a child (under 18)",Family Law,Guardianship(minor)
+ES-03-03-01-00,"Guardian Ad Litem for child in family law cases",Family Law,Guardianship(minor)
+ES-03-03-02-00,"Getting a Guardianship of a Child",Family Law,Guardianship(minor)
+ES-03-03-03-00,"Guardianship of a child who has been abused or neglected",Family Law,Guardianship(minor)
+ES-03-03-04-00,"Standby guardianship plan for a child",Family Law,Guardianship(minor)
+ES-03-03-05-00,"Short-term Temporary Guardianship of a child",Family Law,Guardianship(minor)
+ES-03-04-00-00,"Rights of Guardians and Conservators",Wills & Trusts,Conservatorship/Guardianship
+ES-03-05-00-00,"Removal of a Guardian or Conservator",Wills & Trusts,Reversing Guardianship or Payee Assignments
+ES-04-00-00-00,"Trusts",Wills & Trusts,Living Trusts
+ES-04-01-00-00,"Living Trusts",Wills & Trusts,Living Trusts
+ES-05-00-00-00,"Plans for if you are incapacitated or ill (Powers of Attorney and Advance Directives)",Wills & Trusts,Power of Attorney
+ES-05-01-00-00,"Advance Directives about possible medical treatments",Wills & Trusts,Power of Attorney
+ES-05-02-00-00,"Living Wills for when a person is terminally ill",Wills & Trusts,Power of Attorney
+ES-05-03-00-00,"Powers of Attorney",Wills & Trusts,Power of Attorney
+ES-05-04-00-00,"Options around Life-Sustaining Treatments",Wills & Trusts,Power of Attorney
+ES-06-00-00-00,"Funeral and Burial Issues",Wills & Trusts,Other
+ES-07-00-00-00,"Estate Planning for Military",Administrative Law,Military/Veterans
+ES-07-01-00-00,"Benefits for service members after death",Administrative Law,Military/Veterans
+FA-00-00-00-00,"Family",Family Law,Other
+FA-01-00-00-00,"Adoption",Family Law,Adoption/DHS
+FA-01-01-00-00,"Adopting a Child",Family Law,Adoption/DHS
+FA-01-01-01-00,"Uncontested Adoption of a Child",Family Law,Adoption/DHS
+FA-01-01-02-00,"Contested Adoption of a Child",Family Law,Adoption/DHS
+FA-01-01-03-00,"Getting Time off Work for an Adoption",Labor & Employment,FMLA
+FA-01-02-00-00,"Adopting an Adult",Family Law,Adoption/DHS
+FA-01-03-00-00,"Contesting an Adoption",Family Law,Adoption/DHS
+FA-01-04-00-00,"Birth Parents' Rights around an Adoption",Family Law,Adoption/DHS
+FA-01-05-00-00,"Grandparents' and other Family Members' Rights around an Adoption",Family Law,Grandparent Rights
+FA-01-06-00-00,"Adoption of a Stepchild by a Stepparent",Family Law,Adoption/DHS
+FA-02-00-00-00,"Birth Certificates and Identity Documents",Family Law,Birth Certificate/Name Changes
+FA-03-00-00-00,"Child Care Costs",Family Law,Child Support/Modification
+FA-03-01-00-00,"Child Care support through TANF",Administrative Law,Welfare
+FA-04-00-00-00,"Child Custody, Parenting Plans, and Visitation",Family Law,Child Custody/Visitation
+FA-04-01-00-00,"Parental abduction or kidnapping of a child",Family Law,Child Custody/Visitation
+FA-04-02-00-00,"Emergency Custody orders and hearings",Family Law,Child Custody/Visitation
+FA-04-03-00-00,"Modifying a Custody Order",Family Law,Child Custody/Visitation
+FA-04-03-01-00,"Modifying a custody order for a parent in recovery for substance abuse",Family Law,Child Custody/Visitation
+FA-04-04-00-00,"Interstate Child Custody and Jurisdiction issues",Family Law,Child Custody/Visitation
+FA-04-04-01-00,"Competing Jurisdictions for child custody cases",Family Law,Child Custody/Visitation
+FA-04-04-02-00,"Emergency Jurisdiction for child custody",Family Law,Child Custody/Visitation
+FA-04-05-00-00,"Enforcing a Child Custody order",Family Law,Child Custody/Visitation
+FA-04-06-00-00,"Temporary Child Custody ",Family Law,Child Custody/Visitation
+FA-04-07-00-00,"Child Visitation",Family Law,Child Custody/Visitation
+FA-04-07-01-00,"Enforcing Child Visitation",Family Law,Child Custody/Visitation
+FA-04-07-02-00,"Modifying a Child Visitation Order",Family Law,Child Custody/Visitation
+FA-04-07-03-00,"Getting a Child Visitation Order",Family Law,Child Custody/Visitation
+FA-04-07-04-00,"Third-Party Visitation of child",Family Law,Grandparent Rights
+FA-04-07-05-00,"Supervised or Monitored visitation with a child",Family Law,Child Custody/Visitation
+FA-04-08-00-00,"Third-Party Child Custody",Family Law,Child Custody/Visitation
+FA-04-09-00-00,"Parenting Plans",Family Law,Child Custody/Visitation
+FA-05-00-00-00,"Child Support",Family Law,Child Support/Modification
+FA-05-01-00-00,"Enforcement of Child Support",Family Law,Child Support/Modification
+FA-05-01-01-00,"Going to Child Support (IV-D) Court",Family Law,Child Support/Modification
+FA-05-01-02-00,"Getting state support in enforcing child support",Family Law,Child Support/Modification
+FA-05-01-04-00,"Intercepting tax refunds for child support",Taxation,Personal Income
+FA-05-01-05-00,"Enforcing child support in different states",Family Law,Child Support/Modification
+FA-05-02-00-00,"Petitions for Child Support",Family Law,Child Support/Modification
+FA-05-03-00-00,"Private enforcement of child support",Family Law,Child Support/Modification
+FA-05-04-00-00,"Modifying Child Support arrangement",Family Law,Child Support/Modification
+FA-05-05-00-00,"Child Support Guidelines for calculation and enforcement",Family Law,Child Support/Modification
+FA-05-06-00-00,"Other Custodial parent issues around child support",Family Law,Child Support/Modification
+FA-05-07-00-00,"Other Non-custodial parent issues with child support",Family Law,Child Support/Modification
+FA-05-08-00-00,"Being Behind on child support",Family Law,Child Support/Modification
+FA-06-00-00-00,"Divorce, Separation, and Annulment",Family Law,"General (Divorce/Separation)"
+FA-06-01-00-00,"Spousal Support, Alimony, and Separate Maintenance",Family Law,Spousal Support
+FA-06-01-01-00,"Long-term Spousal Support",Family Law,Spousal Support
+FA-06-01-02-00,"Lump Sum Spousal Support",Family Law,Spousal Support
+FA-06-01-03-00,"Spousal Support from pensions and retirement plans (with a QDRO)",Family Law,QDROs
+FA-06-01-04-00,"Short-Term or Temporary Spousal Support",Family Law,Spousal Support
+FA-06-02-00-00,"Legal Separation of spouses",Family Law,"General (Divorce/Separation)"
+FA-06-02-01-00,"Division of property among separated spouses",Family Law,"General (Divorce/Separation)"
+FA-06-02-02-00,"Property Settlement agreements for separated spouses",Family Law,"General (Divorce/Separation)"
+FA-06-03-00-00,"Divorce process and types",Family Law,"General (Divorce/Separation)"
+FA-06-03-01-00,"Contested divorce process",Family Law,"General (Divorce/Separation)"
+FA-06-03-02-00,"Uncontested Divorce process",Family Law,"General (Divorce/Separation)"
+FA-06-03-03-00,"Subpoenas in a divorce process",Family Law,"General (Divorce/Separation)"
+FA-06-03-04-00,"Taxes after divorce",Taxation,Personal Income
+FA-06-03-04-01,"Child and spousal support's effect on taxes",Taxation,Personal Income
+FA-06-03-05-00,"Filing motions after the final divorce decree",Family Law,"General (Divorce/Separation)"
+FA-06-03-06-00,"Consolidating cases during a divorce",Family Law,"General (Divorce/Separation)"
+FA-06-03-07-00,"Reopening a divorce for new evidence",Family Law,"General (Divorce/Separation)"
+FA-06-03-08-00,"Stopping (or staying) a divorce process",Family Law,"General (Divorce/Separation)"
+FA-06-03-09-00,"Venue of a divorce case",Family Law,"General (Divorce/Separation)"
+FA-06-03-10-00,"Filing for divorce",Family Law,"General (Divorce/Separation)"
+FA-06-03-11-00,"Responding to a divorce the other spouse filed",Family Law,"General (Divorce/Separation)"
+FA-06-04-00-00,"Annulment of a marriage",Family Law,"General (Divorce/Separation)"
+FA-06-05-00-00,"Dividing Property and Debt among spouses",Family Law,"General (Divorce/Separation)"
+FA-06-05-01-00,"Property Settlement agreements among spouses",Family Law,"General (Divorce/Separation)"
+FA-06-05-03-00,"Community Property laws for spouses",Family Law,"General (Divorce/Separation)"
+FA-06-05-04-00,"Dividing Debt during a divorce",Debtor/Creditor,General (Debtor)
+FA-06-05-05-00,"Dividing real estate property in a divorce ",Real Property,General (residential)
+FA-06-05-07-00,"Dividing pensions and retirement accounts in a divorce",Family Law,QDROs
+FA-06-05-08-00,"Marital vs. Non-Marital Property standards",Family Law,"General (Divorce/Separation)"
+FA-06-05-09-00,"Equitable Distribution laws for spouses",Family Law,"General (Divorce/Separation)"
+FA-06-05-10-00,"Re-opening or changing divorce property judgments",Family Law,"General (Divorce/Separation)"
+FA-06-05-11-00,"Stopping a spouse from hiding or destroying assets",Family Law,"General (Divorce/Separation)"
+FA-06-06-00-00,"Children's Issues during a divorce or separation",Family Law,Child Custody/Visitation
+FA-06-06-01-00,"Best Interest of Child standard",Family Law,Child Custody/Visitation
+FA-06-06-02-00,"Children-related divorce case management orders",Family Law,Child Custody/Visitation
+FA-06-06-03-00,"Mediation for children's issues and parenting plans",Family Law,Collaborative Family Law
+FA-06-06-05-00,"Parental Rights and Responsibilities during a divorce",Family Law,Parental Responsibility
+FA-06-07-00-00,"Problems after a final divorce, separation, or annulment judgment",Family Law,"General (Divorce/Separation)"
+FA-06-07-01-00,"Contempt of court for violating a family law order",Family Law,"General (Divorce/Separation)"
+FA-06-07-01-01,"Consequences of being found in contempt of family law judgment",Family Law,"General (Divorce/Separation)"
+FA-06-07-01-02,"Contempt for financial issues related to a family law judgment",Family Law,"General (Divorce/Separation)"
+FA-06-07-01-03,"Contempt for children's issues related to a family law judgment",Family Law,Child Custody/Visitation
+FA-06-07-02-00,"Enforcing a divorce or separation judgment",Family Law,"General (Divorce/Separation)"
+FA-06-07-03-00,"Modifying a divorce or separation judgment",Family Law,"General (Divorce/Separation)"
+FA-07-00-00-00,"Domestic Violence and Abuse",Family Law,Restraining Orders
+FA-07-01-00-00,"Getting a restraining or protection order",Family Law,Restraining Orders
+FA-07-01-01-00,"Initial filing for a protection order",Family Law,Restraining Orders
+FA-07-01-02-00,"Modifying a protection order's complaint",Family Law,Restraining Orders
+FA-07-01-03-00,"Modifying a temporary protection order",Family Law,Restraining Orders
+FA-07-01-04-00,"Extending a protection order",Family Law,Restraining Orders
+FA-07-01-05-00,"Modifying or ending a final protection order",Family Law,Restraining Orders
+FA-07-01-06-00,"Getting a protection order for non-domestic abuse or threats",General Litigation,Stalking Orders
+FA-07-02-00-00,"Employment issues around domestic violence",Labor & Employment,General
+FA-07-03-00-00,"Custody issues around Domestic Violence",Family Law,Child Custody/Visitation
+FA-07-04-00-00,"Financial Issues around Domestic Violence",Family Law,Other
+FA-07-04-01-00,"Child Support and Domestic Violence",Family Law,Child Support/Modification
+FA-07-04-02-00,"Damages and financial compensation for domestic violence",General Litigation,Personal Injury
+FA-07-04-03-00,"Spousal Support and Domestic Violence",Family Law,Spousal Support
+FA-07-04-04-00,"TANF Benefits exceptions for domestic violence victims",Administrative Law,Welfare
+FA-07-05-00-00,"Domestic Violence issues during a public health emergency",Family Law,Restraining Orders
+FA-07-06-00-00,"Drug and Alcohol Treatment related to Domestic Violence",Family Law,Restraining Orders
+FA-07-07-00-00,"Defining what constitutes domestic violence and abuse",Family Law,Restraining Orders
+FA-07-08-00-00,"Firearms and other Weapons and domestic violence",Criminal Law,Gun Rights
+FA-07-09-00-00,"Enforcing a protection order",Family Law,Restraining Orders
+FA-07-10-00-00,"Housing Discrimination and Domestic Violence",Real Property,Tenant (Residential)
+FA-07-11-00-00,"Responding to a restraining order",Family Law,Restraining Orders
+FA-08-00-00-00,"Emancipation of a minor",Family Law,Emancipation
+FA-09-00-00-00,"Foster Care",Family Law,Adoption/DHS
+FA-10-00-00-00,"Marriages and civil unions",Family Law,Same Sex Couples & Parents
+FA-10-01-00-00,"Common Law Marriage",Family Law,Other
+FA-11-00-00-00,"Name or Gender Change",Family Law,Birth Certificate/Name Changes
+FA-11-01-00-00,"Name Change of an Adult",Family Law,Birth Certificate/Name Changes
+FA-11-02-00-00,"Name Change of a Child",Family Law,Birth Certificate/Name Changes
+FA-11-03-00-00,"Gender Change of an Adult",Family Law,Birth Certificate/Name Changes
+FA-11-04-00-00,"Gender Change of a Child",Family Law,Birth Certificate/Name Changes
+FA-12-00-00-00,"Paternity",Family Law,Paternity
+FA-12-01-00-00,"Acknowledging paternity",Family Law,Paternity
+FA-12-02-00-00,"Blood Tests to determine paternity",Family Law,Paternity
+FA-12-03-00-00,"Contested Paternity",Family Law,Paternity
+FA-13-00-00-00,"Mediation and Alternative Dispute Resolution for family",Family Law,Collaborative Family Law
+FA-14-00-00-00,"Parental Rights (and Termination)",Family Law,Terminate Parent Rights
+FA-14-01-00-00,"Terminating Parental Rights",Family Law,Terminate Parent Rights
+FA-14-02-00-00,"Teen Parents' Rights and Obligations",Family Law,Parental Responsibility
+FA-14-03-00-00,"Child Abuse and Neglect",General Litigation,Child Abuse Victims
+FA-14-03-01-00,"Sealing a record for child abuse or neglect",Criminal Law,Expunction
+FA-15-00-00-00,"Elder Abuse",Wills & Trusts,Elder Abuse
+FA-16-00-00-00,"Taking Care of Sick or Disabled Family",Labor & Employment,FMLA
+FA-17-00-00-00,"Family members with money, criminal, and other issues",Family Law,Other
+FA-18-00-00-00,"Financial exploitation of a person",Wills & Trusts,Elder Abuse
+G0-01-01-00-00,"Firearms licenses",Criminal Law,Gun Rights
+GO-00-00-00-00,"Government Services",Administrative Law,General (State)
+GO-01-00-00-00,"Licenses for Driving, Business, Fishing, Guns, etc.",Administrative Law,Professional Licensing
+GO-02-00-00-00,"Getting information and records from the government",Administrative Law,General (State)
+GO-02-01-00-00,"Freedom of Information (FOIA) to request government info",Administrative Law,General (Federal)
+GO-03-00-00-00,"Voting and Elections",General Litigation,Civil Rights
+GO-03-01-00-00,"Voting Systems, Ballots, and Rules",General Litigation,Civil Rights
+GO-03-02-00-00,"Districting and Gerrymandering",General Litigation,Civil Rights
+GO-05-00-00-00,"Dealing with different branches of government",Administrative Law,General (State)
+GO-05-01-00-00,"Dealing with federal agencies",Administrative Law,General (Federal)
+GO-05-02-00-00,"Dealing with municipal government and ordinances",Administrative Law,General (Local/Municipal)
+GO-05-03-00-00,"Dealing with state and local agencies",Administrative Law,General (State)
+GO-05-04-00-00,"Dealing with state legislatures and courts",Administrative Law,General (State)
+H0-06-06-01-00,"City regulations of renting a home",Real Property,Landlord Residential
+H0-08-01-01-00,"Military Service-members' Protections against Foreclosure",Administrative Law,Military/Veterans
+H0-09-01-00-00,"Liens on a Home",Real Property,General (residential)
+H0-09-02-00-00,"Title to a home",Real Property,General (residential)
+HE-00-00-00-00,"Health",General Litigation,Health Law/HIPAA
+HE-01-00-00-00,"Care for a specific condition or disability",General Litigation,Health Law/HIPAA
+HE-01-01-00-00,"Mental Health",Criminal Law,Mental Commitment
+HE-01-01-01-00,"Commitment to a mental health facility",Criminal Law,Mental Commitment
+HE-01-01-01-01,"Voluntary commitment to a mental health facility",Criminal Law,Mental Commitment
+HE-01-01-01-02,"Involuntary Commitment to a mental health facility",Criminal Law,Mental Commitment
+HE-01-01-01-03,"Rights when being committed to a mental health facility",Criminal Law,Mental Commitment
+HE-01-01-03-00,"Community programs for mental health",General Litigation,Health Law/HIPAA
+HE-01-01-04-00,"Least Restrictive Alternative Standard for mental health care",Criminal Law,Mental Commitment
+HE-01-01-05-00,"Mental Health facilities and institutions",General Litigation,Health Law/HIPAA
+HE-01-01-06-00,"Mental Health Advanced Directive planning",Wills & Trusts,Power of Attorney
+HE-01-02-00-00,"HIV/AIDS care and rights",General Litigation,Health Law/HIPAA
+HE-01-02-01-00,"Health care for those with HIV/AIDS",General Litigation,Health Law/HIPAA
+HE-01-03-00-00,"Abortion care and rights",General Litigation,Health Law/HIPAA
+HE-01-04-00-00,"Alcoholism and Substance Abuse",General Litigation,Health Law/HIPAA
+HE-01-04-01-00,"Disability protections for substance use disorders",Labor & Employment,ADA (Disability) Act Issues
+HE-01-05-00-00,"Birth Control and Sterlization",General Litigation,Health Law/HIPAA
+HE-01-06-00-00,"Black Lung Disease (Pneumoconiosis) benefits",Workers' Comp,State
+HE-01-07-00-00,"Breast and Cervical Cancer",General Litigation,Health Law/HIPAA
+HE-01-08-00-00,"Counseling and social work needs",General Litigation,Health Law/HIPAA
+HE-01-09-00-00,"Immunization and Vaccines",General Litigation,Health Law/HIPAA
+HE-01-10-00-00,"Disability issues and rights",General Litigation,ADA
+HE-01-10-01-00,"Health public benefits for a person with a disability",Administrative Law,Medicare/Medicaid
+HE-01-10-01-01,"Medicaid coverage for a person with a disability",Administrative Law,Medicare/Medicaid
+HE-01-10-01-02,"Medicare coverage for a person with a disability",Administrative Law,Medicare/Medicaid
+HE-01-10-02-00,"Mental Health Disabilities",Criminal Law,Mental Commitment
+HE-01-10-03-00,"Disability services and resources",General Litigation,ADA
+HE-02-00-00-00,"Rights and discrimination around health care",General Litigation,Civil Rights
+HE-02-01-00-00,"Language and cultural access to health care",General Litigation,Civil Rights
+HE-02-02-00-00,"Discrimination or Refusal to Treat a person",General Litigation,Civil Rights
+HE-02-03-00-00,"Duty to provide health care to low-income individuals",General Litigation,Health Law/HIPAA
+HE-02-04-00-00,"Minority groups' access to health care",General Litigation,Civil Rights
+HE-03-00-00-00,"Problems with medical or nursing home care",General Litigation,Malpractice-Medical
+HE-03-01-00-00,"Quality of care in a nursing home",General Litigation,Malpractice-Medical
+HE-03-02-00-00,"Complaining about medical services quality or cost",General Litigation,Malpractice-Medical
+HE-04-00-00-00,"Nursing Home Care and Assisted Living",Wills & Trusts,Long-Term Care Issues
+HE-04-01-00-00,"Discharge or transfer from a nursing home",Wills & Trusts,Long-Term Care Issues
+HE-04-02-00-00,"Assisted Living or Board and Care homes",Wills & Trusts,Long-Term Care Issues
+HE-04-04-00-00,"Licensing of nursing homes",Administrative Law,Professional Licensing
+HE-05-00-00-00,"Medical Records and Privacy",General Litigation,Health Law/HIPAA
+HE-06-00-00-00,"Health issues from living conditions",General Litigation,Premises Liability
+HE-07-00-00-00,"Workers with health or disability issues",Labor & Employment,ADA (Disability) Act Issues
+HE-07-01-00-00,"Disability Insurance coverage",General Litigation,Insurance (Health/Disability)
+HO-00-00-00-00,"Housing",Real Property,General (residential)
+HO-01-00-00-00,"Discrimination around housing",General Litigation,Civil Rights
+HO-01-01-00-00,"Federal Protections against housing discrimination (Fair Housing Act)",General Litigation,Civil Rights
+HO-01-02-00-00,"State protections against housing discrimination",General Litigation,Civil Rights
+HO-01-03-00-00,"Local protections against housing discrimination",General Litigation,Civil Rights
+HO-01-04-00-00,"Housing discrimination based on race",General Litigation,Civil Rights
+HO-01-05-00-00,"Discriminatory housing lending (or Redlining)",Consumer Law,Mortgage Issues (non-foreclosure)
+HO-01-06-00-00,"Housing discrimination based on disability",Real Property,LLTN – ADA issues/Animals/Accommodations
+HO-01-07-00-00,"Housing discrimination based on national origin",General Litigation,Civil Rights
+HO-01-08-00-00,"Housing Discrimination based on gender or sexuality",General Litigation,Civil Rights
+HO-01-09-00-00,"Housing discrimination based on familial status (having children, being pregnant, or adopting)",General Litigation,Civil Rights
+HO-01-10-00-00,"Housing discrimination based on religion",General Litigation,Civil Rights
+HO-01-11-00-00,"Housing discrimination based on source of income/voucher subsidies",General Litigation,Civil Rights
+HO-02-00-00-00,"Eviction from a home",Real Property,Tenant (Residential)
+HO-02-01-00-00,"Eviction from a homeless shelter or group home",Real Property,Tenant (Residential)
+HO-02-02-00-00,"Eviction from subsidized or public housing",Real Property,Tenant (Residential)
+HO-02-02-01-00,"Eviction from a home subsidized by Rural Economic and Community Development",Real Property,Tenant (Residential)
+HO-02-02-02-00,"Eviction from federally subsidized (Section 8) housing",Real Property,Tenant (Residential)
+HO-02-02-03-00,"Eviction from public housing (with government landlord)",Real Property,Tenant (Residential)
+HO-02-02-04-00,"One-Strike Eviction policies in public and subsidized housing",Real Property,Tenant (Residential)
+HO-02-03-00-00,"Eviction from private rental housing (not public or subsidized)",Real Property,Tenant (Residential)
+HO-02-03-02-00,"Going to court for Eviction and Landlord-Tenant issues",Real Property,Litigation
+HO-02-03-02-01,"Being a defendant in an eviction lawsuit",Real Property,Litigation
+HO-02-03-02-02,"Being a plaintiff in an eviction lawsuit",Real Property,Litigation
+HO-02-03-02-03,"Requesting a Jury Trial in an eviction lawsuit",Real Property,Litigation
+HO-02-03-02-04,"Appealing an eviction lawsuit's judgment",Real Property,Litigation
+HO-02-03-02-05,"Nonpayment of Rent eviction case procedure",Real Property,Litigation
+HO-02-03-02-06,"Holdover eviction cases",Real Property,Litigation
+HO-02-03-02-07,"Canceling (or setting aside) an Eviction Order",Real Property,Litigation
+HO-02-03-02-08,"Jurisdiction issues around an eviction case",Real Property,Litigation
+HO-02-03-02-09,"Paying to dismiss an eviction case",Real Property,Litigation
+HO-02-03-02-10,"Discovery Requests and Responses in eviction lawsuit",Real Property,Litigation
+HO-02-03-02-11,"Preparing for an Eviction Trial",Real Property,Litigation
+HO-02-03-02-12,"Settling an Eviction Lawsuit",Real Property,Litigation
+HO-02-03-02-13,"Answering an Eviction Lawsuit",Real Property,Litigation
+HO-02-03-02-14,"Going to small claims court for eviction-related case",Consumer Law,Small Claims Advice
+HO-02-04-00-00,"Defenses to stop or delay an eviction",Real Property,Tenant (Residential)
+HO-02-04-01-00,"Notice and Procedural defenses against an eviction",Real Property,Tenant (Residential)
+HO-02-04-02-00,"Reasonable Accommodation for a disability defenses against an eviction",Real Property,LLTN – ADA issues/Animals/Accommodations
+HO-02-04-03-00,"Living conditions (habitability) defenses against an eviction",Real Property,Tenant (Residential)
+HO-02-04-04-00,"Military service-members' protections around eviction",Administrative Law,Military/Veterans
+HO-02-04-05-00,"Title and ownership defenses against an eviction",Real Property,Tenant (Residential)
+HO-02-04-06-00,"Retaliatory Eviction defenses against an eviction",Real Property,Tenant (Residential)
+HO-02-05-00-00,"Tenants' rights and options after an eviction",Real Property,Tenant (Residential)
+HO-02-06-00-00,"Expungement or Masking of an Eviction Record",Criminal Law,Expunction
+HO-02-07-00-00,"Challenging a landlord for a 'constructive eviction'",Real Property,Tenant (Residential)
+HO-02-08-00-00,"Landlord locking-out or shutting off utilities",Real Property,Tenant (Residential)
+HO-02-09-00-00,"Settlements, Mediation, and Diversion from Eviction",Real Property,Litigation
+HO-02-10-00-00,"Landlord Payments to Tenant for Eviction and Displacement",Real Property,Tenant (Residential)
+HO-03-00-00-00,"Housing Assistance, Public Housing, and Subsidized Housing",Administrative Law,Welfare
+HO-03-01-00-00,"Emergency Assistance for housing costs (rental assistance)",Administrative Law,Welfare
+HO-03-01-01-00,"Local housing assistance programs",Administrative Law,Welfare
+HO-03-01-02-00,"State housing assistance programs",Administrative Law,Welfare
+HO-03-01-03-00,"Landlord refusing to accept emergency rent program payments",Real Property,Tenant (Residential)
+HO-03-02-00-00,"Public Housing (with government as landlord)",Administrative Law,Welfare
+HO-03-02-04-00,"Safety and security in public housing",Real Property,Tenant (Residential)
+HO-03-02-05-00,"Public Housing sites, rehabilitation, and demolition",Real Property,Land Use/Zoning
+HO-03-02-05-01,"Site selection for public housing",Real Property,Land Use/Zoning
+HO-03-02-05-02,"Demolition of public housing",Real Property,Land Use/Zoning
+HO-03-02-05-03,"Relocation rights and assistance for public housing",Real Property,Tenant (Residential)
+HO-03-02-05-04,"Employment opportunities (Section 3) for public and subsidized housing contracts",Labor & Employment,General
+HO-03-02-05-05,"Hope VI program to revitalize public housing",Real Property,Land Use/Zoning
+HO-03-02-06-00,"Getting public housing",Administrative Law,Welfare
+HO-03-02-06-01,"Eligibility and Selection Criteria for public housing",Administrative Law,Welfare
+HO-03-02-06-02,"Preferences in who gets public housing",Administrative Law,Welfare
+HO-03-02-06-03,"Residency requirements for public housing",Administrative Law,Welfare
+HO-03-02-07-00,"Having visitors in public housing",Real Property,Tenant (Residential)
+HO-03-03-00-00,"Federally Subsidized Housing (including Section 8/Housing Choice Vouchers)",Administrative Law,Welfare
+HO-03-03-01-00,"Having visitors to federally subsidized rental home",Real Property,Tenant (Residential)
+HO-03-03-02-00,"Getting a Housing Choice (Section 8) voucher for federally subsidized rental",Administrative Law,Welfare
+HO-03-03-03-00,"Recertifying/reporting changes to income and family for Section 8 voucher",Administrative Law,Welfare
+HO-03-03-04-00,"Termination of a federal rental subsidy",Administrative Law,Welfare
+HO-03-03-06-00,"Subsidized Housing Removal, Conversion, or Preservation",Real Property,Tenant (Residential)
+HO-03-03-06-01,"Landlord Opting out of federal subsidies program",Real Property,Tenant (Residential)
+HO-03-03-07-00,"Relocating with a federal rent subsidy voucher",Administrative Law,Welfare
+HO-03-04-00-00,"Rural rental assistance (formerly FMHA) programs",Administrative Law,Welfare
+HO-03-05-00-00,"Affordable Housing development",Real Property,Land Use/Zoning
+HO-03-05-01-00,"Low Income Housing Tax Credit to build affordable housing",Taxation,Business & Corporate
+HO-03-07-00-00,"Immigrants' eligibility for housing programs",Administrative Law,Welfare
+HO-03-08-00-00,"Single Room Occupancy housing options",Real Property,Tenant (Residential)
+HO-04-00-00-00,"Buying a Home",Real Property,General (residential)
+HO-04-01-00-00,"Federal subsidies to buy a home (Homeownership Voucher Program)",Real Property,"Government Loans (VA,FHA,Etc.)"
+HO-04-02-00-00,"Paying for a home through a Bond/Contract for Deed",Real Property,General (residential)
+HO-04-02-01-00,"Installment Land Sale Contracts",Real Property,General (residential)
+HO-04-03-00-00,"Deeds for a home",Real Property,General (residential)
+HO-04-04-00-00,"Closing on a home sale",Real Property,General (residential)
+HO-04-05-00-00,"Cooperatives, Condominiums, and Homeowners Associations",Real Property,Homeowners Association
+HO-05-00-00-00,"Problems with living conditions",Real Property,General (residential)
+HO-05-01-00-00,"Poor living conditions in a rented home",Real Property,Tenant (Residential)
+HO-05-01-01-00,"Poor living conditions in a federally subsidized (Section 8) home",Real Property,Tenant (Residential)
+HO-05-01-01-01,"Challenging a federally subsidized rental's living conditions",Real Property,Tenant (Residential)
+HO-05-01-01-02,"Housing Quality Standards for federally subsidized rentals",Real Property,Tenant (Residential)
+HO-05-01-01-03,"Termination of 'Troubled Properties' as federally subsidized rentals",Real Property,Tenant (Residential)
+HO-05-01-01-04,"Safety and security issues in subsidized housing",Real Property,Tenant (Residential)
+HO-05-01-02-00,"Poor living conditions in a rental subsidized with rural rental assistance",Real Property,Tenant (Residential)
+HO-05-01-03-00,"Poor living conditions in public housing",Real Property,Tenant (Residential)
+HO-05-01-04-00,"Housing code compliance",Real Property,Tenant (Residential)
+HO-05-01-05-00,"Disruptions to 'quiet enjoyment' of a rental",General Litigation,Neighbor Disputes/Nuisance
+HO-05-01-06-00,"Landlord harassment or problem behavior",Real Property,Tenant (Residential)
+HO-05-03-00-00,"Lead Paint and Poisoning",General Litigation,Mold Claims
+HO-06-00-00-00,"Renting or leasing a home",Real Property,Tenant (Residential)
+HO-06-01-00-00,"Security Deposit for a rented home",Real Property,Tenant (Residential)
+HO-06-01-01-00,"Security deposits and charges for federally subsidized (Section 8) rentals",Real Property,Tenant (Residential)
+HO-06-01-01-02,"Income-based rent rates for public housing",Real Property,Tenant (Residential)
+HO-06-01-02-00,"Security deposits and charges for public housing",Real Property,Tenant (Residential)
+HO-06-01-03-00,"Challenging a landlord's security deposit deductions",Real Property,Tenant (Residential)
+HO-06-02-00-00,"Rent charges, increases, and control",Real Property,Tenant (Residential)
+HO-06-02-01-00,"Rent issues in public housing",Real Property,Tenant (Residential)
+HO-06-02-01-01,"Rent Ceilings or Flat Rent for public housing",Real Property,Tenant (Residential)
+HO-06-02-01-03,"Utility allowances and charges for public or subsidized housing",Administrative Law,Utilities
+HO-06-02-01-04,"Rent increases in public housing",Real Property,Tenant (Residential)
+HO-06-02-02-00,"Rent issues in federally subsidized rentals",Real Property,Tenant (Residential)
+HO-06-02-02-01,"Income-based rent rates for federally subsidized housing",Real Property,Tenant (Residential)
+HO-06-02-02-02,"Rent ceilings or Flat Rent rates for federally subsidized rentals",Real Property,Tenant (Residential)
+HO-06-02-03-00,"Rent issues in rural assistance subsidized homes",Real Property,Tenant (Residential)
+HO-06-02-04-00,"Late fees, penalties, other charges for a rental home",Real Property,Tenant (Residential)
+HO-06-02-04-01,"Pet fees, deposits, and rent",Real Property,Tenant (Residential)
+HO-06-02-04-02,"Landlord taking property for rent owed",Real Property,Tenant (Residential)
+HO-06-02-05-00,"Rent Control ",Real Property,Tenant (Residential)
+HO-06-02-05-01,"Overcharges of rent in a rent control area",Real Property,Tenant (Residential)
+HO-06-02-05-02,"Determining if a home is covered by rent control",Real Property,Tenant (Residential)
+HO-06-02-05-03,"Rent control agencies' practices",Real Property,Tenant (Residential)
+HO-06-02-05-04,"Eviction limits under Rent Control laws",Real Property,Tenant (Residential)
+HO-06-02-05-05,"Rent control jurisdictions",Real Property,Tenant (Residential)
+HO-06-02-05-07,"Succession rights and process in Rent Control homes",Real Property,Tenant (Residential)
+HO-06-03-00-00,"Tenant Rights, Organizations, and Participation",Real Property,Tenant (Residential)
+HO-06-03-01-00,"Tenants' participation and organization in subsidized housing",Real Property,Tenant (Residential)
+HO-06-03-02-00,"Tenants' participation and organization in public housing",Real Property,Tenant (Residential)
+HO-06-03-03-00,"Tenants' Rights around Evictions",Real Property,Tenant (Residential)
+HO-06-04-00-00,"Landlord access to a rental",Real Property,Tenant (Residential)
+HO-06-04-01-00,"Landlord access to a federally subsidized rental",Real Property,Tenant (Residential)
+HO-06-04-02-00,"Landlord or Housing Authority access to a public housing rental",Real Property,Tenant (Residential)
+HO-06-05-00-00,"Leases & Rental Agreements for a rental home",Real Property,Tenant (Residential)
+HO-06-05-01-00,"Leases for a federally subsidized home",Real Property,Tenant (Residential)
+HO-06-05-02-00,"Changing a rental agreement or lease",Real Property,Tenant (Residential)
+HO-06-06-00-00,"Local regulations of rental housing",Real Property,Land Use/Zoning
+HO-06-06-02-00,"State regulations of rental housing",Real Property,Land Use/Zoning
+HO-06-06-03-00,"Rental protections for those with HIV/AIDS",Real Property,Tenant (Residential)
+HO-06-07-00-00,"Problems with paying rent",Real Property,Tenant (Residential)
+HO-06-10-00-00,"Ending a rental lease early",Real Property,Tenant (Residential)
+HO-06-11-00-00,"Landlord suing tenant for money",Real Property,Litigation
+HO-06-12-00-00,"Abandoned Personal Property in Rental Home",Real Property,Tenant (Residential)
+HO-06-13-00-00,"Renters' housing issues after a natural disaster",Real Property,Tenant (Residential)
+HO-06-13-00-00,"Having pets or assistance animals in a rental home",Real Property,LLTN – ADA issues/Animals/Accommodations
+HO-07-00-00-00,"Utilities, Energy, and Heating at home",Administrative Law,Utilities
+HO-07-01-00-00,"Utility disconnection and reconnection",Administrative Law,Utilities
+HO-08-00-00-00,"Foreclosure on a Home",Real Property,Foreclosure
+HO-08-01-00-00,"Defenses against a Foreclosure",Real Property,Foreclosure
+HO-08-02-00-00,"Stopping a foreclosure through a 'redemption' (paying off loan in full)",Real Property,Foreclosure
+HO-08-03-00-00,"Stopping a foreclosure by reinstating (catching up with) the loan",Real Property,Foreclosure
+HO-08-06-00-00,"Tenant options when landlord is in foreclosure or bankruptcy",Real Property,Tenant (Residential)
+HO-08-06-01-00,"Another person (receiver) taking over from a landlord",Real Property,Tenant (Residential)
+HO-09-00-00-00,"Owning a Home",Real Property,General (residential)
+HO-09-02-01-00,"Clearing Title to one's home",Real Property,General (residential)
+HO-09-03-00-00,"Zoning and Land Use of one’s property",Real Property,Land Use/Zoning
+HO-09-04-00-00,"Property Taxes",Real Property,Property Tax
+HO-09-04-01-00,"Property Tax Appeals, Refunds and Abatements",Real Property,Property Tax
+HO-09-05-00-00,"Mortgages and other financing for a home",Consumer Law,Mortgage Issues (non-foreclosure)
+HO-09-05-01-00,"Federally-Subsidized Mortgage Loans",Real Property,"Government Loans (VA,FHA,Etc.)"
+HO-09-05-01-01,"HUD-Insured Mortgages",Real Property,"Government Loans (VA,FHA,Etc.)"
+HO-09-05-02-00,"Mortgages for Veterans",Administrative Law,Military/Veterans
+HO-09-05-03-00,"Mortgage Rescue Scams",Consumer Law,Mortgage Issues (non-foreclosure)
+HO-09-05-04-00,"Reverse Mortgages (loans using home equity conversion)",Consumer Law,Mortgage Issues (non-foreclosure)
+HO-09-05-06-00,"Mortgage Predatory Lending",Consumer Law,Mortgage Issues (non-foreclosure)
+HO-09-06-00-00,"Dividing (Partition) a home with another owner",Real Property,Litigation
+HO-10-00-00-00,"Housing after a Disaster",Real Property,General (residential)
+HO-10-01-00-00,"Eviction issues during a public health emergency",Real Property,Tenant (Residential)
+HO-10-03-00-00,"FEMA Housing Assistance",Administrative Law,General (Federal)
+HO-11-00-00-00,"Housing issues after contact with police",Real Property,Tenant (Residential)
+HO-12-00-00-00,"Zoning issues related to housing",Real Property,Land Use/Zoning
+HO-13-00-00-00,"Homelessness and Housing Insecurity",Real Property,Tenant (Residential)
+HO-14-00-00-00,"Mobile Homes",Real Property,Mobile Home (Tenant/Owner)
+HO-14-01-00-00,"Owning a mobile home",Real Property,Mobile Home (Tenant/Owner)
+HO-14-02-00-00,"Renting in a Mobile Home Park",Real Property,Mobile Home (Tenant/Owner)
+HO-14-02-01-00,"Eviction from a mobile home park",Real Property,Mobile Home (Tenant/Owner)
+IM-00-00-00-00,"Immigration",International Law,Gen. Immigration/Visas
+IM-01-00-00-00,"Deportation or Removal of immigrants",International Law,Deportation
+IM-01-01-00-00,"Criminal conviction leading to deportation",International Law,Deportation
+IM-01-02-00-00,"Stopping deportation through Withholding of Removal",International Law,Deportation
+IM-01-03-00-00,"Waivers of Inadmissibility, Deportation, or Removal",International Law,Deportation
+IM-02-00-00-00,"Detention of immigrants",International Law,Deportation
+IM-02-01-00-00,"Bond Hearing for a detained immigrant",International Law,Deportation
+IM-02-02-00-00,"Parole for immigrants",International Law,Deportation
+IM-03-00-00-00,"Public Benefits for immigrants",Administrative Law,Welfare
+IM-03-04-00-00,"Immigrants' access to health care",General Litigation,Health Law/HIPAA
+IM-03-04-01-00,"Immigrants' eligibility for Medicaid",Administrative Law,Medicare/Medicaid
+IM-04-00-00-00,"Options for immigration status, visas, permits, and travel papers",International Law,Gen. Immigration/Visas
+IM-04-01-00-00,"Deferred Action immigration status",International Law,Gen. Immigration/Visas
+IM-04-02-00-00,"Legalization of undocumented immigrant",International Law,Gen. Immigration/Visas
+IM-05-00-00-00,"Political asylum",International Law,Gen. Immigration/Visas
+IM-06-00-00-00,"Immigrants' rights",General Litigation,Civil Rights
+IM-06-01-00-00,"Discrimination against Immigrants",General Litigation,Civil Rights
+IM-07-00-00-00,"Sponsoring an immigrant",International Law,Gen. Immigration/Visas
+IM-07-01-00-00,"Sponsoring an immigrant for a work visa",International Law,Gen. Immigration/Visas
+IM-08-00-00-00,"Border searches",International Law,"Customs, Quotas & Duties"
+IM-09-00-00-00,"Refugees",International Law,Gen. Immigration/Visas
+IM-10-00-00-00,"Going to immigration interviews and hearings",International Law,Litigation
+IM-11-00-00-00,"Undocumented immigrants",International Law,Gen. Immigration/Visas
+IM-11-01-00-00,"Immigrants working when undocumented or without authorization",Labor & Employment,General
+IM-12-00-00-00,"Immigration options for victims of domestic violence",International Law,Family Law
+IM-12-01-00-00,"Green Card options for victims of domestic abuse",International Law,Family Law
+IM-12-01-01-00,"Immigration status through U-Visa for crime victims",International Law,Gen. Immigration/Visas
+IM-12-02-00-00,"Canceling Removal Proceedings for domestic abuse victims",International Law,Deportation
+IM-13-00-00-00,"Migrant and seasonal worker employment",Labor & Employment,General
+IM-14-00-00-00,"Work as an immigrant",Labor & Employment,General
+M0-12-01-08-00,"Military Service-members' protection against collection and repossession",Administrative Law,Military/Veterans
+MO-00-00-00-00,"Money, Debt, and Consumer Issues",Consumer Law,General
+MO-02-00-00-00,"Paying for medical care",General Litigation,Health Law/HIPAA
+MO-02-01-00-00,"Health Insurance",General Litigation,Insurance (Health/Disability)
+MO-02-01-01-00,"Health care coverage through employer",Labor & Employment,Pensions/Benefits/Erisa
+MO-02-01-01-01,"COBRA health insurance post-employement",Labor & Employment,Pensions/Benefits/Erisa
+MO-02-01-02-00,"COBRA coverage for dependents",Labor & Employment,Pensions/Benefits/Erisa
+MO-02-03-00-00,"Free and Low-Cost medical care",General Litigation,Health Law/HIPAA
+MO-02-03-01-00,"Free or low-cost care through Hill-Burton facilities",General Litigation,Health Law/HIPAA
+MO-02-04-00-00,"Managed Care plans",General Litigation,Health Law/HIPAA
+MO-02-05-00-00,"Debt collection for medical costs",Debtor/Creditor,Collection/Harassment
+MO-03-00-00-00,"Contracts, Warranties, and Deceptive Trade Practices",Consumer Law,General
+MO-03-02-00-00,"Corporate and Commercial Contracts",Business & Corporate,"General (Contracts Business Organization)"
+MO-03-02-01-00,"Arts & Entertainment Contracts",Business & Corporate,Entertainment
+MO-03-03-00-00,"Consumer Contract issues",Consumer Law,General
+MO-03-03-01-00,"Building Contractors and Construction problems",Business & Corporate,Construction
+MO-03-03-02-00,"Consumer Fraud and Misrepresentation",Consumer Law,General
+MO-03-03-02-01,"False advertising, deceptive pricing, and unfair trade",Consumer Law,General
+MO-03-03-03-00,"Installment Contracts",Consumer Law,General
+MO-03-03-04-00,"Installment Purchases and Rent-to-Own",Consumer Law,General
+MO-03-04-00-00,"Warranty issues",Consumer Law,General
+MO-03-04-01-00,"As-Is Warranty issues",Consumer Law,Automobiles/RVs/Mobile Homes
+MO-04-00-00-00,"Credit practices and Credit reports",Consumer Law,General
+MO-04-01-00-00,"Building good credit",Consumer Law,General
+MO-04-02-00-00,"Repairing credit",Consumer Law,General
+MO-04-03-00-00,"Finding and understanding a credit report",Consumer Law,General
+MO-04-04-00-00,"Accessing credit and borrowing money",Consumer Law,General
+MO-05-00-00-00,"Financial Literacy",Consumer Law,General
+MO-05-01-00-00,"Using Bank Accounts",Consumer Law,Banking
+MO-05-02-00-00,"Using Checks",Consumer Law,Banking
+MO-05-03-00-00,"Using Debit Cards",Consumer Law,Banking
+MO-05-04-00-00,"Using Credit Cards",Consumer Law,Banking
+MO-06-00-00-00,"Identity Theft and Lost Credit Cards",Consumer Law,Identity Theft
+MO-06-01-00-00,"Financial Identity Theft",Consumer Law,Identity Theft
+MO-06-02-00-00,"Criminal Identity Theft with police",Consumer Law,Identity Theft
+MO-07-00-00-00,"Insurance",Consumer Law,Insurance
+MO-07-02-00-00,"Homeowner's Insurance",Consumer Law,Insurance
+MO-07-03-00-00,"Renters' Insurance",Consumer Law,Insurance
+MO-07-04-00-00,"Insurance Scams and Fraud",Consumer Law,Insurance
+MO-07-05-00-00,"Life Insurance",Consumer Law,Insurance
+MO-07-05-01-00,"Service Members' Group Life Insurance",Administrative Law,Military/Veterans
+MO-08-00-00-00,"Loans",Debtor/Creditor,General (Debtor)
+MO-08-01-00-00,"Predatory Lending",Consumer Law,General
+MO-08-02-00-00,"Student Loans and Financial Aid",Debtor/Creditor,Student Loans
+MO-08-02-01-00,"Student Loan Discharge or Cancellation",Debtor/Creditor,Student Loans
+MO-08-02-02-00,"Student Loan Forgiveness",Debtor/Creditor,Student Loans
+MO-08-02-03-00,"Student Loan Default and Delinquency",Debtor/Creditor,Student Loans
+MO-08-02-04-00,"Student Loan Fraud",Debtor/Creditor,Student Loans
+MO-08-02-05-00,"Applying for Financial Aid (FAFSA)",Debtor/Creditor,Student Loans
+MO-08-04-00-00,"Payday loans",Debtor/Creditor,General (Debtor)
+MO-08-05-00-00,"Understanding the terms of a loan or credit card",Consumer Law,General
+MO-08-06-00-00,"Canceling (or rescission of) a loan",Consumer Law,General
+MO-08-07-00-00,"Fees and Finance Charges for a loan",Consumer Law,General
+MO-08-08-00-00,"High interest rates and Usury protections",Consumer Law,General
+MO-09-00-00-00,"Taxes",Taxation,Personal Income
+MO-09-01-00-00,"Income Taxes",Taxation,Personal Income
+MO-09-01-01-00,"Getting your taxes done for free (VITA program)",Taxation,Personal Income
+MO-09-01-02-00,"Spouse's Tax Debt and Innocent Spouse Relief",Taxation,Personal Income
+MO-09-02-00-00,"Earned Income Tax Credit (EITC)",Taxation,Personal Income
+MO-10-00-00-00,"Small Claims lawsuits",Consumer Law,Small Claims Advice
+MO-10-01-00-00,"Going to Small Claims court",Consumer Law,Small Claims Advice
+MO-11-00-00-00,"Discrimination against a customer",General Litigation,Civil Rights
+MO-12-00-00-00,"Debt and Lending Money",Debtor/Creditor,General (Debtor)
+MO-12-01-00-00,"Debt Collection, Repossession, Garnishment",Debtor/Creditor,Collection/Harassment
+MO-12-01-01-00,"Dealing with Abusive Debt Collection and Harassment",Debtor/Creditor,Collection/Harassment
+MO-12-01-01-01,"Fair Debt Collection Practices Act protections",Debtor/Creditor,Collection/Harassment
+MO-12-01-02-00,"Being a Collection-Proof Debtor",Debtor/Creditor,General (Debtor)
+MO-12-01-03-00,"Debt Management Counseling",Debtor/Creditor,Debt Counseling/Workouts
+MO-12-01-04-00,"Deficiency Judgment issues",Debtor/Creditor,Judgement Collection
+MO-12-01-05-00,"Frozen Bank Account issues",Debtor/Creditor,Collection/Harassment
+MO-12-01-06-00,"Garnishment issues",Debtor/Creditor,Collection/Harassment
+MO-12-01-06-01,"Exemptions from Garnishment",Debtor/Creditor,Collection/Harassment
+MO-12-01-06-02,"Wage Garnishment or Assignment issues",Debtor/Creditor,Collection/Harassment
+MO-12-01-06-03,"Non-Wage Garnishment issues",Debtor/Creditor,Collection/Harassment
+MO-12-01-07-00,"Liens on Property ",Debtor/Creditor,General (Debtor)
+MO-12-01-08-00,"Repossession of a car",Consumer Law,Automobiles/RVs/Mobile Homes
+MO-12-01-09-00,"Being a Defendant in a Debt Collection Lawsuit",Debtor/Creditor,General (Debtor)
+MO-12-01-10-00,"Personal Property Exemptions from debt collection",Debtor/Creditor,General (Debtor)
+MO-13-00-00-00,"Bankruptcy",Bankruptcy,Personal
+MO-13-01-00-00,"Chapter 7 Bankruptcy for people with limited income",Bankruptcy,Personal
+MO-13-02-00-00,"Chapter 13 Bankruptcy for people with regular income",Bankruptcy,Personal
+MO-13-05-00-00,"Discharge of Debts in Bankruptcy",Bankruptcy,Personal
+MO-13-06-00-00,"Exemptions to protect property during bankruptcy",Bankruptcy,Personal
+MO-13-07-00-00,"Automatic Stays on creditors during bankruptcy",Bankruptcy,Creditors
+MO-13-08-00-00,"Exceptions to Debt Discharges during Bankruptcy",Bankruptcy,Personal
+MO-13-09-00-00,"Chapter 11 Bankruptcy for businesses",Bankruptcy,Business
+MO-13-10-00-00,"Chapter 12 Bankruptcy for farmers or fishermen",Bankruptcy,Farms
+MO-14-00-00-00,"Door-to-door Sales, Telemarketing, and Spam",Consumer Law,General
+MO-14-01-00-00,"Telemarketers",Consumer Law,General
+MO-14-02-00-00,"Door-to-Door Sales",Consumer Law,General
+MO-14-03-00-00,"Spam on Email or Text",Consumer Law,General
+NA-00-00-00-00,"Native American Issues and Tribal Law",General Litigation,Other
+NA-01-00-00-00,"Government and lands of Native Americans",General Litigation,Other
+NA-01-01-00-00,"Jurisdiction of Native American tribes",General Litigation,Other
+NA-01-02-00-00,"Native American reservations",General Litigation,Other
+NA-01-03-00-00,"Sovereignty of Native American tribes",General Litigation,Other
+NA-01-04-00-00,"Treaties and Native Americans",General Litigation,Other
+NA-01-05-00-00,"Tribal Government",General Litigation,Other
+NA-02-00-00-00,"Native-based legal services",General Litigation,Other
+NA-03-00-00-00,"Family and child support for Native Americans",Family Law,Other
+NA-03-01-00-00,"Divorce for Native American couples",Family Law,"General (Divorce/Separation)"
+NA-03-02-00-00,"Native American children's custody by non-parents (Indian Child Welfare Act)",Family Law,Child Custody/Visitation
+NA-04-00-00-00,"Tribal enrollment",General Litigation,Other
+NA-05-00-00-00,"Native American crime victims",General Litigation,Crime Victim
+NA-06-00-00-00,"Education issues for Native Americans",Administrative Law,Student Rights
+NA-07-00-00-00,"Public Benefits for Native Americans",Administrative Law,Welfare
+NA-07-01-00-00,"Tribal TANF",Administrative Law,Welfare
+NA-08-00-00-00,"Rights and protections for Native Americans",General Litigation,Civil Rights
+NA-08-01-00-00,"Native American hunting and fishing rights",Criminal Law,Game Violations
+NA-09-00-00-00,"Health Care for Native Americans",General Litigation,Health Law/HIPAA
+NA-09-01-00-00,"Indian Health Service",General Litigation,Health Law/HIPAA
+NA-10-00-00-00,"Criminal Tribal Courts",Criminal Law,Other
+RI-00-00-00-00,"Civil and Human Rights",General Litigation,Civil Rights
+RI-01-00-00-00,"Discrimination by Government (Equal Protection)",General Litigation,Civil Rights
+RI-02-00-00-00,"Right to a free lawyer",General Litigation,General Litigation
+RI-03-00-00-00,"Disability Rights and Discrimination",General Litigation,ADA
+RI-03-01-00-00,"Disability rights around housing",Real Property,LLTN – ADA issues/Animals/Accommodations
+RI-03-01-01-00,"Housing rights for people with substance use disorder disability",Real Property,LLTN – ADA issues/Animals/Accommodations
+RI-03-01-01-00,"Assistance animals in rental housing",Real Property,LLTN – ADA issues/Animals/Accommodations
+RI-03-02-00-00,"Disability rights under the Americans with Disabilities Act (ADA)",General Litigation,ADA
+RI-03-02-01-00,"Websites' accessibility requirements",General Litigation,ADA
+RI-03-02-02-00,"Reasonable Accommodation standard under ADA",General Litigation,ADA
+RI-03-02-03-00,"Accessibility rights under ADA",General Litigation,ADA
+RI-03-02-04-00,"ADA Section 508 accessibility for federal government",General Litigation,ADA
+RI-03-02-05-00,"Architectural barriers and accessibility under the ADA",General Litigation,ADA
+RI-03-02-06-00,"Assistance animals in public",General Litigation,Animal Law
+RI-03-03-00-00,"HIV/AIDS discrimination",General Litigation,Civil Rights
+RI-03-04-00-00,"Disability discrimination in government programs",General Litigation,ADA
+RI-04-00-00-00,"Voting Rights",General Litigation,Civil Rights
+RI-05-00-00-00,"First Amendment Rights",General Litigation,Civil Rights
+RI-05-01-00-00,"First Amendment protections of freedom of religion",General Litigation,Civil Rights
+RI-05-02-00-00,"First Amendment protections of freedom of association",General Litigation,Civil Rights
+RI-05-03-00-00,"First Amendment protections of freedom of speech",General Litigation,Civil Rights
+RI-06-00-00-00,"LGBTQ Rights",Family Law,Same Sex Couples & Parents
+RI-07-00-00-00,"Human Rights",General Litigation,Civil Rights
+RI-08-00-00-00,"Workers' Rights",Labor & Employment,General
+RI-08-01-00-00,"Agricultural workers' protections",Labor & Employment,General
+RI-08-01-01-00,"Poultry workers' protections",Labor & Employment,General
+RI-08-01-02-00,"Racial and ethnic discrimination in agricultural work",Labor & Employment,Discrimination
+RI-09-00-00-00,"Mental Health Rights",Criminal Law,Mental Commitment
+RI-09-01-00-00,"Rights to refuse mental health treatment",Criminal Law,Mental Commitment
+RI-09-02-00-00,"Right to mental health treatment",Criminal Law,Mental Commitment
+RI-10-00-00-00,"Prisoners' Rights",General Litigation,Civil Matter for Inmates
+RI-11-00-00-00,"Women's Rights",General Litigation,Civil Rights
+RI-12-00-00-00,"Privacy Rights and Protections",General Litigation,General Torts/Privacy
+RI-13-00-00-00,"Rights against government searches or arrests",General Litigation,Civil Rights
+RI-14-00-00-00,"Right to Travel",General Litigation,Civil Rights
+RI-15-00-00-00,"Sex workers' Rights",General Litigation,Civil Rights
+RI-16-00-00-00,"Human Trafficking rights and protections",General Litigation,Crime Victim
+RI-17-00-00-00,"Religious Freedoms and Discrimination",General Litigation,Civil Rights
+RI-18-00-00-00,"Racial Justice and discrimination",General Litigation,Civil Rights
+RI-19-00-00-00,"Age Discrimination",Labor & Employment,Discrimination
+RI-20-00-00-00,"Rights when dealing with the government",General Litigation,Civil Rights
+RI-21-00-00-00,"Language Access rights",General Litigation,Civil Rights
+TO-00-00-00-00,"Accidents and Torts",General Litigation,Personal Injury
+TO-01-00-00-00,"Being Physically injured or harmed by another",General Litigation,Personal Injury
+TO-01-01-00-00,"Suing a person or business for a personal injury",General Litigation,Personal Injury
+TO-02-00-00-00,"Personal data privacy breach and protections",General Litigation,General Torts/Privacy
+TO-03-00-00-00,"Getting Care and Compensation for an injury",General Litigation,Personal Injury
+TO-04-00-00-00,"Suing someone, or being sued",General Litigation,General Litigation
+TO-04-01-00-00,"Car Accident lawsuits",General Litigation,Personal Injury
+TO-04-02-00-00,"Being a Plaintiff in lawsuit (suing someone)",General Litigation,General Litigation
+TO-04-03-00-00,"Being a Defendant in a lawsuit (being sued)",General Litigation,General Litigation
+TO-04-04-00-00,"Seeking an injunction to compel an action",General Litigation,General Litigation
+TO-04-04-01-00,"Seeking a preliminary injunction before a trial ends",General Litigation,General Litigation
+TO-04-05-00-00,"Suing to enforce a law (Private right of action)",General Litigation,General Litigation
+TO-04-06-00-00,"Outcomes a plaintiff can seek in a lawsuit",General Litigation,General Litigation
+TO-04-07-00-00,"Suing the government for civil rights violations",General Litigation,Civil Rights
+TO-04-07-01-00,"Getting civil rights lawyer's fees paid",General Litigation,Civil Rights
+TO-05-00-00-00,"Harassment by another person",General Litigation,Online Harassment/Doxing/Bullying
+TR-00-00-00-00,"Traffic and Cars",Criminal Law,Traffic Offenses
+TR-01-00-00-00,"Car injuries to people or property",General Litigation,Personal Injury
+TR-02-00-00-00,"Dealing with traffic and parking tickets",Criminal Law,Traffic Offenses
+TR-02-01-00-00,"Speeding and Moving Violations",Criminal Law,Traffic Offenses
+TR-02-02-00-00,"License and Registration Traffic Tickets",Criminal Law,Traffic Offenses
+TR-02-03-00-00,"No Insurance Traffic Tickets",Criminal Law,Traffic Offenses
+TR-02-04-00-00,"Parking Tickets",Criminal Law,Traffic Offenses
+TR-02-05-00-00,"Driving Under the Influence",Criminal Law,DUII/DWS
+TR-02-06-00-00,"Going to Traffic Court",Criminal Law,Traffic Offenses
+TR-03-00-00-00,"Driver's licenses or permits",Administrative Law,DMV (Non-Criminal)
+TR-03-01-00-00,"Driver's License Suspension",Administrative Law,DMV (Non-Criminal)
+TR-03-01-01-00,"Driver's License Suspension for court fines",Administrative Law,DMV (Non-Criminal)
+TR-03-02-00-00,"Reinstating a Driver's License",Administrative Law,DMV (Non-Criminal)
+TR-04-00-00-00,"Issues with Owning a Car",Consumer Law,Automobiles/RVs/Mobile Homes
+TR-04-01-00-00,"Car Payment Issues",Consumer Law,Automobiles/RVs/Mobile Homes
+TR-04-02-00-00,"Issues with Purchasing and Financing a Car",Consumer Law,Automobiles/RVs/Mobile Homes
+TR-04-03-00-00,"Car Repair issues",Consumer Law,Automobiles/RVs/Mobile Homes
+TR-04-04-00-00,"Warranties and contracts for a car",Consumer Law,Automobiles/RVs/Mobile Homes
+TR-04-04-01-00,"Contracts for Car Repairs",Consumer Law,Automobiles/RVs/Mobile Homes
+TR-04-05-00-00,"Vehicle/Auto License or Registration",Administrative Law,DMV (Non-Criminal)
+TR-05-00-00-00,"Car insurance",Consumer Law,Insurance
+VE-00-00-00-00,"Veterans and Military",Administrative Law,Military/Veterans
+VE-01-00-00-00,"Active Duty Claims",Administrative Law,Military/Veterans
+VE-01-01-00-00,"Active duty claim for household goods",Administrative Law,Military/Veterans
+VE-01-02-00-00,"Active duty medical claims",Administrative Law,Military/Veterans
+VE-02-00-00-00,"Discharge from military",Administrative Law,Military/Veterans
+VE-02-01-00-00,"Administrative Discharge (being fired) from military service",Administrative Law,Military/Veterans
+VE-02-02-00-00,"Medical Discharge from military",Administrative Law,Military/Veterans
+VE-02-03-00-00,"Applying for Military Discharge Upgrades",Administrative Law,Military/Veterans
+VE-03-00-00-00,"Draft into military",Administrative Law,Military/Veterans
+VE-04-00-00-00,"Health benefits for military and veterans",Administrative Law,Military/Veterans
+VE-05-00-00-00,"Mental Health for military and veterans",Administrative Law,Military/Veterans
+VE-06-00-00-00,"Legal protections for military",Administrative Law,Military/Veterans
+VE-07-00-00-00,"Legal help for military",Administrative Law,Military/Veterans
+VE-08-00-00-00,"Deployment preparation and issues",Administrative Law,Military/Veterans
+WO-00-00-00-00,"Work and Employment Law",Labor & Employment,General
+WO-01-00-00-00,"Applying and interviewing for a job",Labor & Employment,General
+WO-01-02-00-00,"Being drug tested when applying for a job",Labor & Employment,General
+WO-01-03-00-00,"Affirmative Action for employment",Labor & Employment,Discrimination
+WO-02-00-00-00,"Problems at a Current Job",Labor & Employment,General
+WO-02-03-00-00,"Being tested for drugs or alcohol at work",Labor & Employment,General
+WO-02-04-00-00,"Wage payment, hours, and breaks at work",Labor & Employment,Wage and Hour Claims
+WO-02-04-01-00,"Minimum wage at work",Labor & Employment,Wage and Hour Claims
+WO-02-04-02-00,"Being paid a 'prevailing wage'",Labor & Employment,Wage and Hour Claims
+WO-02-04-03-00,"Getting paid for overtime work",Labor & Employment,Wage and Hour Claims
+WO-02-04-04-00,"Meal and Rest Breaks",Labor & Employment,Wage and Hour Claims
+WO-02-04-05-00,"Getting paid for trainings and work-related activities",Labor & Employment,Wage and Hour Claims
+WO-02-04-06-00,"Getting reimbursed for work-related costs",Labor & Employment,Wage and Hour Claims
+WO-02-04-07-00,"Making a complaint under the Fair Labor Standards Act",Labor & Employment,FLSA
+WO-02-05-00-00,"Minors' protections and restrictions at work",Labor & Employment,General
+WO-02-06-00-00,"Being an Employee vs. an Independent Contractor",Labor & Employment,General
+WO-02-08-00-00,"Being a subcontractor",Business & Corporate,Construction
+WO-02-14-00-00,"Taking Time off Work at Current Job",Labor & Employment,FMLA
+WO-02-14-01-00,"Taking leave for family and medical reasons",Labor & Employment,FMLA
+WO-02-15-00-00,"Reasonable accommodation for a disability at work",Labor & Employment,ADA (Disability) Act Issues
+WO-02-15-01-00,"Substance use disorder disability accommodation at work",Labor & Employment,ADA (Disability) Act Issues
+WO-03-00-00-00,"Problems regarding a Former Job",Labor & Employment,General
+WO-03-01-00-00,"Being fired after whistleblowing",Labor & Employment,Whistleblowers
+WO-03-02-00-00,"Being fired from a job",Labor & Employment,Wrongful Discharge
+WO-03-02-01-00,"Wrongful termination of employees who are not 'at will'",Labor & Employment,Wrongful Discharge
+WO-03-04-00-00,"Employment records from former job",Labor & Employment,Document Review/Severance Packages.
+WO-04-00-00-00,"Retirement and Pensions",Labor & Employment,Pensions/Benefits/Erisa
+WO-04-01-00-00,"Mismanagement of retirement and pension plans (under ERISA)",Labor & Employment,Pensions/Benefits/Erisa
+WO-04-03-00-00,"Eligibility for pension plan or retirement benefits",Labor & Employment,Pensions/Benefits/Erisa
+WO-04-04-00-00,"Vesting of retirement plan",Labor & Employment,Pensions/Benefits/Erisa
+WO-04-05-00-00,"Railroad workers' retirement system",Labor & Employment,Pensions/Benefits/Erisa
+WO-05-00-00-00,"Unions",Labor & Employment,Union Issues
+WO-05-01-00-00,"Employer interfering with union activity (Unfair Labor Practices)",Labor & Employment,Union Issues
+WO-05-02-00-00,"Unfair Labor Practices by Unions ",Labor & Employment,Union Issues
+WO-06-00-00-00,"Volunteering or interning at a job",Labor & Employment,General
+WO-07-00-00-00,"Being injured on the job",Workers' Comp,State
+WO-07-01-00-00,"Getting Worker's Compensation benefits",Workers' Comp,State
+WO-07-02-00-00,"Working conditions that are unsafe or unhealthy",Workers' Comp,State
+WO-08-00-00-00,"Discrimination around work and employment",Labor & Employment,Discrimination
+WO-08-01-00-00,"Remedies for discrimination at work",Labor & Employment,Discrimination
+WO-08-01-01-00,"Getting Back-Pay after discrimination at work",Labor & Employment,Wage and Hour Claims
+WO-08-01-02-00,"Getting Compensated after discrimination at work",Labor & Employment,Discrimination
+WO-08-01-03-00,"Punitive damages for work discrimination",Labor & Employment,Discrimination
+WO-08-02-00-00,"Sexual harassment at work",Labor & Employment,Sexual Harrasment
+WO-08-03-00-00,"Age discrimination at work",Labor & Employment,Discrimination
+WO-08-04-00-00,"Disability discrimination at work",Labor & Employment,ADA (Disability) Act Issues
+WO-08-05-00-00,"Gender discrimination at work",Labor & Employment,Discrimination
+WO-08-06-00-00,"Racial and Ethnic discrimination at work",Labor & Employment,Discrimination
+WO-08-07-00-00,"Religious discrimination at work",Labor & Employment,Discrimination
+WO-08-08-00-00,"Sexual orientation or Gender Identity discrimination at work",Labor & Employment,Discrimination
+WO-08-09-00-00,"Martial or Parental Status discrimination at work",Labor & Employment,Discrimination
+WO-08-10-00-00,"Proving discrimination at work",Labor & Employment,Discrimination
+WO-08-10-01-00,"Discrimination based on a 'bona fide occupational qualification'",Labor & Employment,Discrimination
+WO-08-10-02-00,"Neutral work policies that lead to discrimination (disparate impact)",Labor & Employment,Discrimination
+WO-09-00-00-00,"Employment in prison",General Litigation,Civil Matter for Inmates
+WO-10-00-00-00,"Veterans and Military members' Civilian Work",Administrative Law,Military/Veterans
+WO-10-01-00-00,"Uniform Services Employment and Reemployment Rights Act for servicemembers",Administrative Law,Military/Veterans
+WO-10-01-01-00,"Reemployment after military service",Administrative Law,Military/Veterans
+WO-11-00-00-00,"Suing an employer for a tort",Labor & Employment,Litigation

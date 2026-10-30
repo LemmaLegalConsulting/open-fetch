@@ -1,0 +1,8 @@
+# Development / test dependencies
+pytest
+pytest-asyncio
+pytest-mock
+python-dotenv
+scireadability
+nltk
+textstat

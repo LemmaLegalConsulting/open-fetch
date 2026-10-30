@@ -1,0 +1,47 @@
+# Run one access-restricted collector/destination per credential scope.
+# This receiver must not be exposed publicly; labels alone are not isolation.
+# OpenTelemetry Collector Contrib configuration.
+# Keep the receiver private; do not expose it through Fly's public http_service.
+extensions:
+  sigv4auth/traces:
+    region: ${env:AWS_REGION}
+    service: xray
+  sigv4auth/logs:
+    region: ${env:AWS_REGION}
+    service: logs
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+processors:
+  memory_limiter:
+    check_interval: 5s
+    limit_mib: 128
+  batch:
+    send_batch_size: 100
+    send_batch_max_size: 100
+    timeout: 5s
+exporters:
+  otlphttp/aws_traces:
+    traces_endpoint: https://xray.${env:AWS_REGION}.amazonaws.com/v1/traces
+    auth:
+      authenticator: sigv4auth/traces
+  otlphttp/aws_logs:
+    logs_endpoint: https://logs.${env:AWS_REGION}.amazonaws.com/v1/logs
+    headers:
+      x-aws-log-group: ${env:AWS_LOG_GROUP}
+      x-aws-log-stream: ${env:AWS_LOG_STREAM}
+    auth:
+      authenticator: sigv4auth/logs
+service:
+  extensions: [sigv4auth/traces, sigv4auth/logs]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlphttp/aws_traces]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlphttp/aws_logs]

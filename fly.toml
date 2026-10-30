@@ -1,0 +1,39 @@
+# Supply your own app with `fly deploy --app YOUR_APP`.
+primary_region = "iad"
+kill_signal = "SIGTERM"
+kill_timeout = "30s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  ENV = "production"
+  OFFLINE_MODE = "0"
+  FETCH_ENABLED_PROVIDERS = "compatible,keyword"
+  DASHBOARD_ENABLED = "true"
+  DASHBOARD_STORAGE = "dynamodb"
+  DASHBOARD_CAPTURE_CONTENT = "false"
+  DASHBOARD_RETENTION_DAYS = "30"
+  AWS_REGION = "us-east-1"
+  TELEMETRY_ENABLED = "false"
+  TELEMETRY_CAPTURE_FULL_QUERY = "false"
+  STREAM_LOG_LEVEL = "ERROR"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "30s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "1gb"

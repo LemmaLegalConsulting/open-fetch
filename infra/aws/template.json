@@ -1,0 +1,525 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Generic FETCH API and review dashboard on ECS Fargate with DynamoDB",
+  "Parameters": {
+    "VpcId": {
+      "Type": "AWS::EC2::VPC::Id"
+    },
+    "PublicSubnets": {
+      "Type": "List<AWS::EC2::Subnet::Id>",
+      "Description": "Two public ALB subnets in different availability zones"
+    },
+    "PrivateSubnets": {
+      "Type": "List<AWS::EC2::Subnet::Id>",
+      "Description": "Private task subnets with NAT or required VPC endpoints"
+    },
+    "CertificateArn": {
+      "Type": "String",
+      "Description": "ACM certificate ARN for your FETCH hostname"
+    },
+    "ImageUri": {
+      "Type": "String",
+      "Description": "Private ECR image URI (use an immutable digest)"
+    },
+    "SecretsArn": {
+      "Type": "String",
+      "Description": "Secrets Manager JSON containing API_CREDENTIALS, API_KEY_PRODUCTION, API_KEY_TEST, DASHBOARD_TOKEN_CLIENT_IDS, COMPATIBLE_API_KEY"
+    },
+    "CompatibleBaseUrl": {
+      "Type": "String",
+      "Default": "https://bedrock-runtime.us-east-1.amazonaws.com/openai/v1"
+    },
+    "CompatibleModel": {
+      "Type": "String",
+      "Default": "openai.gpt-oss-120b-1:0"
+    },
+    "AllowedIngressCidr": {
+      "Type": "String",
+      "Default": "0.0.0.0/0",
+      "Description": "Restrict to campus/VPN ranges when appropriate"
+    },
+    "CaptureContent": {
+      "Type": "String",
+      "Default": "false",
+      "AllowedValues": [
+        "true",
+        "false"
+      ]
+    },
+    "RetentionDays": {
+      "Type": "Number",
+      "Default": 30,
+      "MinValue": 1,
+      "MaxValue": 90
+    }
+  },
+  "Resources": {
+    "Activity": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "client_id",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "sort_key",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "session_key",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "client_id",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "sort_key",
+            "KeyType": "RANGE"
+          }
+        ],
+        "GlobalSecondaryIndexes": [
+          {
+            "IndexName": "sessions",
+            "KeySchema": [
+              {
+                "AttributeName": "session_key",
+                "KeyType": "HASH"
+              },
+              {
+                "AttributeName": "sort_key",
+                "KeyType": "RANGE"
+              }
+            ],
+            "Projection": {
+              "ProjectionType": "ALL"
+            }
+          }
+        ],
+        "TimeToLiveSpecification": {
+          "AttributeName": "expires_at",
+          "Enabled": true
+        },
+        "SSESpecification": {
+          "SSEEnabled": true
+        }
+      },
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "RetentionInDays": 30
+      },
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "TaskRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "fetch-access",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "dynamodb:PutItem",
+                    "dynamodb:Query"
+                  ],
+                  "Resource": [
+                    {
+                      "Fn::GetAtt": [
+                        "Activity",
+                        "Arn"
+                      ]
+                    },
+                    {
+                      "Fn::Sub": "${Activity.Arn}/index/*"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "ExecutionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "fetch-access",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "secretsmanager:GetSecretValue"
+                  ],
+                  "Resource": {
+                    "Ref": "SecretsArn"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "ManagedPolicyArns": [
+          {
+            "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+          }
+        ]
+      }
+    },
+    "LoadBalancerGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "HTTPS ingress",
+        "VpcId": {
+          "Ref": "VpcId"
+        },
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "CidrIp": {
+              "Ref": "AllowedIngressCidr"
+            }
+          }
+        ]
+      }
+    },
+    "TaskGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "FETCH only from ALB",
+        "VpcId": {
+          "Ref": "VpcId"
+        },
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 8080,
+            "ToPort": 8080,
+            "SourceSecurityGroupId": {
+              "Ref": "LoadBalancerGroup"
+            }
+          }
+        ]
+      }
+    },
+    "LoadBalancer": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "Scheme": "internet-facing",
+        "Subnets": {
+          "Ref": "PublicSubnets"
+        },
+        "SecurityGroups": [
+          {
+            "Ref": "LoadBalancerGroup"
+          }
+        ]
+      }
+    },
+    "Target": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VpcId"
+        },
+        "Port": 8080,
+        "Protocol": "HTTP",
+        "TargetType": "ip",
+        "HealthCheckPath": "/health",
+        "Matcher": {
+          "HttpCode": "200"
+        }
+      }
+    },
+    "Https": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "LoadBalancerArn": {
+          "Ref": "LoadBalancer"
+        },
+        "Port": 443,
+        "Protocol": "HTTPS",
+        "Certificates": [
+          {
+            "CertificateArn": {
+              "Ref": "CertificateArn"
+            }
+          }
+        ],
+        "SslPolicy": "ELBSecurityPolicy-TLS13-1-2-2021-06",
+        "DefaultActions": [
+          {
+            "Type": "forward",
+            "TargetGroupArn": {
+              "Ref": "Target"
+            }
+          }
+        ]
+      }
+    },
+    "Cluster": {
+      "Type": "AWS::ECS::Cluster",
+      "Properties": {}
+    },
+    "Task": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "Cpu": "512",
+        "Memory": "1024",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "ExecutionRole",
+            "Arn"
+          ]
+        },
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "TaskRole",
+            "Arn"
+          ]
+        },
+        "ContainerDefinitions": [
+          {
+            "Name": "fetch",
+            "Image": {
+              "Ref": "ImageUri"
+            },
+            "Essential": true,
+            "PortMappings": [
+              {
+                "ContainerPort": 8080
+              }
+            ],
+            "Environment": [
+              {
+                "Name": "ENV",
+                "Value": "production"
+              },
+              {
+                "Name": "OFFLINE_MODE",
+                "Value": "0"
+              },
+              {
+                "Name": "FETCH_ENABLED_PROVIDERS",
+                "Value": "compatible,keyword"
+              },
+              {
+                "Name": "COMPATIBLE_BASE_URL",
+                "Value": {
+                  "Ref": "CompatibleBaseUrl"
+                }
+              },
+              {
+                "Name": "COMPATIBLE_MODEL",
+                "Value": {
+                  "Ref": "CompatibleModel"
+                }
+              },
+              {
+                "Name": "AWS_REGION",
+                "Value": {
+                  "Ref": "AWS::Region"
+                }
+              },
+              {
+                "Name": "DASHBOARD_ENABLED",
+                "Value": "true"
+              },
+              {
+                "Name": "DASHBOARD_STORAGE",
+                "Value": "dynamodb"
+              },
+              {
+                "Name": "DASHBOARD_TABLE",
+                "Value": {
+                  "Ref": "Activity"
+                }
+              },
+              {
+                "Name": "DASHBOARD_CAPTURE_CONTENT",
+                "Value": {
+                  "Ref": "CaptureContent"
+                }
+              },
+              {
+                "Name": "DASHBOARD_RETENTION_DAYS",
+                "Value": {
+                  "Ref": "RetentionDays"
+                }
+              },
+              {
+                "Name": "TELEMETRY_ENABLED",
+                "Value": "false"
+              },
+              {
+                "Name": "TELEMETRY_CAPTURE_FULL_QUERY",
+                "Value": "false"
+              },
+              {
+                "Name": "STREAM_LOG_LEVEL",
+                "Value": "ERROR"
+              }
+            ],
+            "Secrets": [
+              {
+                "Name": "API_CREDENTIALS",
+                "ValueFrom": {
+                  "Fn::Sub": "${SecretsArn}:API_CREDENTIALS::"
+                }
+              },
+              {
+                "Name": "API_KEY_PRODUCTION",
+                "ValueFrom": {
+                  "Fn::Sub": "${SecretsArn}:API_KEY_PRODUCTION::"
+                }
+              },
+              {
+                "Name": "API_KEY_TEST",
+                "ValueFrom": {
+                  "Fn::Sub": "${SecretsArn}:API_KEY_TEST::"
+                }
+              },
+              {
+                "Name": "DASHBOARD_TOKEN_CLIENT_IDS",
+                "ValueFrom": {
+                  "Fn::Sub": "${SecretsArn}:DASHBOARD_TOKEN_CLIENT_IDS::"
+                }
+              },
+              {
+                "Name": "COMPATIBLE_API_KEY",
+                "ValueFrom": {
+                  "Fn::Sub": "${SecretsArn}:COMPATIBLE_API_KEY::"
+                }
+              }
+            ],
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "Logs"
+                },
+                "awslogs-region": {
+                  "Ref": "AWS::Region"
+                },
+                "awslogs-stream-prefix": "fetch"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "Service": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "Cluster": {
+          "Ref": "Cluster"
+        },
+        "TaskDefinition": {
+          "Ref": "Task"
+        },
+        "LaunchType": "FARGATE",
+        "DesiredCount": 1,
+        "HealthCheckGracePeriodSeconds": 60,
+        "DeploymentConfiguration": {
+          "DeploymentCircuitBreaker": {
+            "Enable": true,
+            "Rollback": true
+          }
+        },
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "Subnets": {
+              "Ref": "PrivateSubnets"
+            },
+            "SecurityGroups": [
+              {
+                "Ref": "TaskGroup"
+              }
+            ]
+          }
+        },
+        "LoadBalancers": [
+          {
+            "ContainerName": "fetch",
+            "ContainerPort": 8080,
+            "TargetGroupArn": {
+              "Ref": "Target"
+            }
+          }
+        ]
+      },
+      "DependsOn": [
+        "Https"
+      ]
+    }
+  },
+  "Outputs": {
+    "LoadBalancerDns": {
+      "Value": {
+        "Fn::GetAtt": [
+          "LoadBalancer",
+          "DNSName"
+        ]
+      }
+    },
+    "ActivityTable": {
+      "Value": {
+        "Ref": "Activity"
+      }
+    },
+    "ServiceName": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Service",
+          "Name"
+        ]
+      }
+    }
+  }
+}
