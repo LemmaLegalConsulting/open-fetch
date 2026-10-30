@@ -16,3 +16,4 @@ os.environ["TELEMETRY_ENABLED"] = "false"
 os.environ.pop("FETCH_ENABLED_PROVIDERS", None)
 os.environ.pop("FETCH_MODEL_ENDPOINTS", None)
 os.environ.pop("FETCH_AUXILIARY_MODEL", None)
+os.environ.pop("FETCH_MERGE_MODEL", None)

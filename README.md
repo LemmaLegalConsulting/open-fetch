@@ -8,6 +8,8 @@ See the [FETCH public research repository](https://github.com/nonprofittechy/fet
 
 The paper [*That’s So FETCH: Fashioning Ensemble Techniques for LLM Classification in Civil Legal Intake and Referral*](https://doi.org/10.3233/FAIA251588) describes FETCH’s ensemble classification and follow-up-question approach.
 
+The recommended **Terra + Haiku classification ensemble, with Terra for question merging**, differs from the paper’s model combination. See the [October 2026 performance note](docs/MODEL_PERFORMANCE.md) for the separate public-benchmark evaluation, merge-quality pilot, costs, and limitations.
+
 ## Run locally
 
 Use Python 3.12. From this directory:
@@ -64,4 +66,4 @@ Use `FETCH_ENABLED_PROVIDERS=compatible,keyword` with `COMPATIBLE_BASE_URL`, `CO
 
 Use [credential scopes](docs/CREDENTIAL_SCOPES.md) to bind each API key to a consumer, `test` or `production` environment, and nonsecret key ID. Traces and structured logs route only to that exact scope's destination, with no shared fallback. New dashboard records and review access use the same scope. Legacy keys still classify but do not export HTTP telemetry until migrated.
 
-See [Azure Foundry and AWS Bedrock model hosting](docs/MODEL_HOSTING.md) for a named GPT/Haiku/open-weight ensemble with separate credentials and an explicit auxiliary model.
+See [Azure Foundry and AWS Bedrock model hosting](docs/MODEL_HOSTING.md) for the Terra + Haiku ensemble with separate credentials and explicit merge/screening model selections.

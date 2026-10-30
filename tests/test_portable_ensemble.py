@@ -12,12 +12,15 @@ from app.services.classification_service import ClassificationService
 from app.models.api_models import ClassificationRequest
 
 
+@pytest.mark.parametrize("merge_model", [None, "gpt"])
 @pytest.mark.parametrize("cloud", ["azure", "bedrock"])
 @pytest.mark.asyncio
-async def test_three_model_ensemble_and_auxiliary_calls(monkeypatch, cloud):
+async def test_three_model_ensemble_and_auxiliary_calls(monkeypatch, cloud, merge_model):
     monkeypatch.setenv("OFFLINE_MODE", "0")
     monkeypatch.setenv("FETCH_ENABLED_PROVIDERS", "gpt,haiku,open_weight")
     monkeypatch.setenv("FETCH_AUXILIARY_MODEL", "haiku")
+    if merge_model:
+        monkeypatch.setenv("FETCH_MERGE_MODEL", merge_model)
     configs, urls = {}, {}
     for name, protocol in [
         ("gpt", "openai"),
@@ -127,10 +130,12 @@ async def test_three_model_ensemble_and_auxiliary_calls(monkeypatch, cloud):
             "A custody dispute", ["Family Law > Paternity"]
         )
         assert len(requests) == 5
-        assert all(body["model"] == "synthetic-haiku" for _, body in requests[-2:])
-        assert all(
-            str(req.url) == urls["haiku"] + "/v1/messages" for req, _ in requests[-2:]
-        )
+        assert requests[-2][1]["model"] == "synthetic-" + (merge_model or "haiku")
+        assert requests[-1][1]["model"] == "synthetic-haiku"
+        assert str(requests[-1][0].url) == urls["haiku"] + "/v1/messages"
+        monkeypatch.setenv("FETCH_MERGE_MODEL", "missing")
+        with pytest.raises(ValueError, match="FETCH_MERGE_MODEL"):
+            await service._call_semantic_merge_model("Merge", "[]")
     finally:
         await service.cleanup()
         for p in service.providers:

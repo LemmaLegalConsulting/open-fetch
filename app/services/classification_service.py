@@ -138,6 +138,7 @@ class ClassificationService:
         )
         if not self.offline_mode:
             self._auxiliary_provider()
+            self._auxiliary_provider("FETCH_MERGE_MODEL")
         # Lock to protect taxonomy cache updates if we ever load on-miss at runtime
         self._tax_lock = Lock()
         # Preload all taxonomies to reduce per-request latency
@@ -344,8 +345,10 @@ class ClassificationService:
             for label, score in selected[:max_labels]
         ]
 
-    def _auxiliary_provider(self):
-        name = os.getenv("FETCH_AUXILIARY_MODEL")
+    def _auxiliary_provider(self, setting: str = "FETCH_AUXILIARY_MODEL"):
+        if not os.getenv(setting):
+            setting = "FETCH_AUXILIARY_MODEL"
+        name = os.getenv(setting)
         if name:
             provider = self._all_providers.get(name)
             if (
@@ -353,7 +356,7 @@ class ClassificationService:
                 or provider not in self.providers
             ):
                 raise ValueError(
-                    "FETCH_AUXILIARY_MODEL must name an enabled portable endpoint"
+                    f"{setting} must name an enabled portable endpoint"
                 )
             return provider
         return next(
@@ -365,7 +368,7 @@ class ClassificationService:
     ) -> Tuple[str, Any, Optional[str]]:
         """Run semantic merge against the first available merge model."""
 
-        compatible = self._auxiliary_provider()
+        compatible = self._auxiliary_provider("FETCH_MERGE_MODEL")
         if compatible is not None:
             response, content = await compatible.complete(final_prompt, questions_json)
             return compatible.model_name, response, content
