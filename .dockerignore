@@ -9,8 +9,5 @@
 !app/data/list_taxonomy_mapping.csv
 !app/data/taxonomy_keywords.yaml
 !app/data/taxonomy_hints_default.yaml
-!app/dashboard/static/*.html
-!app/dashboard/static/*.css
-!app/dashboard/static/*.js
 !LICENSE
 !NOTICE

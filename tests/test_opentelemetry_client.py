@@ -45,6 +45,7 @@ def test_record_telemetry_event_redacts_query_from_input_payload(monkeypatch):
     assert (
         tracer.span.attributes["fetch.user_query.chunk_01"] == "private housing facts"
     )
+    assert tracer.span.attributes["fetch.content_captured"] is True
     assert tracer.span.ended is True
     chunks = [
         value

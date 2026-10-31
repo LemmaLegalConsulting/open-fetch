@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Generic FETCH API and review dashboard on ECS Fargate with DynamoDB",
+  "Description": "FETCH API on ECS Fargate with CloudWatch application logs",
   "Parameters": {
     "VpcId": {
       "Type": "AWS::EC2::VPC::Id"
@@ -23,7 +23,7 @@
     },
     "SecretsArn": {
       "Type": "String",
-      "Description": "Secrets Manager JSON containing API_CREDENTIALS, API_KEY_PRODUCTION, API_KEY_TEST, DASHBOARD_TOKEN_CLIENT_IDS, COMPATIBLE_API_KEY"
+      "Description": "Secrets Manager JSON containing API_CREDENTIALS, API_KEY_PRODUCTION, API_KEY_TEST, COMPATIBLE_API_KEY"
     },
     "CompatibleBaseUrl": {
       "Type": "String",
@@ -37,80 +37,9 @@
       "Type": "String",
       "Default": "0.0.0.0/0",
       "Description": "Restrict to campus/VPN ranges when appropriate"
-    },
-    "CaptureContent": {
-      "Type": "String",
-      "Default": "false",
-      "AllowedValues": [
-        "true",
-        "false"
-      ]
-    },
-    "RetentionDays": {
-      "Type": "Number",
-      "Default": 30,
-      "MinValue": 1,
-      "MaxValue": 90
     }
   },
   "Resources": {
-    "Activity": {
-      "Type": "AWS::DynamoDB::Table",
-      "Properties": {
-        "BillingMode": "PAY_PER_REQUEST",
-        "AttributeDefinitions": [
-          {
-            "AttributeName": "client_id",
-            "AttributeType": "S"
-          },
-          {
-            "AttributeName": "sort_key",
-            "AttributeType": "S"
-          },
-          {
-            "AttributeName": "session_key",
-            "AttributeType": "S"
-          }
-        ],
-        "KeySchema": [
-          {
-            "AttributeName": "client_id",
-            "KeyType": "HASH"
-          },
-          {
-            "AttributeName": "sort_key",
-            "KeyType": "RANGE"
-          }
-        ],
-        "GlobalSecondaryIndexes": [
-          {
-            "IndexName": "sessions",
-            "KeySchema": [
-              {
-                "AttributeName": "session_key",
-                "KeyType": "HASH"
-              },
-              {
-                "AttributeName": "sort_key",
-                "KeyType": "RANGE"
-              }
-            ],
-            "Projection": {
-              "ProjectionType": "ALL"
-            }
-          }
-        ],
-        "TimeToLiveSpecification": {
-          "AttributeName": "expires_at",
-          "Enabled": true
-        },
-        "SSESpecification": {
-          "SSEEnabled": true
-        }
-      },
-      "DeletionPolicy": "Retain",
-      "UpdateReplacePolicy": "Retain"
-    },
     "Logs": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
@@ -133,35 +62,7 @@
               "Action": "sts:AssumeRole"
             }
           ]
-        },
-        "Policies": [
-          {
-            "PolicyName": "fetch-access",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "dynamodb:PutItem",
-                    "dynamodb:Query"
-                  ],
-                  "Resource": [
-                    {
-                      "Fn::GetAtt": [
-                        "Activity",
-                        "Arn"
-                      ]
-                    },
-                    {
-                      "Fn::Sub": "${Activity.Arn}/index/*"
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        ]
+        }
       }
     },
     "ExecutionRole": {
@@ -367,32 +268,6 @@
                 }
               },
               {
-                "Name": "DASHBOARD_ENABLED",
-                "Value": "true"
-              },
-              {
-                "Name": "DASHBOARD_STORAGE",
-                "Value": "dynamodb"
-              },
-              {
-                "Name": "DASHBOARD_TABLE",
-                "Value": {
-                  "Ref": "Activity"
-                }
-              },
-              {
-                "Name": "DASHBOARD_CAPTURE_CONTENT",
-                "Value": {
-                  "Ref": "CaptureContent"
-                }
-              },
-              {
-                "Name": "DASHBOARD_RETENTION_DAYS",
-                "Value": {
-                  "Ref": "RetentionDays"
-                }
-              },
-              {
                 "Name": "TELEMETRY_ENABLED",
                 "Value": "false"
               },
@@ -422,12 +297,6 @@
                 "Name": "API_KEY_TEST",
                 "ValueFrom": {
                   "Fn::Sub": "${SecretsArn}:API_KEY_TEST::"
-                }
-              },
-              {
-                "Name": "DASHBOARD_TOKEN_CLIENT_IDS",
-                "ValueFrom": {
-                  "Fn::Sub": "${SecretsArn}:DASHBOARD_TOKEN_CLIENT_IDS::"
                 }
               },
               {
@@ -506,11 +375,6 @@
           "LoadBalancer",
           "DNSName"
         ]
-      }
-    },
-    "ActivityTable": {
-      "Value": {
-        "Ref": "Activity"
       }
     },
     "ServiceName": {

@@ -51,7 +51,6 @@ def registry(monkeypatch):
     monkeypatch.setenv("TELEMETRY_ENABLED", "true")
     monkeypatch.setenv("TELEMETRY_LOGS_ENABLED", "true")
     monkeypatch.setenv("TELEMETRY_ENVIRONMENT", "production")
-    monkeypatch.setenv("DASHBOARD_ENABLED", "false")
     return config
 
 
@@ -327,34 +326,6 @@ def test_scope_content_policy_is_not_broadened_by_client_allowlist(
     )
     spans = traces["http://collector/test-one/v1/traces"].get_finished_spans()
     assert len(spans) == 1 and spans[0].attributes["fetch.content_captured"] is False
-
-
-def test_dashboard_test_and_prod_partition_separately(registry, monkeypatch, tmp_path):
-    monkeypatch.setenv("DASHBOARD_ENABLED", "true")
-    monkeypatch.setenv("DASHBOARD_STORAGE", "sqlite")
-    monkeypatch.setenv("DASHBOARD_SQLITE_PATH", str(tmp_path / "synthetic.db"))
-    monkeypatch.setenv(
-        "DASHBOARD_TOKEN_CLIENT_IDS",
-        SCOPES[2].scope_id
-        + "=review-test,"
-        + SCOPES[0].scope_id
-        + "=review-prod,school=legacy-review",
-    )
-    with TestClient(app, base_url="https://testserver") as client:
-        for i in [0, 1, 2]:
-            assert (
-                client.post(
-                    "/api/activity/outcome",
-                    headers={"Authorization": f"Bearer synthetic-secret-{i}"},
-                    json={"conversation_id": "same-session", "outcome": "in_progress"},
-                ).status_code
-                == 202
-            )
-        client.post("/dashboard/login", json={"token": "review-test"})
-        records = client.get("/dashboard/api/activity").json()["events"]
-        assert len(records) == 1 and records[0]["client_id"] == SCOPES[2].scope_id
-        client.post("/dashboard/login", json={"token": "legacy-review"})
-        assert client.get("/dashboard/api/activity").json()["events"] == []
 
 
 def test_unknown_key_has_401_with_registry_only(registry, monkeypatch):

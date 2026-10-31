@@ -141,6 +141,11 @@ def load_prompt(
 
     # Load template from file cache
     prompt_template = _load_prompt_template(prompt_path)
+    if "{{classification_instructions}}" in prompt_template:
+        prompt_template = prompt_template.replace(
+            "{{classification_instructions}}",
+            _load_prompt_template("app/prompts/classification_instructions.txt"),
+        )
 
     # Build taxonomy string from either a DataFrame or a generic sequence of rows/dicts
     parts: List[str] = []

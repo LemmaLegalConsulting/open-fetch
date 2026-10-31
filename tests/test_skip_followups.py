@@ -87,6 +87,32 @@ class TestLoadPromptSkipFollowups:
         assert "CLASSIFICATION APPROACH" in final_prompt
         assert "FOLLOW-UP QUESTIONS GUIDELINES" not in final_prompt
 
+    @pytest.mark.parametrize("provider", ["default", "compatible", "gemini", "mistral"])
+    def test_initial_and_refinement_share_role_and_classification_rules(self, provider):
+        taxonomy = [
+            {"Category": "Real Property", "Subcategory": "Tenant (Residential)"},
+            {"Category": "Real Property", "Subcategory": "Landlord Residential"},
+        ]
+        initial, _ = load_prompt(provider, taxonomy, taxonomy_name="default")
+        refinement, _ = load_prompt(
+            provider, taxonomy, skip_followups=True, taxonomy_name="default"
+        )
+        shared = initial.split("FOLLOW-UP QUESTIONS GUIDELINES:")[0].strip()
+        assert refinement.startswith(shared)
+        assert (
+            '"Real Property > Tenant (Residential)" is for tenants seeking help'
+            in shared
+        )
+        assert (
+            '"Real Property > Landlord Residential" is for landlords seeking help'
+            in shared
+        )
+        assert "not the opposing party" in shared
+        assert "all accumulated follow-up answers" in shared
+        assert "NO LEGAL PROBLEM:" in shared
+        assert "Do not generate further questions" in refinement
+        assert "{{" not in initial and "{{" not in refinement
+
 
 # =============================================================================
 # Tests for ClassificationRequest model with skip_followups

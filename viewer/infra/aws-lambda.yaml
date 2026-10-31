@@ -1,0 +1,87 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Separate read-only FETCH telemetry viewer; Lambda with OIDC, no activity database or ALB
+Parameters:
+  ImageUri:
+    Type: String
+    Description: ECR URI of viewer Dockerfile lambda target (linux/amd64)
+  ConfigSecretArn:
+    Type: String
+    Description: Secrets Manager JSON with VIEWER_ORIGIN, VIEWER_SESSION_SECRET, OIDC_ISSUER, OIDC_CLIENT_ID, OIDC_CLIENT_SECRET, OIDC_CLIENT_AUTH, VIEWER_CONFIG_JSON
+  TelemetryLogGroupArn:
+    Type: String
+    Description: Exact CloudWatch span log group ARN, without trailing :* (for example arn:aws:logs:REGION:ACCOUNT:log-group:aws/spans)
+Resources:
+  Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: lambda.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: query-scoped-telemetry
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: logs:StartQuery
+                Resource:
+                  [!Ref TelemetryLogGroupArn, !Sub "${TelemetryLogGroupArn}:*"]
+              # Result APIs do not support resource-level IAM. Query IDs stay server-side.
+              - Effect: Allow
+                Action: [logs:GetQueryResults, logs:StopQuery]
+                Resource: "*"
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !Sub "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${AWS::StackName}-viewer:*"
+  Logs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-viewer"
+      RetentionInDays: 14
+  Viewer:
+    Type: AWS::Lambda::Function
+    DependsOn: Logs
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-viewer"
+      PackageType: Image
+      Code: { ImageUri: !Ref ImageUri }
+      Role: !GetAtt Role.Arn
+      MemorySize: 1024
+      Timeout: 60
+      ReservedConcurrentExecutions: 5
+      Architectures: [x86_64]
+      Environment:
+        Variables:
+          VIEWER_ORIGIN: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:VIEWER_ORIGIN}}"
+          VIEWER_SESSION_SECRET: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:VIEWER_SESSION_SECRET}}"
+          OIDC_ISSUER: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:OIDC_ISSUER}}"
+          OIDC_CLIENT_ID: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:OIDC_CLIENT_ID}}"
+          OIDC_CLIENT_SECRET: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:OIDC_CLIENT_SECRET}}"
+          OIDC_CLIENT_AUTH: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:OIDC_CLIENT_AUTH}}"
+          VIEWER_CONFIG_JSON: !Sub "{{resolve:secretsmanager:${ConfigSecretArn}:SecretString:VIEWER_CONFIG_JSON}}"
+  Url:
+    Type: AWS::Lambda::Url
+    Properties:
+      TargetFunctionArn: !Ref Viewer
+      AuthType: NONE
+      InvokeMode: BUFFERED
+  UrlPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref Viewer
+      Action: lambda:InvokeFunctionUrl
+      Principal: "*"
+      FunctionUrlAuthType: NONE
+  InvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref Viewer
+      Action: lambda:InvokeFunction
+      Principal: "*"
+      InvokedViaFunctionUrl: true
+Outputs:
+  ViewerUrl:
+    Value: !GetAtt Url.FunctionUrl

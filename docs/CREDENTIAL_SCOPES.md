@@ -61,20 +61,10 @@ The application rejects identical resolved destinations configured for multiple 
 
 Restart after changing routing or credentials, because exporters are cached. For a distinct new key, assign a new key ID and destination. Rotating a secret under the same key ID intentionally retains that logical scope. Historical records are not automatically migrated.
 
-## Dashboard records
-
-Structured credentials also partition new dashboard records by the full scope ID. Review tokens use that scope as the left side of `DASHBOARD_TOKEN_CLIENT_IDS`:
-
-```dotenv
-DASHBOARD_TOKEN_CLIENT_IDS=school/production/school-prod-one=<production-review-secret>,school/test/school-test-one=<test-review-secret>
-```
-
-This is read authorization, not a UI filter: a test reviewer cannot read production records, even with the same conversation ID or a forged query parameter. One review token reads one exact partition. Legacy records retain their old consumer partition and are not merged with new scoped records. For scoped keys, dashboard text capture requires both `DASHBOARD_CAPTURE_CONTENT=true` and that key’s `capture_content=true`; a global flag cannot override a key’s denial. Legacy mapped keys retain the global dashboard opt-in behavior.
-
 ## Migration and development
 
 Legacy `API_TOKENS` and `API_TOKEN_CLIENT_IDS` still authenticate for classification, but authenticated HTTP requests using those credentials do **not** export telemetry until migrated to `API_CREDENTIALS`. Anonymous dev calls also never export. This prevents an unknown environment/key identity from slipping into a shared production destination.
 
 Legacy client/shared exporter settings remain available for existing internal instrumentation when no structured registry exists. Once `API_CREDENTIALS` is configured, unscoped internal/evaluation calls are also suppressed; explicitly bind an authenticated scope in trusted integration code or call the API using a test credential. Supplied PromptFoo configurations disable telemetry by default.
 
-To migrate: inject the secret references, define the registry and exact destinations, assign separate review credentials to the new partitions, restart, then exercise synthetic test and production requests. Inspect both destination resources to verify separation before using real data. No cloud resources or keys are provisioned by this configuration.
+To migrate: inject the secret references, define the registry and exact destinations, restart, then exercise synthetic test and production requests. Inspect both destination resources to verify separation before using real data. No cloud resources or keys are provisioned by this configuration.

@@ -55,6 +55,7 @@ def configured_endpoints():
             "base_url_env",
             "api_key_env",
             "max_tokens",
+            "auth",
         }:
             raise ValueError("Unknown model endpoint option")
     return endpoints
@@ -75,8 +76,18 @@ class CompatibleProvider(ClassifierProvider):
         self.protocol = config.get("protocol", "openai")
         if self.protocol not in {"openai", "anthropic"}:
             raise ValueError("Unsupported model endpoint protocol")
+        auth_mode = config.get("auth", "api_key")
+        if auth_mode not in {"api_key", "bedrock"}:
+            raise ValueError("Unsupported model authentication")
+        if auth_mode == "bedrock" and "api_key_env" in config:
+            raise ValueError(
+                "Bedrock role authentication must not configure an API key"
+            )
         values = []
-        for field in ("model_env", "base_url_env", "api_key_env"):
+        fields = ["model_env", "base_url_env"]
+        if auth_mode == "api_key":
+            fields.append("api_key_env")
+        for field in fields:
             env_name = config.get(field)
             if (
                 not isinstance(env_name, str)
@@ -85,7 +96,8 @@ class CompatibleProvider(ClassifierProvider):
             ):
                 raise ValueError("Model endpoint environment values are required")
             values.append(os.environ[env_name].strip())
-        model, base_url, key = values
+        model, base_url = values[:2]
+        key = values[2] if auth_mode == "api_key" else "bedrock-role-auth"
         url = urlsplit(base_url)
         if (
             url.scheme != "https"
@@ -101,16 +113,27 @@ class CompatibleProvider(ClassifierProvider):
         self.max_tokens = config.get("max_tokens", 4096)
         if type(self.max_tokens) is not int or not 1 <= self.max_tokens <= 32768:
             raise ValueError("max_tokens must be between 1 and 32768")
+        auth = None
+        if auth_mode == "bedrock":
+            from app.providers.bedrock_auth import BedrockAuth
+
+            auth = BedrockAuth(base_url, self.protocol)
         if self.protocol == "anthropic":
             self.messages_url = base_url.rstrip("/") + "/v1/messages"
             self.client = httpx.AsyncClient(
                 headers={"x-api-key": key, "anthropic-version": "2023-06-01"},
                 timeout=15,
                 follow_redirects=False,
+                auth=auth,
             )
         else:
+            options = {}
+            if auth is not None:
+                options["http_client"] = httpx.AsyncClient(
+                    auth=auth, timeout=15, follow_redirects=False
+                )
             self.client = AsyncOpenAI(
-                base_url=base_url, api_key=key, timeout=15, max_retries=1
+                base_url=base_url, api_key=key, timeout=15, max_retries=1, **options
             )
 
     async def aclose(self):

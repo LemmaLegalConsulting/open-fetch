@@ -262,7 +262,7 @@ class ClassificationRequest(BaseModel):
     )
     skip_followups: bool = Field(
         default=False,
-        description="Skip generating follow-up questions. When True, uses a simplified prompt and returns empty follow_up_questions.",
+        description="Skip generating follow-up questions while retaining the same taxonomy and classification guidance. Returns empty follow_up_questions.",
     )
     enabled_models: Optional[List[str]] = Field(
         default=None,

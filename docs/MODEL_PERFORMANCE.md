@@ -1,6 +1,6 @@
 # Terra + Haiku performance note
 
-This is a **post-publication evaluation dated October 30, 2026**, not a result reported in [*That’s So FETCH: Fashioning Ensemble Techniques for LLM Classification in Civil Legal Intake and Referral*](https://doi.org/10.3233/FAIA251588). The recommended Terra + Haiku configuration differs from the paper’s model combination. These results do not reproduce or supersede the paper’s findings.
+This is a **post-publication evaluation dated October 30, 2026**, not a result reported in [*That’s So FETCH: Fashioning Ensemble Techniques for LLM Classification in Civil Legal Intake and Referral*](https://doi.org/10.3233/FAIA251588). The deployed ensemble uses Terra + Haiku + keyword + SPOT and differs from the paper’s model combination. The benchmark below evaluated only the Terra + Haiku pair; it does not measure the full deployed ensemble. These results do not reproduce or supersede the paper’s findings.
 
 ## Configuration and classification results
 

@@ -560,6 +560,7 @@ def record_telemetry_event(
     span = None
     try:
         span = tracer.start_span(name=name, kind=SpanKind.SERVER)
+        span.set_attribute("fetch.content_captured", True)
         trace_payload = dict(event_payload)
         if "query" in trace_payload:
             trace_payload["query"] = "[redacted; see fetch.user_query.* attributes]"
@@ -727,7 +728,7 @@ def flush_telemetry() -> None:
 
 
 async def flush_telemetry_async() -> None:
-    """Best-effort async telemetry flush that cannot block request handling."""
+    """Bounded flush for shutdown or explicit evaluation use; not the request path."""
     try:
         await asyncio.wait_for(
             asyncio.to_thread(flush_telemetry),

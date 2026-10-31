@@ -9,4 +9,5 @@ diskcache
 opentelemetry-sdk==1.40.0
 opentelemetry-exporter-otlp-proto-http==1.40.0
 azure-monitor-opentelemetry-exporter==1.0.0b51
-boto3>=1.35.0,<2
+redis>=5.0,<9
+aws-bedrock-token-generator>=1.1.0,<2

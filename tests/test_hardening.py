@@ -13,8 +13,6 @@ from app.core.identity import (
     current_client,
     credential_registry,
 )
-from app.dashboard.routes import client_for_token
-from app.dashboard.store import capture_classification
 from app.models.api_models import (
     ClassificationRequest,
     ClassificationResponse,
@@ -54,59 +52,6 @@ def test_duplicate_registry_keys_rejected(monkeypatch):
     monkeypatch.setenv("API_CREDENTIALS", '{"key":{},"key":{}}')
     with pytest.raises(ValueError, match="Duplicate"):
         credential_registry()
-
-
-@pytest.mark.parametrize("mapping", ["alpha=review,beta=review", "alpha=api"])
-def test_ambiguous_dashboard_tokens_fail_closed(monkeypatch, mapping):
-    monkeypatch.setenv("DASHBOARD_TOKEN_CLIENT_IDS", mapping)
-    monkeypatch.setenv("API_TOKENS", "api")
-    with pytest.raises(Exception) as error:
-        client_for_token("review")
-    assert error.value.status_code == 503
-
-
-def test_unicode_and_cross_scheme_dashboard_login(monkeypatch):
-    monkeypatch.setenv("DASHBOARD_ENABLED", "true")
-    monkeypatch.setenv("DASHBOARD_TOKEN_CLIENT_IDS", "alpha=review")
-    client = TestClient(app, base_url="https://testserver")
-    assert client.post("/dashboard/login", json={"token": "é"}).status_code == 401
-    for origin in ["http://testserver", "https://["]:
-        assert (
-            client.post(
-                "/dashboard/login", json={"token": "review"}, headers={"Origin": origin}
-            ).status_code
-            == 403
-        )
-
-
-def test_dashboard_respects_per_key_content_permission(monkeypatch):
-    monkeypatch.setenv("DASHBOARD_ENABLED", "true")
-    monkeypatch.setenv("DASHBOARD_CAPTURE_CONTENT", "true")
-    records = []
-    monkeypatch.setattr(
-        "app.dashboard.store.store", lambda: SimpleNamespace(put=records.append)
-    )
-    response = ClassificationResponse(
-        labels=[],
-        follow_up_questions=[],
-        likely_no_legal_problem=dict(
-            value=False, weighted_result=0, disagreement_score=0
-        ),
-    )
-    for capture in [False, True]:
-        scope = CredentialScope("school", "test", "key", capture)
-        token = current_scope.set(scope)
-        try:
-            capture_classification(
-                scope.scope_id,
-                ClassificationRequest(text="SYNTHETIC PRIVATE SENTINEL"),
-                response,
-            )
-        finally:
-            current_scope.reset(token)
-    assert records[0]["details"]["content_captured"] is False
-    assert "SYNTHETIC PRIVATE" not in json.dumps(records[0])
-    assert records[1]["details"]["query"] == "SYNTHETIC PRIVATE SENTINEL"
 
 
 @pytest.mark.parametrize(
@@ -268,28 +213,6 @@ async def test_responses_retry_extracts_text_and_logs_no_content(monkeypatch, ca
     assert "SYNTHETIC PRIVATE SENTINEL" not in caplog.text
 
 
-def test_dashboard_login_behind_tls_termination(monkeypatch):
-    monkeypatch.setenv("ENV", "production")
-    monkeypatch.setenv("DASHBOARD_ENABLED", "true")
-    monkeypatch.setenv("DASHBOARD_TOKEN_CLIENT_IDS", "alpha=review")
-    client = TestClient(app, base_url="http://testserver")
-    response = client.post(
-        "/dashboard/login",
-        json={"token": "review"},
-        headers={"Origin": "https://testserver"},
-    )
-    assert response.status_code == 200
-    assert "Secure" in response.headers["set-cookie"]
-    assert (
-        client.post(
-            "/dashboard/login",
-            json={"token": "review"},
-            headers={"Origin": "http://testserver"},
-        ).status_code
-        == 403
-    )
-
-
 @pytest.mark.asyncio
 @pytest.mark.parametrize("fail", [False, True])
 async def test_auth_context_reset_in_same_task(monkeypatch, fail):
@@ -300,8 +223,19 @@ async def test_auth_context_reset_in_same_task(monkeypatch, fail):
     monkeypatch.setenv("API_TOKENS", "synthetic")
     monkeypatch.setenv("API_TOKEN_CLIENT_IDS", "school=synthetic")
     previous = (current_scope.get(), current_client.get(), http_scope_enforced.get())
+    from starlette.requests import Request
+
     generator = verify_token(
-        HTTPAuthorizationCredentials(scheme="Bearer", credentials="synthetic")
+        Request(
+            {
+                "type": "http",
+                "app": app,
+                "path": "/api/classify",
+                "headers": [],
+                "client": ("test", 0),
+            }
+        ),
+        HTTPAuthorizationCredentials(scheme="Bearer", credentials="synthetic"),
     )
     assert await anext(generator) == "synthetic"
     assert current_client.get() == "school" and http_scope_enforced.get()

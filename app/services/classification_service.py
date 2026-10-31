@@ -71,7 +71,6 @@ from threading import Lock
 from app.telemetry import (
     finalize_provider_generation,
     finalize_request_trace,
-    flush_telemetry_async,
     start_provider_generation,
     start_request_trace,
 )
@@ -1685,13 +1684,6 @@ class ClassificationService:
                 request_span,
                 output_payload=output_payload,
                 error=error,
-            )
-            flush_start = time.perf_counter()
-            await flush_telemetry_async()
-            logger.info(
-                "[ClassificationService] request_id=%s telemetry_flush_latency_ms=%.2f",
-                request_id,
-                (time.perf_counter() - flush_start) * 1000.0,
             )
             logger.info(
                 "[ClassificationService] request_id=%s total_latency_ms=%.2f error=%s",

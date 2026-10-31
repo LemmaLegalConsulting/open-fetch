@@ -8,7 +8,7 @@ See the [FETCH public research repository](https://github.com/nonprofittechy/fet
 
 The paper [*That’s So FETCH: Fashioning Ensemble Techniques for LLM Classification in Civil Legal Intake and Referral*](https://doi.org/10.3233/FAIA251588) describes FETCH’s ensemble classification and follow-up-question approach.
 
-The recommended **Terra + Haiku classification ensemble, with Terra for question merging**, differs from the paper’s model combination. See the [October 2026 performance note](docs/MODEL_PERFORMANCE.md) for the separate public-benchmark evaluation, merge-quality pilot, costs, and limitations.
+The recommended **Terra + Haiku + keyword + SPOT classification ensemble, with Terra for question merging**, differs from the paper’s model combination. See the [October 2026 performance note](docs/MODEL_PERFORMANCE.md) for the separate two-LLM public-benchmark evaluation, merge-quality pilot, costs, and limitations. Those benchmark results excluded keyword and SPOT; they are not measurements of the full four-provider ensemble.
 
 ## Run locally
 
@@ -22,7 +22,7 @@ cp .env.example .env
 ENV=dev OFFLINE_MODE=1 uvicorn app.main:app --reload
 ```
 
-Open http://127.0.0.1:8000/docs for the interactive API. The optional review dashboard is available at `/dashboard/`; see [dashboard setup](docs/DASHBOARD.md).
+Open http://127.0.0.1:8000/docs for the interactive API.
 
 ```bash
 curl http://127.0.0.1:8000/api/classify \
@@ -39,7 +39,11 @@ docker build -t open-fetch .
 docker run --rm -p 8080:8080 --env-file .env open-fetch
 ```
 
-Telemetry is disabled in the example configuration. Application logs omit model responses and exception bodies. Optional response caches and opted-in dashboard/trace content remain sensitive: keep them private and out of Git. Legacy OSB telemetry event contracts remain in the code for compatibility; configure any telemetry explicitly for your own deployment.
+Telemetry is disabled in the example configuration. Application logs omit model responses and exception bodies. Optional response caches and opted-in trace content remain sensitive: keep them private and out of Git. Legacy OSB telemetry event contracts remain in the code for compatibility; configure any telemetry explicitly for your own deployment.
+
+## Rate limiting
+
+API rate limits are enabled by default: 60 classifications/minute per key (burst 10), plus 120/minute per consumer/environment across keys (burst 20). Use the [shared Redis backend](docs/RATE_LIMITING.md) for multiple workers or hosts; the default memory backend is per process. Exceeded limits return `429` with `Retry-After` before model calls.
 
 ## Validation
 
@@ -56,14 +60,14 @@ Required Notice: Copyright 2026 Oregon State Bar
 
 Licensed under [PolyForm Noncommercial 1.0.0](LICENSE). See [NOTICE](NOTICE). Third-party materials retain their own applicable terms.
 
-## Dashboard, Fly.io, and telemetry
+## Fly.io and telemetry
 
-A generic activity dashboard is included, with SQLite for local development and DynamoDB for AWS. See [dashboard setup](docs/DASHBOARD.md) and [AWS deployment](docs/AWS_DEPLOYMENT.md). The primary hosting path is [Fly.io](docs/FLY_DEPLOYMENT.md), with a storage-only AWS template for dashboard activity. An ECS template is also available. [Portable OpenTelemetry](docs/TELEMETRY.md) supports Azure Monitor and AWS/OTLP for traces and optional structured request logs.
+The API has no dashboard UI or activity database. Run it on [Fly.io](docs/FLY_DEPLOYMENT.md) or use the optional [ECS deployment](docs/AWS_DEPLOYMENT.md). [OpenTelemetry](docs/TELEMETRY.md) captures traces and optional structured logs for Azure Monitor or AWS/OTLP. View them in your telemetry backend or the included [separate telemetry viewer](viewer/README.md). It retains the conversation UI from the original Azure viewer, supports Azure Log Analytics and AWS CloudWatch span queries, and maps named reviewers to exact consumer/environment/API-key scopes. Deploy it independently; it never runs on the API host.
 
 Use `FETCH_ENABLED_PROVIDERS=compatible,keyword` with `COMPATIBLE_BASE_URL`, `COMPATIBLE_MODEL`, and `COMPATIBLE_API_KEY` for a portable OpenAI-compatible model backend, including OpenAI models hosted by Amazon Bedrock. This configuration routes classification, question merging, and screening extraction to the configured endpoint.
 
 ## Consumer and test/production isolation
 
-Use [credential scopes](docs/CREDENTIAL_SCOPES.md) to bind each API key to a consumer, `test` or `production` environment, and nonsecret key ID. Traces and structured logs route only to that exact scope's destination, with no shared fallback. New dashboard records and review access use the same scope. Legacy keys still classify but do not export HTTP telemetry until migrated.
+Use [credential scopes](docs/CREDENTIAL_SCOPES.md) to bind each API key to a consumer, `test` or `production` environment, and nonsecret key ID. Traces and structured logs route only to that exact scope's destination, with no shared fallback. Legacy keys still classify but do not export HTTP telemetry until migrated.
 
 See [Azure Foundry and AWS Bedrock model hosting](docs/MODEL_HOSTING.md) for the Terra + Haiku ensemble with separate credentials and explicit merge/screening model selections.

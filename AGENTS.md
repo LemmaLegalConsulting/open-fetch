@@ -5,8 +5,8 @@
 - `app/services/`: Orchestrates classification flow and result merging.
 - `app/providers/`: Model backends (OpenAI, Gemini, portable named endpoints, keyword, etc.).
 - `app/models/`: Pydantic request/response schemas.
-- `app/dashboard/`: Generic review UI, authenticated routes, SQLite/DynamoDB storage.
-- `infra/aws/template.json`: Generic ECS Fargate/ALB/DynamoDB deployment.
+- `infra/aws/template.json`: Generic ECS Fargate/ALB deployment.
+- `viewer/`: Separate Next.js telemetry reader; Azure/AWS query adapters, OIDC sign-in, exact reviewer-to-scope grants. Never mount it in the classification API. From `viewer/`, run `npm ci`, `npm test`, `npm run typecheck`, and `npm run build`.
 - `app/core/`: Config and trusted API credential scopes.
 - Telemetry identity must come from server-side credentials. Preserve consumer/environment/key isolation; never fall back from a missing scoped destination to shared telemetry.
 - `app/utils/`: Logging, backoff/retry utilities.

@@ -1,0 +1,32 @@
+{
+  "name": "open-fetch-telemetry-viewer",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 8080",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "format:check": "prettier --check \"lib/**/*.ts\" \"pages/**/*.{ts,tsx}\" \"components/*.tsx\" \"tests/*.ts\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.0.0",
+    "@azure/identity": "^4.0.0",
+    "jose": "^6.0.0",
+    "next": "15.5.28",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prettier": "3.9.10",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "postcss": "8.5.24",
+    "sharp": "0.35.5"
+  }
+}

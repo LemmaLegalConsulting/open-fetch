@@ -1,4 +1,4 @@
-import asyncio
+from contextlib import asynccontextmanager
 import hmac
 import os
 
@@ -12,6 +12,7 @@ if os.getenv("ENV") != "production":
 
 from fastapi import FastAPI, Depends, HTTPException, status, Request
 from app.core.config import TAXONOMY_MAPPING
+from app.core.rate_limit import RateLimiter
 from app.core.identity import (
     current_scope,
     current_client,
@@ -19,15 +20,6 @@ from app.core.identity import (
     credential_registry,
     legacy_credentials,
 )
-from app.dashboard.routes import router as dashboard_router
-from app.dashboard.store import (
-    capture_classification,
-    enabled as dashboard_enabled,
-    event,
-    store,
-)
-from pydantic import BaseModel, Field
-from typing import Literal
 from typing import Optional
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from app.models.api_models import (
@@ -40,15 +32,26 @@ from app.services.classification_service import (
     ClassificationUnavailable,
 )
 from app.services.screening_protocols import validate_answers
-from app.utils.logging import get_logger
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    app.state.rate_limiter = RateLimiter()
+    try:
+        yield
+    finally:
+        from app.telemetry import flush_telemetry_async
+
+        await app.state.rate_limiter.close()
+        await flush_telemetry_async()
+
 
 app = FastAPI(
+    lifespan=lifespan,
     title="Legal Problem Classification API",
     description="FETCH legal problem classification API. See README.md for setup and /docs for schemas. Model providers process submitted inputs when enabled.\n\n## Organization and end-to-end tracking\nAuthenticated credentials determine client_id. Send opaque conversation_id and client_request_id values; keep personal information out of identifiers.",
     version="1.0.0",
 )
-
-app.include_router(dashboard_router)
 
 
 @app.middleware("http")
@@ -62,16 +65,6 @@ async def request_context_and_headers(request: Request, call_next):
         current_scope.reset(scope_token)
         current_client.reset(client_token)
         http_scope_enforced.reset(enforce_token)
-    if request.url.path.startswith("/dashboard"):
-        response.headers.update(
-            {
-                "Cache-Control": "no-store",
-                "X-Content-Type-Options": "nosniff",
-                "Referrer-Policy": "no-referrer",
-                "X-Frame-Options": "DENY",
-                "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
-            }
-        )
     return response
 
 
@@ -82,12 +75,13 @@ def health():
 
 classification_service = ClassificationService()
 
-logger = get_logger(__name__)
-
 security = HTTPBearer(auto_error=False)
+# Also initialized for ASGI callers that do not drive lifespan (e.g. unit tests).
+app.state.rate_limiter = RateLimiter()
 
 
 async def verify_token(
+    request: Request,
     credentials: Optional[HTTPAuthorizationCredentials] = Depends(security),
 ):
     """Authenticate once and bind trusted identity for the whole async request."""
@@ -96,10 +90,13 @@ async def verify_token(
         legacy = legacy_credentials()
     except ValueError:
         raise HTTPException(503, "API credential configuration is invalid") from None
+    limiter = request.app.state.rate_limiter
+    peer = request.client.host if request.client else "unknown"
     scope, client = None, None
     token = credentials.credentials if credentials else None
     if token is None:
         if os.getenv("ENV") != "dev" or registry or legacy or os.getenv("API_TOKENS"):
+            await limiter.failed_auth(peer)
             raise HTTPException(403, "Not authenticated")
     else:
         for secret, candidate in registry:
@@ -117,11 +114,13 @@ async def verify_token(
         if client is None and not any(
             hmac.compare_digest(secret.encode(), token.encode()) for secret in tokens
         ):
+            await limiter.failed_auth(peer)
             raise HTTPException(
                 401,
                 "Invalid authentication credentials",
                 headers={"WWW-Authenticate": "Bearer"},
             )
+    await limiter.admitted(scope, client, token, peer, request.url.path)
     scope_token = current_scope.set(scope)
     client_token = current_client.set(client)
     enforce_token = http_scope_enforced.set(True)
@@ -182,20 +181,6 @@ async def classify(payload: ClassificationRequest, token: str = Depends(verify_t
         )
     except ClassificationUnavailable:
         raise HTTPException(503, "Classification is temporarily unavailable") from None
-    try:
-        await asyncio.to_thread(
-            capture_classification,
-            (
-                current_scope.get().scope_id
-                if current_scope.get()
-                else current_client.get()
-            ),
-            payload,
-            result,
-        )
-    except Exception:
-        # Storage failures must not break classification or log submitted content.
-        logger.error("Dashboard activity write failed")
     return result
 
 
@@ -205,7 +190,7 @@ async def referral_completed_telemetry(
     token: str = Depends(verify_token),
 ):
     """Accept a completed OSB interaction for the shared telemetry stream."""
-    from app.telemetry import flush_telemetry_async, record_telemetry_event
+    from app.telemetry import record_telemetry_event
 
     client_id = current_client.get()
     if client_id not in {"osbar-referral", "osbar-referral-dev"}:
@@ -237,39 +222,4 @@ async def referral_completed_telemetry(
         client_id=client_id,
         full_query_text=payload.query,
     )
-    await flush_telemetry_async()
-    return {"accepted": True}
-
-
-class ActivityOutcome(BaseModel):
-    conversation_id: str = Field(
-        min_length=1, max_length=128, pattern=r"^[A-Za-z0-9._:-]+$"
-    )
-    outcome: Literal["referred", "no_match", "no_legal_problem", "error", "in_progress"]
-
-
-@app.post("/api/activity/outcome", status_code=202)
-async def activity_outcome(
-    payload: ActivityOutcome, token: str = Depends(verify_token)
-):
-    """Record a host-reported outcome, separately from classification results."""
-    scope = current_scope.get()
-    client = scope.scope_id if scope else current_client.get()
-    if not dashboard_enabled():
-        raise HTTPException(404)
-    if not client:
-        raise HTTPException(403, "A client-mapped API credential is required")
-    try:
-        await asyncio.to_thread(
-            lambda: store().put(
-                event(
-                    client,
-                    payload.conversation_id,
-                    "outcome",
-                    {"outcome": payload.outcome},
-                )
-            )
-        )
-    except Exception:
-        raise HTTPException(503, "Activity storage is unavailable") from None
     return {"accepted": True}

@@ -6,3 +6,4 @@ python-dotenv
 scireadability
 nltk
 textstat
+fakeredis[lua]>=2.31,<3
